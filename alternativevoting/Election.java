@@ -1,6 +1,9 @@
 package alternativevoting;
 
-public abstract class Election
+public interface Election
 {
     
+    Candidate processBallot( Ballot b );
+
+    boolean existsWinner();
 }

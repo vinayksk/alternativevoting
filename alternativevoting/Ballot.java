@@ -6,9 +6,9 @@ import java.util.*;
 public class Ballot
 {
     ArrayList<Candidate> list;
+    String voter;
 
-
-    public Ballot()
+    public Ballot(String name)
     {
         list = new ArrayList<Candidate>();
     }
@@ -18,4 +18,6 @@ public class Ballot
     {
         list.add( c );
     }
+    
+    
 }

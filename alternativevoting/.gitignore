@@ -2,3 +2,6 @@
 /Candidate.class
 /Vote.class
 /Ballot.class
+/AlternativeElection.class
+/AlternativeElection$Position.class
+/Position.class
