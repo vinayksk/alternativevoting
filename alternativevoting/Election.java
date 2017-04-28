@@ -1,9 +1,15 @@
 package alternativevoting;
 
+import java.util.*;
+
+
 public interface Election
 {
-    
-    Candidate processBallot( Ballot b );
+    Candidate BallotWinner( Ballot b );
+
 
     boolean existsWinner();
+
+
+    String currentResults();
 }
