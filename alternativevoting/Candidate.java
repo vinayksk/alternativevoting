@@ -6,6 +6,7 @@ public class Candidate
 
     private String name;
 
+
     public Candidate( String name )
     {
         votes = 0;
@@ -13,10 +14,16 @@ public class Candidate
     }
 
 
-    public Candidate( int votes, String name )
+    public Candidate( String name, int votes )
     {
         this.votes = votes;
         this.name = name;
+    }
+
+
+    public int getVotes()
+    {
+        return votes;
     }
 
 
