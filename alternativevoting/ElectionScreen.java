@@ -17,9 +17,15 @@ public class ElectionScreen extends JFrame
         list.add( new Candidate( "Jeffrey", 12 ) );
         list.add( new Candidate( "Austin", 2 ) );
         list.add( new Candidate( "De Facto", 3 ) );
-        list.add( new Candidate( "Matthew", 23 ) );
+        list.add( new Candidate( "Matthew", 2322 ) );
+        list.add( new Candidate( "Mathew", 23 ) );
+        list.add( new Candidate( "Mattthew", 13 ) );
         BarChart chart = new BarChart( list );
         c.add( chart, BorderLayout.CENTER );
+        VisualBallot b = new VisualBallot( chart );
+        c.add( b, BorderLayout.SOUTH );
+        ActionButtons stuff = new ActionButtons( b );
+        c.add( stuff, BorderLayout.EAST );
     }
 
 

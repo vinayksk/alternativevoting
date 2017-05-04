@@ -15,7 +15,6 @@ public class Ballot
         list = new ArrayList<Candidate>();
     }
 
-
     public void addCandidate( Candidate c )
     {
         list.add( c );

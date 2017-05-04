@@ -32,11 +32,14 @@ public class BarChart extends JPanel
         }
     }
 
+    public ArrayList<Candidate> getCandidateList()
+    {
+        return candList;
+    }
 
     public void paintComponent( Graphics g )
     {
         super.paintComponent( g );
-        g.setFont( // TODO THIS)
         int barWidth = getHeight() / candList.size() / 3;
         int maxBarHeight = getWidth() * 3 / 4;
         for ( int i = 0; i < candList.size(); i++ )
