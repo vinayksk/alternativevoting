@@ -32,12 +32,12 @@ public class VisualBallot extends JPanel implements ActionListener
         for ( int i = 0; i < candList.size(); i++ )
         {
             fields.add( new JTextField() );
-            fields.get( i ).setPreferredSize( new Dimension( 40, 30 ) );
+            fields.get( i ).setPreferredSize( new Dimension( 40, 60 ) );
         }
         for ( int i = 0; i < candList.size(); i++ )
         {
             buttons.add( new JButton( candList.get( i ).getName() ) );
-            buttons.get( i ).setPreferredSize( new Dimension( 80, 30 ) );
+            buttons.get( i ).setPreferredSize( new Dimension( 80, 60 ) );
             buttons.get( i ).addActionListener( this );
         }
         for ( int i = 0; i < candList.size(); i++ )

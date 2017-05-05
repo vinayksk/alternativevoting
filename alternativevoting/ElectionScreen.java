@@ -1,13 +1,19 @@
 package alternativevoting;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import javax.swing.*;
 
 
-public class ElectionScreen extends JFrame
+public class ElectionScreen extends JFrame implements ActionListener
 {
+    LinkedList<Candidate> ballots;
+
+
     public ElectionScreen()
     {
         super( "Vote now on your phones!" );
@@ -34,5 +40,14 @@ public class ElectionScreen extends JFrame
         w.setBounds( 100, 100, 700, 700 );
         w.setDefaultCloseOperation( EXIT_ON_CLOSE );
         w.setVisible( true );
+    }
+
+
+    public void actionPerformed( ActionEvent e )
+    {
+        if ( ( (JButton)( e.getSource() ) ).getText().equals( "Vote" ) )
+        {
+
+        }
     }
 }
