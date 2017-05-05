@@ -5,19 +5,28 @@ import java.util.*;
 
 public class Ballot
 {
-    ArrayList<Candidate> list;
-
-    String voter;
+    private ArrayList<Candidate> list;
 
 
-    public Ballot( String name )
+    public Ballot()
     {
         list = new ArrayList<Candidate>();
     }
 
 
-    public void addCandidate( Candidate c )
+    public void add( Candidate c )
     {
         list.add( c );
+    }
+
+
+    public ArrayList<Candidate> getList()
+    {
+        return list;
+    }
+    
+    public String toString()
+    {
+        return list.toString();
     }
 }
