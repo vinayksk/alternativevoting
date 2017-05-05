@@ -1,6 +1,7 @@
 package alternativevoting;
 
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -32,5 +33,11 @@ public class ActionButtons extends JPanel implements ActionListener
         add( calculateButton );
 
         this.b = b;
+    }
+
+
+    public void actionPerformed( ActionEvent e )
+    {
+        
     }
 }
