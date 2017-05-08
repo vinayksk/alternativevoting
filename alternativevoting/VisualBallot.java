@@ -53,14 +53,21 @@ public class VisualBallot extends JPanel implements ActionListener
         int[] ret = new int[fields.size()];
         for ( int i = 0; i < ret.length; i++ )
         {
-            int c = Integer.parseInt( fields.get( i ).getText() );
-            if ( 1 <= c && c <= ret.length - 1 )
+            if ( fields.get( i ).getText().equals( "" ) )
             {
-                ret[i] = Integer.parseInt( fields.get( i ).getText() );
+                ret[i] = ret.length;
             }
             else
             {
-                ret[i] = ret.length;
+                int c = Integer.parseInt( fields.get( i ).getText() );
+                if ( 1 <= c && c <= ret.length - 1 )
+                {
+                    ret[i] = Integer.parseInt( fields.get( i ).getText() );
+                }
+                else
+                {
+                    ret[i] = ret.length;
+                }
             }
         }
         return ret;
