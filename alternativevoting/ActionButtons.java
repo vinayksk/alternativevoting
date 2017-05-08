@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 
 public class ActionButtons extends JPanel implements ActionListener
 {
-    private JButton clearButton, submitButton;
+    private JButton clearButton, submitButton, tutorial;
 
     private VisualBallot b;
 
@@ -28,6 +28,11 @@ public class ActionButtons extends JPanel implements ActionListener
         submitButton.setPreferredSize( new Dimension( 80, 80 ) );
         submitButton.addActionListener( this );
         add( submitButton );
+
+        tutorial = new JButton( "Tutorial" );
+        tutorial.setPreferredSize( new Dimension( 90, 80 ) );
+        tutorial.addActionListener( this );
+        add( tutorial );
 
         this.setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
 
@@ -53,6 +58,11 @@ public class ActionButtons extends JPanel implements ActionListener
             int[] array = b.pushBallot();
             // here is where you put it into database
             b.clearBallot();
+        }
+        else if ( button.getText().equals( "Tutorial" ) )
+        {
+            System.out.println( "CRINGE" + "\nC\nR\nI\nN\nG\nE" );
+
         }
     }
 }
