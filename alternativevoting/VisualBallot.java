@@ -48,6 +48,35 @@ public class VisualBallot extends JPanel implements ActionListener
     }
 
 
+    public int[] pushBallot()
+    {
+        int[] ret = new int[fields.size()];
+        for ( int i = 0; i < ret.length; i++ )
+        {
+            int c = Integer.parseInt( fields.get( i ).getText() );
+            if ( 1 <= c && c <= ret.length - 1 )
+            {
+                ret[i] = Integer.parseInt( fields.get( i ).getText() );
+            }
+            else
+            {
+                ret[i] = ret.length;
+            }
+        }
+        return ret;
+    }
+
+
+    public void clearBallot()
+    {
+        for ( JTextField t : fields )
+        {
+            t.setText( "" );
+        }
+        rankedCands = 0;
+    }
+
+
     public void actionPerformed( ActionEvent e )
     {
         JButton button = (JButton)e.getSource();

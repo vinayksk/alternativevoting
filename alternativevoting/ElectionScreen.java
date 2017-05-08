@@ -13,10 +13,16 @@ public class ElectionScreen extends JFrame implements ActionListener
 {
     LinkedList<Candidate> ballots;
 
+    BarChart chart;
+
+    VisualBallot b;
+
+    ActionButtons a;
+
 
     public ElectionScreen()
     {
-        super( "Vote now on your phones!" );
+        super( "Vote" );
         Container c = getContentPane();
         c.setBackground( Color.WHITE );
         ArrayList<Candidate> list = new ArrayList<Candidate>();
@@ -25,12 +31,12 @@ public class ElectionScreen extends JFrame implements ActionListener
         list.add( new Candidate( "De Facto", 3 ) );
         list.add( new Candidate( "Mathew", 23 ) );
         list.add( new Candidate( "Mattthew", 13 ) );
-        BarChart chart = new BarChart( list );
+        chart = new BarChart( list );
         c.add( chart, BorderLayout.CENTER );
-        VisualBallot b = new VisualBallot( chart );
+        b = new VisualBallot( chart );
         c.add( b, BorderLayout.SOUTH );
-        ActionButtons stuff = new ActionButtons( b );
-        c.add( stuff, BorderLayout.EAST );
+        a = new ActionButtons( b );
+        c.add( a, BorderLayout.EAST );
     }
 
 
@@ -45,9 +51,6 @@ public class ElectionScreen extends JFrame implements ActionListener
 
     public void actionPerformed( ActionEvent e )
     {
-        if ( ( (JButton)( e.getSource() ) ).getText().equals( "Vote" ) )
-        {
-
-        }
+        b.actionPerformed( e );
     }
 }
