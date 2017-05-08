@@ -1,10 +1,11 @@
 package alternativevoting;
 
-public class Candidate
+public class Candidate implements Comparable<Candidate>
 {
     private int votes;
 
     private String name;
+
 
     public Candidate( String name )
     {
@@ -13,10 +14,22 @@ public class Candidate
     }
 
 
-    public Candidate( int votes, String name )
+    public Candidate( String name, int votes )
     {
         this.votes = votes;
         this.name = name;
+    }
+
+
+    public int getVotes()
+    {
+        return votes;
+    }
+
+
+    public String toString()
+    {
+        return name;
     }
 
 
@@ -29,5 +42,11 @@ public class Candidate
     public void changeVotes( int v )
     {
         votes += v;
+    }
+
+
+    public int compareTo( Candidate other )
+    {
+        return votes - other.getVotes();
     }
 }
