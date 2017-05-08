@@ -33,7 +33,7 @@ public class CandidatePanel extends JPanel
         buttons = new ArrayList<JButton>( candidateList.size() );
         for ( Candidate c : candidateList )
         {
-            buttons.add( new JButton() )
+            buttons.add( new JButton() );
         }
     }
 }
