@@ -1,19 +1,20 @@
 package alternativevoting;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.*;
 import java.io.*;
 
 
 public class Setup
 {
-
-    private ArrayList<Candidate> names;
-
-    private String electionName;
-
-
-    public Setup()
+    public static void main( String[] a )
     {
+        ArrayList<Candidate> names;
+        String electionName;
+
         Scanner in = new Scanner( System.in );
         System.out.println( "What is the name of the election?" );
         electionName = in.nextLine();
@@ -25,21 +26,37 @@ public class Setup
         {
             names.add( new Candidate( str ) );
             System.out.println( "Enter the name of Candidate " + ++count
-                + " or \"!\" if there are no more candidates:" );
+                    + " or \"!\" if there are no more candidates:" );
             str = in.nextLine();
         }
-    }
 
+        String hostName = "warowac";
+        String dbName = "testDB";
+        String user = "warowac";
+        String password = "XoFruitL00ps";
+        String url = String.format("jdbc:sqlserver://%s.database.windows.net:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
+        Connection connection = null;
 
-    public void create()
-    {
+        try{
+            connection = DriverManager.getConnection(url);
+            Statement mystat = connection.createStatement();
 
-    }
+            String sql = "CREATE TABLE " + electionName +
+                    " (name VARCHAR(255) not NULL";
 
+            for(int i = 0; i < names.size(); i++){
+                sql = sql + ", " + names.get(i) + " INTEGER";
+            }
 
-    public static void main( String[] a )
-    {
-        Setup s = new Setup();
+            sql = sql + ", PRIMARY KEY ( name ))";
+            System.out.println(sql);
+
+            mystat.executeUpdate(sql);
+
+        }
+        catch(Exception exc){
+            exc.printStackTrace();
+        }
 
     }
 }
