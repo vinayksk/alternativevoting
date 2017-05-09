@@ -7,7 +7,7 @@ import java.io.*;
 public class AlternativeElection
 {
 
-    public static void main( String[] a )
+    public static void main( String[] args )
     {
         Scanner in = new Scanner( System.in );
         int count = 1;
@@ -22,12 +22,15 @@ public class AlternativeElection
             str = in.nextLine();
         }
         count--;
-        ArrayList<Ballot> list = new ArrayList<Ballot>();
+        LinkedList<Ballot> list = new LinkedList<Ballot>();
         int count2 = 1;
         System.out.println( "Enter ballot " + count2 + ":" );
         str = in.nextLine();
+        ArrayList<String> temp = new ArrayList<String>();
         while ( !str.equals( "!" ) )
         {
+            str.split( "\\s+" );
+            temp.add( str );
             list.add( new Ballot() );
             for ( int i = 1; i <= count; i++ )
             {
@@ -46,6 +49,80 @@ public class AlternativeElection
             str = in.nextLine();
         }
         count2--;
+        int[][] ballots = new int[count2][count];
+        for ( int i = 0; i < count2; i++ )
+        {
+            for ( int j = 0; j < count; j++ )
+            {
+                ballots[i][j] = temp.get( i ).charAt( j ) - '0';
+            }
+        }
+        String[][] pref = new String[count + 1][count + 1];
+        for ( int i = 1; i <= count; i++ )
+        {
+            pref[i][0] = pref[0][i] = names.get( i - 1 ).getName();
+        }
+        for ( int i = 0; i <= count; i++ )
+        {
+            pref[i][i] = "X";
+        }
+        int[][] prefint = new int[count + 1][count + 1];
+        double[][] prefper = new double[count + 1][count + 1];
+        for ( int i = 1; i < count; i++ )
+        {
+            for ( int j = i + 1; j <= count; j++ )
+            {
+                for ( int k = 0; k < count2; k++ )
+                {
+                    prefint[i][j] += ballots[k][i - 1] < ballots[k][j - 1] ? 1
+                        : 0;
+                    prefint[j][i] += ballots[k][i - 1] > ballots[k][j - 1] ? 1
+                        : 0;
+                    prefper[i][j] = (int)( 1000 * ( prefint[i][j]
+                        / ( 0.0 + prefint[i][j] + prefint[j][i] ) ) ) / 10.0;
+                    prefper[j][i] = (int)( 1000 * ( prefint[j][i]
+                        / ( 0.0 + prefint[i][j] + prefint[j][i] ) ) ) / 10.0;
+                }
+            }
+        }
+        for ( int i = 1; i <= count; i++ )
+        {
+            for ( int j = 1; j <= count; j++ )
+            {
+                if ( i != j )
+                {
+                    pref[i][j] = prefint[i][j] + "";
+                }
+            }
+        }
+        for ( String[] i : pref )
+        {
+            for ( String j : i )
+            {
+                System.out.print( j + "\t" );
+            }
+            System.out.println();
+        }
+        System.out.println();
+        for ( int i = 1; i <= count; i++ )
+        {
+            for ( int j = 1; j <= count; j++ )
+            {
+                if ( i != j )
+                {
+                    pref[i][j] = prefper[i][j] + "";
+                }
+            }
+        }
+        for ( String[] i : pref )
+        {
+            for ( String j : i )
+            {
+                System.out.print( j + "\t" );
+            }
+            System.out.println();
+        }
+        System.out.println();
         for ( Ballot b : list )
         {
             b.getList().get( 0 ).changeVotes( 1 );
@@ -87,6 +164,7 @@ public class AlternativeElection
             }
             Collections.sort( names );
         }
+
         System.out.println(
             "The winner is " + names.get( names.size() - 1 ).getName() + "!" );
     }
