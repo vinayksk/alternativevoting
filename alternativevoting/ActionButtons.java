@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -89,6 +90,8 @@ public class ActionButtons extends JPanel implements ActionListener
                 String str = Integer.toString( (int)( Math.random() * 100 ) );
                 String electionName = ( (ElectionScreen)( this.getParent() ) )
                     .getElectionName();
+                ArrayList<Candidate> candidates = ( (ElectionScreen)( this
+                    .getParent() ) ).getCandidates();
                 // here is where you put it into database (array & str)
                 String newuser = "insert into " + electionName + " (name, ) values (str, array[0], array[1], array[2])";
                 mystat.executeUpdate( newuser );

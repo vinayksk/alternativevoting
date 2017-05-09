@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 public class VoterInfo extends JPanel
 {
     JTextField voterName;
+    
 
     public VoterInfo()
     {
