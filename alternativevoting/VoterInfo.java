@@ -13,10 +13,18 @@ import javax.swing.JTextField;
 public class VoterInfo extends JPanel
 {
     JTextField voterName;
-    
+
 
     public VoterInfo()
     {
         voterName = new JTextField();
+        voterName.setPreferredSize( new Dimension( 80, 40 ) );
+        this.add( voterName );
+    }
+
+
+    public String getVoterName()
+    {
+        return voterName.getText();
     }
 }

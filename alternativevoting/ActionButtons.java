@@ -87,7 +87,7 @@ public class ActionButtons extends JPanel implements ActionListener
             else if ( button.getText().equals( "Vote" ) )
             {
                 int[] array = b.pushBallot();
-                String str = Integer.toString( (int)( Math.random() * 100 ) );
+                String str = v.getName();
                 String electionName = ( (ElectionScreen)( this.getParent() ) )
                     .getElectionName();
                 ArrayList<Candidate> candidates = ( (ElectionScreen)( this
