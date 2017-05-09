@@ -32,33 +32,38 @@ public class BarChart extends JPanel
         }
     }
 
+
     public ArrayList<Candidate> getCandidateList()
     {
         return candList;
     }
+
 
     public void paintComponent( Graphics g )
     {
         super.paintComponent( g );
         int barWidth = getHeight() / candList.size() / 3;
         int maxBarHeight = getWidth() * 3 / 4;
-        for ( int i = 0; i < candList.size(); i++ )
+        if ( totalVotes > 0 )
         {
-            g.setColor( candColors.get( i ) );
-            g.fillRect( getWidth() / 4,
-                (int)( getHeight() / 8 + i * barWidth * 1.5 ),
-                (int)( maxBarHeight * candList.get( i ).getVotes() * 1.0
-                    / totalVotes ),
-                barWidth );
-            g.setColor( Color.BLACK );
-            g.drawString(
-                Integer.toString(
-                    candList.get( i ).getVotes() * 100 / totalVotes ) + "%",
-                getWidth() / 4,
-                (int)( getHeight() / 8 + i * barWidth * 1.5 ) );
-            g.drawString( candList.get( i ).getName(),
-                getWidth() / 8,
-                (int)( 3 * getHeight() / 16 + i * barWidth * 1.5 ) );
+            for ( int i = 0; i < candList.size(); i++ )
+            {
+                g.setColor( candColors.get( i ) );
+                g.fillRect( getWidth() / 4,
+                    (int)( getHeight() / 8 + i * barWidth * 1.5 ),
+                    (int)( maxBarHeight * candList.get( i ).getVotes() * 1.0
+                        / totalVotes ),
+                    barWidth );
+                g.setColor( Color.BLACK );
+                g.drawString(
+                    Integer.toString(
+                        candList.get( i ).getVotes() * 100 / totalVotes ) + "%",
+                    getWidth() / 4,
+                    (int)( getHeight() / 8 + i * barWidth * 1.5 ) );
+                g.drawString( candList.get( i ).getName(),
+                    getWidth() / 8,
+                    (int)( 3 * getHeight() / 16 + i * barWidth * 1.5 ) );
+            }
         }
     }
 
