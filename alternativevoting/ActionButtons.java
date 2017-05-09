@@ -93,7 +93,10 @@ public class ActionButtons extends JPanel implements ActionListener
                 ArrayList<Candidate> candidates = ( (ElectionScreen)( this
                     .getParent() ) ).getCandidates();
                 // here is where you put it into database (array & str)
-                String newuser = "insert into " + electionName + " (name, ) values (str, array[0], array[1], array[2])";
+                String newvoter = "insert into " + electionName + " (" + str + ",";
+                for (int i = 0; i < candidates.size(); i++){
+                    newvoter;
+                }
                 mystat.executeUpdate( newuser );
                 System.out.println( "added the next value" );
                 b.clearBallot();

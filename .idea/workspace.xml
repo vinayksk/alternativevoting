@@ -73,7 +73,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1000">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
+              <folding>
+                <marker date="1494351379800" expanded="true" signature="1347:1353" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,10 +83,14 @@
       <file leaf-file-name="ActionButtons.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alternativevoting/ActionButtons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+            <state relative-caret-position="793">
+              <caret line="97" column="29" lean-forward="false" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="29" />
               <folding>
-                <marker date="1494351271418" expanded="true" signature="2633:2717" ph="insert into missingValue... " />
+                <element signature="e#1843#1844#0" expanded="true" />
+                <element signature="e#1867#1868#0" expanded="true" />
+                <marker date="1494351524150" expanded="true" signature="2791:2825" ph="insert into missingValue... " />
+                <marker date="1494351524150" expanded="true" signature="2791:2836" ph="insert into missingValue... " />
+                <marker date="1494351524150" expanded="true" signature="2791:2837" ph="insert into missingValue... " />
               </folding>
             </state>
           </provider>
@@ -673,12 +679,12 @@
       <workItem from="1494261389107" duration="2688000" />
       <workItem from="1494304507556" duration="2133000" />
       <workItem from="1494348626803" duration="1876000" />
-      <workItem from="1494351141808" duration="139000" />
+      <workItem from="1494351141808" duration="383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26748000" />
+    <option name="totallyTimeSpent" value="26992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -1154,16 +1160,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1000">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <folding>
+            <marker date="1494351379800" expanded="true" signature="1347:1353" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/ActionButtons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+        <state relative-caret-position="793">
+          <caret line="97" column="29" lean-forward="false" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="29" />
           <folding>
-            <marker date="1494351271418" expanded="true" signature="2633:2717" ph="insert into missingValue... " />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#1867#1868#0" expanded="true" />
+            <marker date="1494351524150" expanded="true" signature="2791:2825" ph="insert into missingValue... " />
+            <marker date="1494351524150" expanded="true" signature="2791:2836" ph="insert into missingValue... " />
+            <marker date="1494351524150" expanded="true" signature="2791:2837" ph="insert into missingValue... " />
           </folding>
         </state>
       </provider>
