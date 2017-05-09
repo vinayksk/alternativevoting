@@ -62,6 +62,9 @@ public class Setup
 
             mystat.executeUpdate( sql );
 
+//            String test = "DROP TABLE Election1 ";
+//            mystat.executeUpdate(test);
+
         }
         catch ( Exception exc )
         {

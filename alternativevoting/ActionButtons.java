@@ -3,6 +3,9 @@ package alternativevoting;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -17,6 +20,24 @@ public class ActionButtons extends JPanel implements ActionListener
     private VisualBallot b;
 
     private VoterInfo v;
+
+    // Account details for Azure database
+    private String hostName = "warowac";
+
+    private String dbName = "testDB";
+
+    private String user = "warowac";
+
+    private String password = "XoFruitL00ps";
+
+    private String url = String.format(
+        "jdbc:sqlserver://%s.database.windows.net:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;",
+        hostName,
+        dbName,
+        user,
+        password );
+
+    private Connection connection = null;
 
 
     public ActionButtons( VisualBallot b, VoterInfo v )
@@ -52,24 +73,38 @@ public class ActionButtons extends JPanel implements ActionListener
 
     public void actionPerformed( ActionEvent e )
     {
-        JButton button = (JButton)e.getSource();
-        if ( button.getText().equals( "Clear" ) )
+        try
         {
-            b.clearBallot();
-        }
-        else if ( button.getText().equals( "Vote" ) )
-        {
-            int[] array = b.pushBallot();
-            String str = ( (ElectionScreen)( this.getParent() ) )
-                .getElectionName();
-            // here is where you put it into database (array & str)
-            b.clearBallot();
-        }
-        else if ( button.getText().equals( "Tutorial" ) )
-        {
-            System.out.println(
-                "Rank your candidates from 1 to N, where N is your least preferred candidate! If you don't want to vote for a candidate, just leave it blank." );
+            connection = DriverManager.getConnection( url );
+            Statement mystat = connection.createStatement();
 
+            JButton button = (JButton)e.getSource();
+            if ( button.getText().equals( "Clear" ) )
+            {
+                b.clearBallot();
+            }
+            else if ( button.getText().equals( "Vote" ) )
+            {
+                int[] array = b.pushBallot();
+                String str = Integer.toString( (int)( Math.random() * 100 ) );
+                // here is where you put it into database (array & str)
+                String newuser = "insert into Votes () values (str, array[0], array[1], array[2])";
+                mystat.executeUpdate( newuser );
+                System.out.println( "added the next value" );
+                b.clearBallot();
+            }
+            else if ( button.getText().equals( "Tutorial" ) )
+            {
+                System.out.println(
+                    "Rank your candidates from 1 to N, where N is your least preferred candidate! If you don't want to vote for a candidate, just leave it blank." );
+
+            }
         }
+
+        catch ( Exception exc )
+        {
+            exc.printStackTrace();
+        }
+
     }
 }
