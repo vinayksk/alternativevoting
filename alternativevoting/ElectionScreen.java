@@ -44,6 +44,12 @@ public class ElectionScreen extends JFrame implements ActionListener
     }
 
 
+    public String getElectionName()
+    {
+        return electionName;
+    }
+
+
     public void actionPerformed( ActionEvent e )
     {
         b.actionPerformed( e );

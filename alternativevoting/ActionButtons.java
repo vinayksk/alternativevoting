@@ -15,11 +15,11 @@ public class ActionButtons extends JPanel implements ActionListener
     private JButton clearButton, submitButton, tutorial;
 
     private VisualBallot b;
-    
+
     private VoterInfo v;
 
 
-    public ActionButtons( VisualBallot b , VoterInfo v)
+    public ActionButtons( VisualBallot b, VoterInfo v )
     {
         clearButton = new JButton( "Clear" );
         clearButton.setPreferredSize( new Dimension( 90, 80 ) );
@@ -39,7 +39,7 @@ public class ActionButtons extends JPanel implements ActionListener
         this.setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
 
         this.b = b;
-        
+
         this.v = v;
     }
 
@@ -60,7 +60,8 @@ public class ActionButtons extends JPanel implements ActionListener
         else if ( button.getText().equals( "Vote" ) )
         {
             int[] array = b.pushBallot();
-            String str = Integer.toString( (int)( Math.random() * 100 ) );
+            String str = ( (ElectionScreen)( this.getParent() ) )
+                .getElectionName();
             // here is where you put it into database (array & str)
             b.clearBallot();
         }
