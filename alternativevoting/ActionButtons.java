@@ -18,6 +18,8 @@ public class ActionButtons extends JPanel implements ActionListener
     private JButton clearButton, submitButton, tutorial;
 
     private VisualBallot b;
+    
+    private VoterInfo v;
 
     //Account details for Azure database
     private String hostName = "warowac";
@@ -28,7 +30,7 @@ public class ActionButtons extends JPanel implements ActionListener
     private Connection connection = null;
 
 
-    public ActionButtons( VisualBallot b )
+    public ActionButtons( VisualBallot b , VoterInfo v)
     {
         clearButton = new JButton( "Clear" );
         clearButton.setPreferredSize( new Dimension( 90, 80 ) );
@@ -48,6 +50,8 @@ public class ActionButtons extends JPanel implements ActionListener
         this.setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
 
         this.b = b;
+        
+        this.v = v;
     }
 
 

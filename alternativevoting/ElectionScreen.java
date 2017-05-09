@@ -11,41 +11,36 @@ import javax.swing.*;
 
 public class ElectionScreen extends JFrame implements ActionListener
 {
-    LinkedList<Candidate> ballots;
+    ArrayList<Candidate> candidates;
+
+    String electionName;
 
     BarChart chart;
 
     VisualBallot b;
 
-    ActionButtons a;
+    ActionButtons buttons;
+
+    VoterInfo v;
 
 
-    public ElectionScreen()
+    public ElectionScreen( ArrayList<Candidate> a, String electionName )
     {
-        super( "Vote" );
+        super( electionName );
         Container c = getContentPane();
         c.setBackground( Color.WHITE );
-        ArrayList<Candidate> list = new ArrayList<Candidate>();
-        list.add( new Candidate( "Jeffrey", 12 ) );
-        list.add( new Candidate( "Austin", 2 ) );
-        list.add( new Candidate( "De Facto", 3 ) );
-        list.add( new Candidate( "Mathew", 23 ) );
-        list.add( new Candidate( "Mattthew", 13 ) );
-        chart = new BarChart( list );
+        candidates = a;
+        chart = new BarChart( a );
         c.add( chart, BorderLayout.CENTER );
         b = new VisualBallot( chart );
         c.add( b, BorderLayout.SOUTH );
-        a = new ActionButtons( b );
-        c.add( a, BorderLayout.EAST );
-    }
-
-
-    public static void main( String[] args )
-    {
-        ElectionScreen w = new ElectionScreen();
-        w.setBounds( 100, 100, 700, 700 );
-        w.setDefaultCloseOperation( EXIT_ON_CLOSE );
-        w.setVisible( true );
+        v = new VoterInfo();
+        c.add( v, BorderLayout.WEST );
+        buttons = new ActionButtons( b, v );
+        c.add( buttons, BorderLayout.EAST );
+        this.setBounds( 100, 100, 700, 700 );
+        setDefaultCloseOperation( EXIT_ON_CLOSE );
+        setVisible( true );
     }
 
 
