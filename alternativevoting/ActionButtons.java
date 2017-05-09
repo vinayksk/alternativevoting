@@ -56,12 +56,14 @@ public class ActionButtons extends JPanel implements ActionListener
         else if ( button.getText().equals( "Vote" ) )
         {
             int[] array = b.pushBallot();
-            // here is where you put it into database
+            String str = Integer.toString( (int)( Math.random() * 100 ) );
+            // here is where you put it into database (array & str)
             b.clearBallot();
         }
         else if ( button.getText().equals( "Tutorial" ) )
         {
-            System.out.println( "CRINGE" + "\nC\nR\nI\nN\nG\nE" );
+            System.out.println(
+                "Rank your candidates from 1 to N, where N is your least preferred candidate! If you don't want to vote for a candidate, just leave it blank." );
 
         }
     }
