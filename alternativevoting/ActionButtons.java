@@ -87,6 +87,8 @@ public class ActionButtons extends JPanel implements ActionListener
             {
                 int[] array = b.pushBallot();
                 String str = Integer.toString( (int)( Math.random() * 100 ) );
+                String electionName = ( (ElectionScreen)( this.getParent() ) )
+                    .getElectionName();
                 // here is where you put it into database (array & str)
                 String newuser = "insert into Votes () values (str, array[0], array[1], array[2])";
                 mystat.executeUpdate( newuser );
