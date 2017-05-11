@@ -9,7 +9,6 @@ public class ResultScreen extends JFrame
 {
     BarChart results;
 
-
     public ResultScreen( String electionName )
     {
         super( electionName );
