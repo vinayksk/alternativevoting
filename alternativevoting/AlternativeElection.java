@@ -122,7 +122,6 @@ public class AlternativeElection
             }
             System.out.println();
         }
-        System.out.println();
         for ( Ballot b : list )
         {
             b.getList().get( 0 ).changeVotes( 1 );
@@ -164,7 +163,6 @@ public class AlternativeElection
             }
             Collections.sort( names );
         }
-
         System.out.println(
             "The winner is " + names.get( names.size() - 1 ).getName() + "!" );
     }
