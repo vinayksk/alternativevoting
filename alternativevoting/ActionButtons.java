@@ -95,6 +95,7 @@ public class ActionButtons extends JPanel implements ActionListener
                     .getWindowAncestor( this ) ) ).getCandidates();
                 // here is where you put it into database (array & str)
                 String newvoter = "insert into " + electionName + " (name";
+<<<<<<< HEAD
                 for ( int i = 0; i < candidates.size(); i++ )
                 {
                     newvoter = newvoter + ", " + candidates.get( i );
@@ -106,6 +107,16 @@ public class ActionButtons extends JPanel implements ActionListener
                 }
                 newvoter = newvoter + ")";
                 System.out.println( newvoter );
+=======
+                for (int i = 0; i < candidates.size(); i++){
+                    newvoter = newvoter + ", " + candidates.get(i);
+                }
+                newvoter = newvoter + ") values (" + str;
+                for (int i = 0; i < array.length; i++){
+                    newvoter = newvoter + ", " + array[i];
+                }
+                newvoter = newvoter + ")";
+>>>>>>> 09876d5830cffbf5e4e77b02a384ccf41f83bc99
                 mystat.executeUpdate( newvoter );
                 System.out.println( "added the next voter" );
                 b.clearBallot();

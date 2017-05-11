@@ -13,6 +13,10 @@ public class Ballot
         list = new ArrayList<Candidate>();
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09876d5830cffbf5e4e77b02a384ccf41f83bc99
     public void add( Candidate c )
     {
         list.add( c );
