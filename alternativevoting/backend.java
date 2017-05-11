@@ -20,14 +20,14 @@ public class backend {
             String lit = connection.getSchema();
             System.out.println("Success " + lit);
 
-            String fats = "insert into warowac1 (name, 1, 2, 3, 4) values ('vote', 1, 3, 2, 4)";
-            mystat.executeUpdate(fats);
-            System.out.println("added the next value");
+//            String fats = "insert into warowac1 (name, 1, 2, 3, 4) values ('vote', 1, 3, 2, 4)";
+//            mystat.executeUpdate(fats);
+//            System.out.println("added the next value");
 
-            ResultSet myRs = mystat.executeQuery("select * from Votes");
+            ResultSet myRs = mystat.executeQuery("select * from crigne8");
 
             while(myRs.next()){
-                System.out.println(myRs.getString("name"));
+                System.out.println(myRs.getString("vinay"));
             }
 
         }
