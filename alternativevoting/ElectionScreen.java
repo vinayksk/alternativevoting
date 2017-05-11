@@ -27,6 +27,7 @@ public class ElectionScreen extends JFrame implements ActionListener
     public ElectionScreen( ArrayList<Candidate> a, String electionName )
     {
         super( electionName );
+        this.electionName = electionName;
         Container c = getContentPane();
         c.setBackground( Color.WHITE );
         candidates = a;
@@ -46,7 +47,6 @@ public class ElectionScreen extends JFrame implements ActionListener
         setVisible( true );
     }
 
-
     public String getElectionName()
     {
         return electionName;
@@ -61,7 +61,6 @@ public class ElectionScreen extends JFrame implements ActionListener
 
     public void actionPerformed( ActionEvent e )
     {
-
         b.actionPerformed( e );
     }
 }

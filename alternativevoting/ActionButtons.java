@@ -22,7 +22,7 @@ public class ActionButtons extends JPanel implements ActionListener
     private VisualBallot b;
 
     private VoterInfo v;
-
+    
     // Account details for Azure database
     private String hostName = "warowac";
 
@@ -105,6 +105,7 @@ public class ActionButtons extends JPanel implements ActionListener
                     newvoter = newvoter + ", " + array[i];
                 }
                 newvoter = newvoter + ")";
+                System.out.println( newvoter );
                 mystat.executeUpdate( newvoter );
                 System.out.println( "added the next voter" );
                 b.clearBallot();
@@ -113,7 +114,6 @@ public class ActionButtons extends JPanel implements ActionListener
             {
                 System.out.println(
                     "Rank your candidates from 1 to N, where N is your least preferred candidate! If you don't want to vote for a candidate, just leave it blank." );
-
             }
         }
 
