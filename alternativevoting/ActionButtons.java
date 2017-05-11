@@ -12,6 +12,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 
 public class ActionButtons extends JPanel implements ActionListener
@@ -88,10 +89,9 @@ public class ActionButtons extends JPanel implements ActionListener
             {
                 int[] array = b.pushBallot();
                 String str = v.getName();
-                String electionName = ( (ElectionScreen)( this.getParent() ) )
+                String electionName = ( (ElectionScreen)( SwingUtilities.getWindowAncestor(this) ) )
                     .getElectionName();
-                ArrayList<Candidate> candidates = ( (ElectionScreen)( this
-                    .getParent() ) ).getCandidates();
+                ArrayList<Candidate> candidates = ( (ElectionScreen)( SwingUtilities.getWindowAncestor(this) ) ).getCandidates();
                 // here is where you put it into database (array & str)
                 String newvoter = "insert into " + electionName + " (" + str + ",";
                 for (int i = 0; i < candidates.size(); i++){
