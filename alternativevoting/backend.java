@@ -20,9 +20,9 @@ public class backend {
             String lit = connection.getSchema();
             System.out.println("Success " + lit);
 
-//            String newuser = "insert into Votes (name, Vote1, Vote2, Vote3) values ('Andrew', 3, 1, 1)";
-//            mystat.executeUpdate(newuser);
-//            System.out.println("added the next value");
+            String fats = "insert into warowac1 (name, 1, 2, 3, 4) values ('vote', 1, 3, 2, 4)";
+            mystat.executeUpdate(fats);
+            System.out.println("added the next value");
 
             ResultSet myRs = mystat.executeQuery("select * from Votes");
 

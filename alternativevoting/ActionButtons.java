@@ -100,7 +100,7 @@ public class ActionButtons extends JPanel implements ActionListener
                 {
                     newvoter = newvoter + ", " + candidates.get( i );
                 }
-                newvoter = newvoter + ") values (" + str;
+                newvoter = newvoter + ") values (\'" + str + "\'";
                 for ( int i = 0; i < array.length; i++ )
                 {
                     newvoter = newvoter + ", " + array[i];
