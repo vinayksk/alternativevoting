@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -16,18 +17,28 @@ public class VoterInfo extends JPanel
 
     JTextField age;
 
+    JLabel description;
+
 
     public VoterInfo()
     {
+        this.setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
+
         voterName = new JTextField();
         voterName.setText( "Voter name?" );
-        voterName.setPreferredSize( new Dimension( 80, 40 ) );
+        voterName.setPreferredSize( new Dimension( 40, 80 ) );
         this.add( voterName );
 
         age = new JTextField();
         age.setText( "Age?" );
-        age.setPreferredSize( new Dimension( 80, 40 ) );
+        age.setPreferredSize( new Dimension( 40, 80 ) );
         this.add( age );
+
+        description = new JLabel();
+        description.setPreferredSize( new Dimension( 100, 80 ) );
+        description.setText(
+            "This will only be used for statistical purposes. By the way, please don't put any numbers in your name!" );
+        this.add( description );
     }
 
 

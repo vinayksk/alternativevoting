@@ -17,7 +17,7 @@ import javax.swing.SwingUtilities;
 
 public class ActionButtons extends JPanel implements ActionListener
 {
-    private JButton clearButton, submitButton, tutorial;
+    private JButton clearButton, submitButton;
 
     private VisualBallot b;
 
@@ -44,22 +44,17 @@ public class ActionButtons extends JPanel implements ActionListener
 
     public ActionButtons( VisualBallot b, VoterInfo v )
     {
+        this.setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
+        
         clearButton = new JButton( "Clear" );
-        clearButton.setPreferredSize( new Dimension( 90, 80 ) );
+        clearButton.setPreferredSize( new Dimension( 40, 80 ) );
         clearButton.addActionListener( this );
         add( clearButton );
 
         submitButton = new JButton( "Vote" );
-        submitButton.setPreferredSize( new Dimension( 80, 80 ) );
+        submitButton.setPreferredSize( new Dimension( 40, 80 ) );
         submitButton.addActionListener( this );
         add( submitButton );
-
-        tutorial = new JButton( "Tutorial" );
-        tutorial.setPreferredSize( new Dimension( 90, 80 ) );
-        tutorial.addActionListener( this );
-        add( tutorial );
-
-        this.setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
 
         this.b = b;
 
@@ -111,11 +106,6 @@ public class ActionButtons extends JPanel implements ActionListener
                 mystat.executeUpdate( newvoter );
                 System.out.println( "added the next voter" );
                 b.clearBallot();
-            }
-            else if ( button.getText().equals( "Tutorial" ) )
-            {
-                System.out.println(
-                    "Rank your candidates from 1 to N, where N is your least preferred candidate! If you don't want to vote for a candidate, just leave it blank." );
             }
         }
 
