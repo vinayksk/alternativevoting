@@ -88,17 +88,25 @@ public class ActionButtons extends JPanel implements ActionListener
             else if ( button.getText().equals( "Vote" ) )
             {
                 int[] array = b.pushBallot();
-                String str = v.getName();
-                String electionName = ( (ElectionScreen)( SwingUtilities.getWindowAncestor(this) ) )
-                    .getElectionName();
-                ArrayList<Candidate> candidates = ( (ElectionScreen)( SwingUtilities.getWindowAncestor(this) ) ).getCandidates();
+                String str = v.getVoterName();
+                String electionName = ( (ElectionScreen)( SwingUtilities
+                    .getWindowAncestor( this ) ) ).getElectionName();
+                ArrayList<Candidate> candidates = ( (ElectionScreen)( SwingUtilities
+                    .getWindowAncestor( this ) ) ).getCandidates();
                 // here is where you put it into database (array & str)
-                String newvoter = "insert into " + electionName + " (" + str + ",";
-                for (int i = 0; i < candidates.size(); i++){
-                    newvoter;
+                String newvoter = "insert into " + electionName + " (name";
+                for ( int i = 0; i < candidates.size(); i++ )
+                {
+                    newvoter = newvoter + ", " + candidates.get( i );
                 }
-                mystat.executeUpdate( newuser );
-                System.out.println( "added the next value" );
+                newvoter = newvoter + ") values (" + str;
+                for ( int i = 0; i < array.length; i++ )
+                {
+                    newvoter = newvoter + ", " + array[i];
+                }
+                newvoter = newvoter + ")";
+                mystat.executeUpdate( newvoter );
+                System.out.println( "added the next voter" );
                 b.clearBallot();
             }
             else if ( button.getText().equals( "Tutorial" ) )

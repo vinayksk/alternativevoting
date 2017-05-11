@@ -38,6 +38,7 @@ public class ElectionScreen extends JFrame implements ActionListener
 
         v = new VoterInfo();
         c.add( v, BorderLayout.WEST );
+
         buttons = new ActionButtons( b, v );
         c.add( buttons, BorderLayout.EAST );
         this.setBounds( 100, 100, 700, 700 );
