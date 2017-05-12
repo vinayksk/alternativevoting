@@ -73,7 +73,9 @@ public class Setup
 
         System.out.println( "Press any key to finish entering votes" );
         String filler = in.nextLine();
-        ResultScreen r = new ResultScreen(electionName);
+        BallotStats b = new BallotStats();
+        // here we store all the stuff from database into b
+        ResultScreen r = new ResultScreen( electionName, b );
         in.close();
     }
 }
