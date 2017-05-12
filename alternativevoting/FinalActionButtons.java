@@ -18,12 +18,12 @@ public class FinalActionButtons extends JPanel implements ActionListener
     {
 
         eliminateButton = new JButton( "Eliminate a Candidate" );
-        eliminateButton.setPreferredSize( new Dimension( 150, 40 ) );
+        eliminateButton.setPreferredSize( new Dimension( 200, 40 ) );
         eliminateButton.addActionListener( this );
         add( eliminateButton );
 
         doneButton = new JButton( "Done with Elimination" );
-        doneButton.setPreferredSize( new Dimension( 150, 40 ) );
+        doneButton.setPreferredSize( new Dimension( 200, 40 ) );
         doneButton.addActionListener( this );
         add( doneButton );
     }
