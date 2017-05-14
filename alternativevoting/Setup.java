@@ -62,8 +62,8 @@ public class Setup
 
             mystat.executeUpdate( sql );
 
-//            String test = "DROP TABLE Election1 ";
-//            mystat.executeUpdate(test);
+            // String test = "DROP TABLE Election1 ";
+            // mystat.executeUpdate(test);
 
         }
         catch ( Exception exc )
@@ -71,6 +71,11 @@ public class Setup
             exc.printStackTrace();
         }
 
+        System.out.println( "Press any key to finish entering votes" );
+        String filler = in.nextLine();
+        BallotStats b = new BallotStats();
+        // here we store all the stuff from database into b
+        ResultScreen r = new ResultScreen( electionName, b );
         in.close();
     }
 }
