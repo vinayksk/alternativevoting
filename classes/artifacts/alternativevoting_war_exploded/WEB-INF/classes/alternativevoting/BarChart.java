@@ -65,6 +65,24 @@ public class BarChart extends JPanel
                     (int)( 3 * getHeight() / 16 + i * barWidth * 1.5 ) );
             }
         }
+        else
+        {
+            for ( int i = 0; i < candList.size(); i++ )
+            {
+                g.setColor( candColors.get( i ) );
+                g.fillRect( getWidth() / 4,
+                    (int)( getHeight() / 8 + i * barWidth * 1.5 ),
+                    1,
+                    barWidth );
+                g.setColor( Color.BLACK );
+                g.drawString( "0%",
+                    getWidth() / 4,
+                    (int)( getHeight() / 8 + i * barWidth * 1.5 ) );
+                g.drawString( candList.get( i ).getName(),
+                    getWidth() / 8,
+                    (int)( 3 * getHeight() / 16 + i * barWidth * 1.5 ) );
+            }
+        }
     }
 
 

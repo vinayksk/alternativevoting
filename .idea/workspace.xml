@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="alternativevoting:war exploded" />
+      <artifact name="election" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aa81f17-05df-4689-bdfa-c2c3844ca97c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/delete.class" afterPath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/delete.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting.iml" afterPath="$PROJECT_DIR$/alternativevoting.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/Setup.java" afterPath="$PROJECT_DIR$/alternativevoting/Setup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/.gitignore" afterPath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/ActionButtons.java" afterPath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/ActionButtons.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/BarChart.java" afterPath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/BarChart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/ResultScreen.java" afterPath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/ResultScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/Setup.java" afterPath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/Setup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/VoterInfo.java" afterPath="$PROJECT_DIR$/classes/artifacts/alternativevoting_war_exploded/WEB-INF/classes/alternativevoting/VoterInfo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,8 +113,8 @@
               <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <marker date="1494723499217" expanded="true" signature="1661:1738" ph="CREATE TABLE... missingValue" />
-                <marker date="1494723499217" expanded="true" signature="2234:2240" ph="{...}" />
+                <marker date="1494799320608" expanded="true" signature="1661:1738" ph="CREATE TABLE... missingValue" />
+                <marker date="1494799320608" expanded="true" signature="2512:2518" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -135,9 +141,11 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="821">
+              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,9 +157,10 @@
               <caret line="98" column="56" lean-forward="false" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#1698#1699#0" expanded="false" />
-                <element signature="e#1722#1723#0" expanded="false" />
-                <marker date="1494524025204" expanded="true" signature="3325:3446" ph="{...}" />
+                <marker date="1494799320585" expanded="false" signature="1685:1700" ph=" { " />
+                <marker date="1494799320585" expanded="false" signature="1709:1715" ph=" }" />
+                <marker date="1494799320585" expanded="true" signature="1771:3438" ph="{...}" />
+                <marker date="1494799320585" expanded="true" signature="3317:3438" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -186,6 +195,7 @@
         <option value="$PROJECT_DIR$/alternativevoting/Setup.java" />
         <option value="$PROJECT_DIR$/alternativevoting/ElectionScreen.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/index.html.jsp" />
+        <option value="$PROJECT_DIR$/alternativevoting/FusionCharts.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
@@ -272,25 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="alternativevoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alternativevoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,8 +294,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Lynbrook 2016-17/postgresql-42.1.1.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jsp-wrapper-master/jsp-wrapper-master/includeJarFiles/gson-2.4.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
@@ -1051,16 +1043,15 @@
       <workItem from="1494718469827" duration="904000" />
       <workItem from="1494723619481" duration="3554000" />
       <workItem from="1494731371231" duration="10254000" />
-      <workItem from="1494787288306" duration="5657000" />
+      <workItem from="1494787288306" duration="10503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53107000" />
+    <option name="totallyTimeSpent" value="57953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1085,9 +1076,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="HDInsight Spark Submission" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28908357" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28908357" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1634375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1634375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1116,37 +1107,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
-            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
-            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
-            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alternativevoting/Ballot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#138#139#0" expanded="false" />
-            <element signature="e#187#188#0" expanded="false" />
-            <element signature="e#229#230#0" expanded="false" />
-            <element signature="e#258#259#0" expanded="false" />
-            <element signature="e#308#309#0" expanded="false" />
-            <element signature="e#335#336#0" expanded="false" />
-            <element signature="e#372#373#0" expanded="false" />
-            <element signature="e#410#411#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/Candidate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1653,9 +1613,10 @@
           <caret line="98" column="56" lean-forward="false" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1698#1699#0" expanded="false" />
-            <element signature="e#1722#1723#0" expanded="false" />
-            <marker date="1494524025204" expanded="true" signature="3325:3446" ph="{...}" />
+            <marker date="1494799320585" expanded="false" signature="1685:1700" ph=" { " />
+            <marker date="1494799320585" expanded="false" signature="1709:1715" ph=" }" />
+            <marker date="1494799320585" expanded="true" signature="1771:3438" ph="{...}" />
+            <marker date="1494799320585" expanded="true" signature="3317:3438" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1691,8 +1652,8 @@
           <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1494723499217" expanded="true" signature="1661:1738" ph="CREATE TABLE... missingValue" />
-            <marker date="1494723499217" expanded="true" signature="2234:2240" ph="{...}" />
+            <marker date="1494799320608" expanded="true" signature="1661:1738" ph="CREATE TABLE... missingValue" />
+            <marker date="1494799320608" expanded="true" signature="2512:2518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1714,11 +1675,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/jsp-wrapper-master/jsp-wrapper-master/src/java/fusioncharts/FusionCharts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#3217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/FusionCharts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="821">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
