@@ -22,7 +22,7 @@ public class AlternativeElection
             str = in.nextLine();
         }
         count--;
-        LinkedList<Ballot> list = new LinkedList<Ballot>();
+        HashSet<Ballot> set = new HashSet<Ballot>();
         int count2 = 1;
         System.out.println( "Enter ballot " + count2 + ":" );
         str = in.nextLine();
@@ -31,13 +31,13 @@ public class AlternativeElection
         {
             str.split( "\\s+" );
             temp.add( str );
-            list.add( new Ballot() );
+            Ballot b = new Ballot();
+            set.add( b );
             for ( int i = 1; i <= count; i++ )
             {
                 if ( str.contains( i + "" ) )
                 {
-                    list.get( count2 - 1 )
-                        .add( names.get( str.indexOf( i + "" ) ) );
+                    b.add( names.get( str.indexOf( i + "" ) ) );
                 }
                 else
                 {
@@ -122,11 +122,12 @@ public class AlternativeElection
             }
             System.out.println();
         }
-        for ( Ballot b : list )
+        for ( Ballot b : set )
         {
             b.getList().get( 0 ).changeVotes( 1 );
         }
         Collections.sort( names );
+
         while ( names.size() > 1
             && 2 * names.get( names.size() - 1 ).getVotes() <= count2 )
         {
@@ -147,7 +148,7 @@ public class AlternativeElection
                     remove.add( names.remove( i ) );
                 }
             }
-            for ( Ballot b : list )
+            for ( Ballot b : set )
             {
                 for ( int i = b.getList().size() - 1; i >= 0; i-- )
                 {
@@ -162,8 +163,10 @@ public class AlternativeElection
                 }
             }
             Collections.sort( names );
-        }
+        }        
         System.out.println(
             "The winner is " + names.get( names.size() - 1 ).getName() + "!" );
+        System.out.println(
+            "First-past-the-post winner: " + names.get( names.size() - 1 ) );
     }
 }

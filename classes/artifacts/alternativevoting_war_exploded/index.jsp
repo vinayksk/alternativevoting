@@ -58,16 +58,16 @@
 </body>
 
 
-<%--<script>--%>
-    <%--window.onload = function () {--%>
-        <%--TESTER = document.getElementById('tester');--%>
-        <%--Plotly.plot( TESTER, [{--%>
-            <%--x: monthData,--%>
-            <%--y: userData }], {--%>
-            <%--margin: { t: 0 } } );--%>
-    <%--}--%>
-    <%----%>
-<%--</script>--%>
+<script>
+    window.onload = function () {
+        TESTER = document.getElementById('tester');
+        Plotly.plot( TESTER, [{
+            x: monthData,
+            y: userData }], {
+            margin: { t: 0 } } );
+    }
+
+</script>
 
 
 </html>

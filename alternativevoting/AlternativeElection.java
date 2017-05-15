@@ -127,7 +127,8 @@ public class AlternativeElection
             b.getList().get( 0 ).changeVotes( 1 );
         }
         Collections.sort( names );
-
+        System.out.println(
+                "First-past-the-post winner: " + names.get( names.size() - 1 ) );
         while ( names.size() > 1
             && 2 * names.get( names.size() - 1 ).getVotes() <= count2 )
         {
@@ -165,8 +166,6 @@ public class AlternativeElection
             Collections.sort( names );
         }        
         System.out.println(
-            "The winner is " + names.get( names.size() - 1 ).getName() + "!" );
-        System.out.println(
-            "First-past-the-post winner: " + names.get( names.size() - 1 ) );
+            "Alternative vote winner: " + names.get( names.size() - 1 ).getName() + "!" );
     }
 }
