@@ -20,7 +20,7 @@
 
 <body>
     <b><% out.println("Hello World!"); %></b>
-    <h1>hello</h1>
+    <h1>Values queried from this database: <%out.println(request.getParameter("query"));%></h1>
     <div id="tester" style="width:600px;height:250px;"></div>
 </body>
 <script>
@@ -40,7 +40,7 @@
                 connection = DriverManager.getConnection(url);
                 Statement mystat = connection.createStatement();
 
-                ResultSet myRs = mystat.executeQuery("select * from demo");
+                ResultSet myRs = mystat.executeQuery("select * from " + request.getParameter("query"));
                 ResultSetMetaData metaData = myRs.getMetaData();
                 int count = metaData.getColumnCount();
                 for(int i = 2; i <= count; i ++){

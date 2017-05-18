@@ -11,6 +11,9 @@
     <title>Welcome</title>
 </head>
 <body>
-
+    <form action="results.jsp" method="post">
+        <input type="text" name="query">
+        <input type="submit">
+    </form>
 </body>
 </html>
