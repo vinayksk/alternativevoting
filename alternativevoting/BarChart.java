@@ -26,7 +26,7 @@ public class BarChart extends JPanel
         for ( int i = 0; i < candList.size(); i++ )
         {
             candColors.add(
-                new Color( (int)( 120 + 63.0 * ( i + 1 ) / candList.size() ),
+                new Color( (int)( 120 + 67.0 * ( i + 1 ) / candList.size() ),
                     (int)( 120 + 34.0 * ( i + 1 ) / candList.size() ),
                     (int)( 120 + 23.0 * ( i + 1 ) / candList.size() ) ) );
         }
