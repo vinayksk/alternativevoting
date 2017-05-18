@@ -44,13 +44,13 @@
                 ResultSetMetaData metaData = myRs.getMetaData();
                 int count = metaData.getColumnCount();
                 for(int i = 2; i <= count; i ++){
-                    users.add(metaData.getColumnName(i));
                     map.put(metaData.getColumnName(i), 0);
                 }
-
+                Set key = map.keySet();
+                Iterator<String> iter = key.iterator();
                 while(myRs.next()){
-                    for(int i = 0; i < users.size(); i++ ){
-                        candidate1.add(myRs.getInt(users.get(i)));
+                    while(iter.hasNext()){
+                        candidate1.add(myRs.getInt(iter.next()));
                     }
                 }
 

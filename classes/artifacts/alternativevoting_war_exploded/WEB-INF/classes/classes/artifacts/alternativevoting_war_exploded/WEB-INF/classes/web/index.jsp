@@ -1,9 +1,6 @@
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="static jdk.nashorn.internal.objects.NativeArray.join" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.ResultSet" %><%--
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %><%--
   Created by IntelliJ IDEA.
   User: aweso
   Date: 5/13/2017
@@ -23,20 +20,15 @@
 
 <body>
     <b><% out.println("Hello World!"); %></b>
-    <b><% out.println("graph"); %></b>
-    <h1>
-        hello
-    </h1>
+    <h1>hello</h1>
     <div id="tester" style="width:600px;height:250px;"></div>
 </body>
 <script>
-
-    <%!
-           // --- Create two Java Arrays
-            public ArrayList<Integer> months = new ArrayList<Integer>();
-            public ArrayList<String> users = new ArrayList<String>();
-    %>
     <%
+            Map<String, Integer> map = new HashMap<String, Integer>();
+            ArrayList<String> users = new ArrayList<>();
+            ArrayList<Integer> candidate1 = new ArrayList<>();
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String hostName = "warowac";
             String dbName = "testDB";
             String user = "warowac";
@@ -47,15 +39,19 @@
             try{
                 connection = DriverManager.getConnection(url);
                 Statement mystat = connection.createStatement();
-                String lit = connection.getSchema();
-                System.out.println("Success " + lit);
 
-
-                ResultSet myRs = mystat.executeQuery("select * from warowac2");
+                ResultSet myRs = mystat.executeQuery("select * from demo");
+                ResultSetMetaData metaData = myRs.getMetaData();
+                int count = metaData.getColumnCount();
+                for(int i = 2; i <= count; i ++){
+                    users.add(metaData.getColumnName(i));
+                    map.put(metaData.getColumnName(i), 0);
+                }
 
                 while(myRs.next()){
-                    users.add(myRs.getString("name"));
-                    months.add(myRs.getInt("byby"));
+                    for(int i = 0; i < users.size(); i++ ){
+                        candidate1.add(myRs.getInt(users.get(i)));
+                    }
                 }
 
             }
@@ -65,14 +61,15 @@
       %>
 
     // --- add a comma after each value in the array and convert to javascript string representing an array
-    var jsArray = [<% for (int i = 0; i < months.size(); i++) { %>"<%= months.get(i) %>"<%= i + 1 < months.size() ? ",":"" %><% } %>];
-    var jsArray2 = [<% for (int i = 0; i < users.size(); i++) { %>"<%= users.get(i) %>"<%= i + 1 < users.size() ? ",":"" %><% } %>];
-    console.log(jsArray);
+    var jsArray1 = [<% for (int i = 0; i < users.size(); i++) { %>"<%= users.get(i) %>"<%= i + 1 < users.size() ? ",":"" %><% } %>];
+    var jsArray2 = [<% for (int i = 0; i < candidate1.size(); i++) { %>"<%= candidate1.get(i) %>"<%= i + 1 < candidate1.size() ? ",":"" %><% } %>];
+    console.log(jsArray1);
+    console.log(jsArray2);
 
     TESTER = document.getElementById('tester');
     Plotly.plot( TESTER, [{
-        x: jsArray2,
-        y: jsArray,
+        x: jsArray1,
+        y: jsArray2,
         type: 'bar'}], {
         margin: { t: 0 } } );
 </script>
