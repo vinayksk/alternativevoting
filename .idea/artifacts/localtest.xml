@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="localtest">
+    <output-path>$PROJECT_DIR$/classes/artifacts/localtest</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="alternativevoting/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../Dev/sqljdbc_6.0/enu/jre8/sqljdbc42.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
