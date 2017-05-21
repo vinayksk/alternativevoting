@@ -27,6 +27,7 @@
     <%
             Map<String, Integer> map = new HashMap<String, Integer>();
             ArrayList<String> users = new ArrayList<>();
+            ArrayList<String> tableList = new ArrayList<>();
             ArrayList<Integer> candidate1 = new ArrayList<>();
             String hostName = "warowac";
             String dbName = "testDB";
@@ -39,7 +40,14 @@
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 connection = DriverManager.getConnection(url);
                 Statement mystat = connection.createStatement();
+                DatabaseMetaData m = connection.getMetaData();
+                ResultSet tables = m.getTables(connection.getCatalog(), null, "TAB_%", null);
+                int j = tables.getMetaData().getColumnCount();
+                while (tables.next()) {
+                    tableList.add(tables.getMetaData().getTableName(j));
+                    j--;
 
+                }
                 ResultSet myRs = mystat.executeQuery("select * from " + request.getParameter("query"));
                 ResultSetMetaData metaData = myRs.getMetaData();
                 int count = metaData.getColumnCount();
@@ -70,8 +78,10 @@
     // --- add a comma after each value in the array and convert to javascript string representing an array
     var jsArray1 = [<% for (int i = 0; i < users.size(); i++) { %>"<%= users.get(i) %>"<%= i + 1 < users.size() ? ",":"" %><% } %>];
     var jsArray2 = [<% for (int i = 0; i < candidate1.size(); i++) { %>"<%= candidate1.get(i) %>"<%= i + 1 < candidate1.size() ? ",":"" %><% } %>];
+    var jsArray3 = [<% for (int i = 0; i < tableList.size(); i++) { %>"<%= tableList.get(i) %>"<%= i + 1 < tableList.size() ? ",":"" %><% } %>];
     console.log(jsArray1);
     console.log(jsArray2);
+    console.log(jsArray3);
 
     TESTER = document.getElementById('tester');
     Plotly.plot( TESTER, [{

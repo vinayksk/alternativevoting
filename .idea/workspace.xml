@@ -6,7 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="1aa81f17-05df-4689-bdfa-c2c3844ca97c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/results.jsp" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/results.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/welcome.jsp" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/results.jsp" afterPath="$PROJECT_DIR$/web/results.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/welcome.jsp" afterPath="$PROJECT_DIR$/web/welcome.jsp" />
+    </list>
+=======
     <list default="true" id="1aa81f17-05df-4689-bdfa-c2c3844ca97c" name="Default" comment="" />
+>>>>>>> origin/master
     <ignored path="$PROJECT_DIR$/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,6 +39,134 @@
     <option name="OUTPUT_DIRECTORY" value="C:\Users\Andrew\Documents\GitHub\alternativevoting\exportToHTML" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+          <file leaf-file-name="Ballot.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/Ballot.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="560">
+                  <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Candidate.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/Candidate.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="backend.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="320">
+                  <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+                  <folding>
+                    <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+                    <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+                    <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+                    <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="delete.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/delete.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="440">
+                  <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+                  <folding>
+                    <marker date="1494523960856" expanded="true" signature="986:997" ph="DROP TABLE m... " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Setup.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/Setup.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="840">
+                  <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+                  <folding>
+                    <marker date="1494799320608" expanded="true" signature="1661:1738" ph="CREATE TABLE... missingValue" />
+                    <marker date="1494799320608" expanded="true" signature="2512:2518" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ElectionScreen.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/ElectionScreen.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="440">
+                  <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="welcome.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/welcome.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="672">
+                  <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AlternativeElection.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/AlternativeElection.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="5040">
+                  <caret line="127" column="9" lean-forward="false" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ActionButtons.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/alternativevoting/ActionButtons.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3320">
+                  <caret line="98" column="56" lean-forward="false" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
+                  <folding>
+                    <marker date="1494799320585" expanded="true" signature="2654:2692" ph="insert into missingValue... " />
+                    <marker date="1494799320585" expanded="true" signature="3317:3438" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+          <file leaf-file-name="results.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/results.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="480">
+                  <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+                  <folding>
+                    <element signature="e#763#780#0#JAVA" expanded="true" />
+                    <marker date="1495165721256" expanded="true" signature="2055:2069" ph="select * fro... missingValue" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="results.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/results.jsp">
@@ -122,6 +260,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> origin/master
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -150,8 +289,14 @@
         <option value="$PROJECT_DIR$/alternativevoting/FusionCharts.java" />
         <option value="$PROJECT_DIR$/alternativevoting/AlternativeElection.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/welcome.jsp" />
         <option value="$PROJECT_DIR$/web/results.jsp" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/web/welcome.jsp" />
+=======
+        <option value="$PROJECT_DIR$/web/voter.jsp" />
+>>>>>>> origin/master
         <option value="$PROJECT_DIR$/alternativevoting/ElectionScreen.java" />
         <option value="$PROJECT_DIR$/alternativevoting/ActionButtons.java" />
         <option value="$PROJECT_DIR$/alternativevoting/Setup.java" />
@@ -161,7 +306,11 @@
         <option value="$PROJECT_DIR$/alternativevoting/ResultApplet.java" />
         <option value="$PROJECT_DIR$/alternativevoting/FinalActionButtons.java" />
         <option value="$PROJECT_DIR$/alternativevoting/ResultScreen.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/web/voter.jsp" />
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -198,7 +347,81 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
+<<<<<<< HEAD
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gson-2.4.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alternativevoting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+=======
     <panes />
+>>>>>>> origin/master
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -845,16 +1068,39 @@
       <workItem from="1495126334615" duration="816000" />
       <workItem from="1495128527532" duration="2378000" />
       <workItem from="1495138987391" duration="1277000" />
+<<<<<<< HEAD
+      <workItem from="1495141383037" duration="57000" />
+      <workItem from="1495157393618" duration="2142000" />
+      <workItem from="1495213248310" duration="2495000" />
+      <workItem from="1495231566452" duration="905000" />
+      <workItem from="1495393090761" duration="775000" />
+=======
       <workItem from="1495212930192" duration="2742000" />
+<<<<<<< HEAD
       <workItem from="1495388213402" duration="3621000" />
+=======
+      <workItem from="1495388213402" duration="3085000" />
+>>>>>>> origin/master
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="94895000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="94906000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="94359000" />
+>>>>>>> origin/master
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+>>>>>>> origin/master
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -871,13 +1117,22 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39959568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> origin/master
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="HDInsight Spark Submission" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27021563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29088914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> origin/master
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -889,6 +1144,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Azure Activity Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="HDInsight Spark Submission" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -929,8 +1185,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="360">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+          </folding>
+=======
         <state relative-caret-position="600">
           <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -952,8 +1219,19 @@
     <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
     <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="600">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+          </folding>
+=======
         <state relative-caret-position="640">
           <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -975,8 +1253,19 @@
     <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
     <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="600">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+          </folding>
+=======
         <state relative-caret-position="1160">
           <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -996,54 +1285,93 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
+    <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="640">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+          </folding>
+=======
+        <state relative-caret-position="880">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+>>>>>>> origin/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Ballot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Candidate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
+    <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1160">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+          </folding>
+=======
+        <state relative-caret-position="400">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+>>>>>>> origin/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Ballot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Candidate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/Ballot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alternativevoting/Candidate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
-    <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alternativevoting/Ballot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alternativevoting/Candidate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
+=======
     <entry file="file://$PROJECT_DIR$/alternativevoting/Election.java" />
     <entry file="file://$PROJECT_DIR$/alternativevoting/CandidatePanel.java">
+>>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
           <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
@@ -1055,15 +1383,32 @@
     <entry file="file://$PROJECT_DIR$/alternativevoting/FusionCharts.java" />
     <entry file="file://$PROJECT_DIR$/alternativevoting/delete.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="80">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+=======
         <state relative-caret-position="231">
           <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/backend.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="400">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding>
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+          </folding>
+=======
         <state relative-caret-position="168">
           <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -1101,8 +1446,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="5040">
+          <caret line="127" column="9" lean-forward="false" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+=======
         <state relative-caret-position="189">
           <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
@@ -1112,16 +1462,26 @@
         <state relative-caret-position="42">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="32" />
           <folding>
+<<<<<<< HEAD
+            <marker date="1494799320585" expanded="true" signature="2654:2692" ph="insert into missingValue... " />
+            <marker date="1494799320585" expanded="true" signature="3317:3438" ph="{...}" />
+=======
             <element signature="e#763#780#0#JAVA" expanded="false" />
             <marker date="1495173986727" expanded="true" signature="1618:1632" ph="select * fro... missingValue" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/ElectionScreen.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="80">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+=======
         <state relative-caret-position="231">
           <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
@@ -1131,16 +1491,29 @@
         <state relative-caret-position="462">
           <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
           <folding>
+<<<<<<< HEAD
+            <marker date="1494523960856" expanded="true" signature="986:997" ph="DROP TABLE m... " />
+=======
             <marker date="1495388489025" expanded="true" signature="1659:1736" ph="CREATE TABLE... missingValue" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/VoterInfo.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="840">
+          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <marker date="1494799320608" expanded="true" signature="1661:1738" ph="CREATE TABLE... missingValue" />
+            <marker date="1494799320608" expanded="true" signature="2512:2518" ph="{...}" />
+          </folding>
+=======
         <state relative-caret-position="147">
           <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
           <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -1165,7 +1538,14 @@
         <state relative-caret-position="273">
           <caret line="85" column="13" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="85" selection-end-column="13" />
           <folding>
+<<<<<<< HEAD
+            <marker date="1494523175059" expanded="true" signature="857:924" ph="insert into warowac1... " />
+            <marker date="1494523175059" expanded="true" signature="1078:1092" ph="select * fro... Votes" />
+            <marker date="1494523175059" expanded="true" signature="1078:1099" ph="select * fro... crign8" />
+            <marker date="1494523175059" expanded="true" signature="1210:1296" ph="..." />
+=======
             <marker date="1495388433475" expanded="true" signature="2608:2646" ph="insert into missingValue... " />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -1180,6 +1560,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/VoterApplet.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="440">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+=======
         <state relative-caret-position="399">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
@@ -1193,11 +1577,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/web/index.jsp" />
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Ballot.java">
+=======
     <entry file="file://$PROJECT_DIR$/alternativevoting/FinalActionButtons.java">
+>>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
@@ -1207,23 +1597,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alternativevoting/ResultScreen.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="480">
+          <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+          <folding>
+            <element signature="e#763#780#0#JAVA" expanded="true" />
+            <marker date="1495165721256" expanded="true" signature="2055:2069" ph="select * fro... missingValue" />
+=======
         <state relative-caret-position="420">
           <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#661#672#0" expanded="true" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/web/voter.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/web/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/alternativevoting/ResultApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1234,6 +1640,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> origin/master
   </component>
   <component name="masterDetails">
     <states>
