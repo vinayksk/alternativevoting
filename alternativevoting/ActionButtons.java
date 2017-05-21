@@ -17,6 +17,8 @@ import javax.swing.SwingUtilities;
 
 public class ActionButtons extends JPanel implements ActionListener
 {
+    private ElectionScreen e;
+
     private JButton clearButton, submitButton;
 
     private VisualBallot b;
@@ -67,6 +69,10 @@ public class ActionButtons extends JPanel implements ActionListener
         return b;
     }
 
+    public void setElectionScreen(ElectionScreen e1)
+    {
+        e = e1;
+    }
 
     public void actionPerformed( ActionEvent e )
     {
@@ -84,10 +90,8 @@ public class ActionButtons extends JPanel implements ActionListener
             {
                 int[] array = b.pushBallot();
                 String str = v.getVoterName();
-                String electionName = ( (ElectionScreen)( SwingUtilities
-                    .getWindowAncestor( this ) ) ).getElectionName();
-                ArrayList<Candidate> candidates = ( (ElectionScreen)( SwingUtilities
-                    .getWindowAncestor( this ) ) ).getCandidates();
+                String electionName = this.e.getElectionName();
+                ArrayList<Candidate> candidates = this.e.getCandidates();
                 // here is where you put it into database (array & str)
                 String newvoter = "insert into " + electionName + " (name";
 

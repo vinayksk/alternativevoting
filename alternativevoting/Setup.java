@@ -27,7 +27,7 @@ public class Setup
         while ( !str.equals( "!" ) )
         {
             names.add( new Candidate( str ) );
-            System.out.println( "Enter the name o  f Candidate " + ++count
+            System.out.println( "Enter the name of Candidate " + ++count
                 + " or \"!\" if there are no more candidates:" );
             str = in.nextLine();
         }

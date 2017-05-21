@@ -12,6 +12,8 @@ public class BallotStats extends JPanel
     public BallotStats()
     {
         display = new JLabel();
+        display.setText("Default");
+        this.add(display);
     }
 
 
