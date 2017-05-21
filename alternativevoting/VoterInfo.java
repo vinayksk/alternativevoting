@@ -26,18 +26,18 @@ public class VoterInfo extends JPanel
 
         voterName = new JTextField();
         voterName.setText( "Voter name?" );
-        voterName.setPreferredSize( new Dimension( 80, 40 ) );
+        voterName.setPreferredSize( new Dimension( 30, 60 ) );
         this.add( voterName );
 
         age = new JTextField();
         age.setText( "Age?" );
-        age.setPreferredSize( new Dimension( 80, 40 ) );
+        age.setPreferredSize( new Dimension( 30, 60 ) );
         this.add( age );
 
         description = new JLabel();
-        description.setPreferredSize( new Dimension( 80, 40 ) );
         description.setText(
-            "This will only be used for statistical purposes. By the way, please don't put any numbers in your name!" );
+            "This will only be used for \n statistical purposes. By the way, please \n don't put any numbers in your name!" );
+        description.setPreferredSize( new Dimension( 60, 60 ) );
         this.add( description );
     }
 

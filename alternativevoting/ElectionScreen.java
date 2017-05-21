@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import javax.swing.*;
 
 
-public class ElectionScreen extends JFrame implements ActionListener
+public class ElectionScreen extends JInternalFrame implements ActionListener
 {
     ArrayList<Candidate> candidates;
 
@@ -42,6 +42,7 @@ public class ElectionScreen extends JFrame implements ActionListener
 
         buttons = new ActionButtons( b, v );
         c.add( buttons, BorderLayout.EAST );
+        buttons.setElectionScreen(this);
         this.setBounds( 100, 100, 700, 700 );
         setDefaultCloseOperation( EXIT_ON_CLOSE );
         setVisible( true );
