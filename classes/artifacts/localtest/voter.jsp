@@ -1,4 +1,3 @@
-<%@ page import="alternativevoting.VoterApplet" %>
 <%@ page import="java.util.*" %>
 <%--
   Created by IntelliJ IDEA.
