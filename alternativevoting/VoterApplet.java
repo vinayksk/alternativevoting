@@ -14,6 +14,8 @@ public class VoterApplet extends JApplet
         list.add(new Candidate("Jeffrey", 3));
         list.add(new Candidate("Vinay", 4));
         ElectionScreen e = new ElectionScreen(list, "bad");
+        e.setVisible(true);
         this.add(e);
+        this.setVisible(true);
     }
 }
