@@ -6,8 +6,11 @@ import java.io.*;
 
 public class AlternativeElection
 {
+    // get candidate votes, eliminate candidate
 
-    public static void main( String[] args )
+    public static void Alternative(
+        ArrayList<String> candidates,
+        HashMap<String, ArrayList<Integer>> votemap )
     {
         Scanner in = new Scanner( System.in );
         int count = 1;
@@ -168,4 +171,7 @@ public class AlternativeElection
         System.out.println( "Alternative vote winner: "
             + names.get( names.size() - 1 ).getName() );
     }
+    
+    
+    
 }
