@@ -17,6 +17,7 @@
 </head>
 <body>
 <center><h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Welcome to Warowac</h1>
+<<<<<<< HEAD
     <button class="button button1" type="button" id="vote" onclick="switch1()">Vote</button>
     <button class="button button1" type="button" id="create">Create</button>
     <div id="workspace">
@@ -31,10 +32,24 @@
     <div id="createElection">
         <p style="font-family: 'Segoe UI Light'">What is the name of the election:</p>
         <form action="voter.jsp" method="post">
+=======
+    <button class="button button1" type="button" onclick="enter()">Vote</button>
+    <button class="button button1" type="button" name="create">Create</button>
+<<<<<<< HEAD
+    <form action="results.jsp" method="post" id="enterElection" style="visibility: hidden">
+        <input type="text" name="query">
+        <input type="submit" value="Enter">
+    </form>
+=======
+    <div>
+        <p>Enter the code:</p>
+        <form action="voter.jsp" method="post" id="enterElection" style="visibility: hidden">
+>>>>>>> origin/master
             <input type="text" name="query">
             <input class="button1" type="submit" value="Submit" style="font-family: 'Segoe UI Light'">
         </form>
     </div>
+>>>>>>> origin/master
     <script type="text/javascript">
         function switch1(){
             var div = document.getElementById('createElection').innerHTML;

@@ -12,7 +12,9 @@
     <title>Test voter</title>
 </head>
 <body>
-    <jsp:plugin align="middle" height="500" width="500"
-        type="applet"  code="alternativevoting.VoterApplet.class" name="clock" codebase="localhost:8080"></jsp:plugin>
+<jsp:plugin type="applet" codebase="project.jar" code="VoterApplet.class" width="400" height="400">
+    <jsp:fallback> <p>Unable to load applet</p>
+    </jsp:fallback>
+</jsp:plugin>
 </body>
 </html>
