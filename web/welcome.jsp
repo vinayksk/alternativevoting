@@ -9,21 +9,36 @@
 <html>
 <head>
     <title>Welcome</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+
+    </script>
 </head>
 <body>
 <center><h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Welcome to Warowac</h1>
-    <button class="button button1" type="button" onclick="enter()">Vote</button>
-    <button class="button button1" type="button" name="create">Create</button>
-    <div>
-        <p>Enter the code:</p>
-        <form action="voter.jsp" method="post" id="enterElection" style="visibility: hidden">
+    <button class="button button1" type="button" id="vote" onclick="switch1()">Vote</button>
+    <button class="button button1" type="button" id="create">Create</button>
+    <div id="workspace">
+    </div>
+    <div id="enterElection" style="display: none;">
+        <p style="font-family: 'Segoe UI Light'">Enter the election code:</p>
+        <form action="voter.jsp" method="post">
             <input type="text" name="query">
-            <input type="submit" value="Enter">
+            <input class="button1" type="submit" value="Enter" style="font-family: 'Segoe UI Light'">
+        </form>
+    </div>
+    <div id="createElection">
+        <p style="font-family: 'Segoe UI Light'">What is the name of the election:</p>
+        <form action="voter.jsp" method="post">
+            <input type="text" name="query">
+            <input class="button1" type="submit" value="Submit" style="font-family: 'Segoe UI Light'">
         </form>
     </div>
     <script type="text/javascript">
-        function enter()
-        { document.getElementById('enterElection').style.visibility="visible"; }
+        function switch1(){
+            $('#workspace')
+        }
     </script>
 </center>
 </body>
@@ -41,11 +56,12 @@
         -webkit-transition-duration: 0.4s; /* Safari */
         transition-duration: 0.4s;
         cursor: pointer;
+        font-family: 'Segoe UI Light'
     }
 
     .button1 {
         background-color: white;
-        color: black;
+        color: #008CBA;
         border: 2px solid #008CBA;
     }
 
