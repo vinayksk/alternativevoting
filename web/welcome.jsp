@@ -14,10 +14,13 @@
 <center><h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Welcome to Warowac</h1>
     <button class="button button1" type="button" onclick="enter()">Vote</button>
     <button class="button button1" type="button" name="create">Create</button>
-    <form action="results.jsp" method="post" id="enterElection" style="visibility: hidden">
-        <input type="text" name="query">
-        <input type="submit" value="Enter">
-    </form>
+    <div>
+        <p>Enter the code:</p>
+        <form action="voter.jsp" method="post" id="enterElection" style="visibility: hidden">
+            <input type="text" name="query">
+            <input type="submit" value="Enter">
+        </form>
+    </div>
     <script type="text/javascript">
         function enter()
         { document.getElementById('enterElection').style.visibility="visible"; }
