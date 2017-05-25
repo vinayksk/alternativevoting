@@ -12,11 +12,9 @@ import javax.swing.JPanel;
 public class FinalActionButtons extends JPanel implements ActionListener
 {
     private JButton eliminateButton, doneButton;
-    BallotStats b;
 
-    public FinalActionButtons(BallotStats b)
+    public FinalActionButtons()
     {
-        this.b = b;
         eliminateButton = new JButton( "Eliminate a Candidate" );
         eliminateButton.setPreferredSize( new Dimension( 200, 40 ) );
         eliminateButton.addActionListener( this );

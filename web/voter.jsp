@@ -1,3 +1,4 @@
+<%@ page import="java.applet.*" %>
 <%@ page import="java.util.*" %>
 <%--
   Created by IntelliJ IDEA.
@@ -11,10 +12,18 @@
 <head>
     <title>Voter Screen</title>
 </head>
-<body>
-<jsp:plugin type="applet" codebase="project.jar" code="alternativevoting/VoterApplet.class" width="400" height="400">
-    <jsp:fallback> <p>Unable to load applet</p>
-    </jsp:fallback>
-</jsp:plugin>
-</body>
+<form action="servlet/Voter" method="post">
+
+    Hello and welcome to the TEST election! <br/><br/>
+
+    Please put your name:<input type="text" name="userName"/><br/><br/>
+    What is your age?:<input type="number" name="age"/><br/><br/>
+    Please rank candidates from 1 to N, where N is the number of candidates you like. N can be less than the total number of candidates. Do NOT repeat. You may leave candidate names blank. <br/><br/>
+    Cand1:<input type="number" name="vote1"/><br/><br/>
+    Cand2:<input type="number" name="vote2"/><br/><br/>
+    Cand3:<input type="number" name="vote3"/><br/><br/>
+    <br/><br/>
+    <input type="submit" value="submit vote"/>
+    <input type="reset" value="try again"
+</form>
 </html>

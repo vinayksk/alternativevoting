@@ -12,17 +12,14 @@ public class ResultScreen extends JInternalFrame implements ActionListener
 
     FinalActionButtons buttons;
 
-    BallotStats b;
 
 
-    public ResultScreen( String electionName, BallotStats b )
+    public ResultScreen( String electionName )
     {
         super( electionName );
         Container c = getContentPane();
         c.setBackground( Color.WHITE );
-        this.b = b;
-        c.add( b, BorderLayout.WEST );
-        buttons = new FinalActionButtons(this.b);
+        buttons = new FinalActionButtons();
         c.add( buttons, BorderLayout.SOUTH );
         ArrayList<Candidate> list = new ArrayList<Candidate>();
         list.add(new Candidate("Jeffrey", 3));
