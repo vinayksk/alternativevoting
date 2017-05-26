@@ -37,10 +37,14 @@ public class Statistics extends JPanel implements ActionListener
         if ( button.getText().equals( "Get Statistics" ) )
         {
             JFrame frame = new JFrame();
-            JLabel text = new JLabel();
+            JLabel text = new JLabel("text");
+            JPanel panel = new JPanel();
+            panel.add(text);
            // text.setText(BallotStats.method(r.getAlternativeElection()));
-            frame.add(text);
-            frame.setPreferredSize(new Dimension(200, 200));
+            frame.add(panel, BorderLayout.CENTER);
+            frame.setBounds( 100, 100, 200, 200 );
+            frame.setDefaultCloseOperation( EXIT_ON_CLOSE );
+            setVisible( true );
             frame.setVisible(true);
         }
     }
