@@ -17,8 +17,13 @@
     String electionName = "";
 %>
 <center><h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Welcome to Warowac</h1>
+<<<<<<< HEAD
     <button class="button button1" type="button" id="vote" onclick="change()">Vote</button>
     <button class="button button1" type="button" id="create" onclick="change1()">Create</button>
+=======
+    <button class="button button1" type="button" id="vote" onclick="switch1()">Vote</button>
+    <button class="button button1" type="button" id="create">Create</button>
+>>>>>>> origin/master
     <div id="workspace">
     </div>
     <div id="workspace2">
@@ -30,6 +35,7 @@
             <input class="button1" type="submit" value="Enter" style="font-family: 'Segoe UI Light'">
         </form>
     </div>
+<<<<<<< HEAD
     <div id="createElection" style="display: none;">
         <form action="candidateEntry.jsp" method="post">
             <p style="font-family: 'Segoe UI Light'">What is the name of the election?</p>
@@ -50,6 +56,19 @@
             var test = $('#createElection').html();
             $('#workspace').html(test);
         };
+=======
+    <div id="createElection">
+        <p style="font-family: 'Segoe UI Light'">What is the name of the election:</p>
+        <form action="voter.jsp" method="post">
+            <input type="text" name="query">
+            <input class="button1" type="submit" value="Submit" style="font-family: 'Segoe UI Light'">
+        </form>
+    </div>
+    <script type="text/javascript">
+        function switch1(){
+            $('#workspace')
+        }
+>>>>>>> origin/master
     </script>
 </center>
 </body>

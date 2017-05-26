@@ -10,7 +10,7 @@ public class ResultApplet extends JApplet
 {
     public void init()
     {
-        ResultScreen r = new ResultScreen("hmm", new BallotStats());
+        ResultScreen r = new ResultScreen("hmm", new ArrayList<Candidate>());
         this.add(r);
     }
 }

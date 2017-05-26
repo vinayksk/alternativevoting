@@ -1,44 +1,54 @@
 package alternativevoting;
 
+import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 import javax.swing.*;
 
 
-public class ResultScreen extends JInternalFrame implements ActionListener
+public class ResultScreen extends JFrame
 {
     BarChart results;
 
     FinalActionButtons buttons;
 
-    BallotStats b;
+    Statistics stats;
 
+    // AlternativeElection a;
 
-    public ResultScreen( String electionName, BallotStats b )
+    HashSet<ArrayList<Candidate>> set;
+
+    public ResultScreen( String electionName, ArrayList<Candidate> list //, AlternativeElection a
+    )
     {
+        // this.a = a;
         super( electionName );
         Container c = getContentPane();
         c.setBackground( Color.WHITE );
-        this.b = b;
-        c.add( b, BorderLayout.WEST );
-        buttons = new FinalActionButtons(this.b);
+
+        buttons = new FinalActionButtons();
         c.add( buttons, BorderLayout.SOUTH );
-        ArrayList<Candidate> list = new ArrayList<Candidate>();
-        list.add(new Candidate("Jeffrey", 3));
-        list.add(new Candidate("Vinay", 4));
-       results = new BarChart(list);
-       c.add(results, BorderLayout.CENTER);
+        buttons.setResultScreen(this);
 
+        results = new BarChart(list);
+        c.add(results, BorderLayout.CENTER);
 
-        this.setBounds( 100, 100, 700, 700 );
+        stats = new Statistics();
+        c.add(stats, BorderLayout.NORTH);
+        stats.setResultScreen(this);
+
+        this.setBounds( 100, 100, 1000, 1000 );
         setDefaultCloseOperation( EXIT_ON_CLOSE );
         setVisible( true );
     }
 
+    //public void getAlternativeElection()
+    //{ return a;
 
-    public void actionPerformed( ActionEvent e )
-    {
-        buttons.actionPerformed( e );
+    //}
+
+    public void updateBarChart(ArrayList<Candidate> list) {
+        results.setCandidateList(list);
+        results.update();
     }
 }
