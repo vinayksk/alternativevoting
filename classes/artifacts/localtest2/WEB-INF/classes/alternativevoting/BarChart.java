@@ -18,17 +18,17 @@ public class BarChart extends JPanel
     {
         setBackground( Color.WHITE );
         candList = list;
-        if(list != null && list.size() > 0) {
-            for (int i = 0; i < candList.size(); i++) {
-                totalVotes += candList.get(i).getVotes();
-            }
-            candColors = new ArrayList<Color>();
-            for (int i = 0; i < candList.size(); i++) {
-                candColors.add(
-                        new Color((int) (120 + 67.0 * (i + 1) / candList.size()),
-                                (int) (120 + 34.0 * (i + 1) / candList.size()),
-                                (int) (120 + 23.0 * (i + 1) / candList.size())));
-            }
+        for ( int i = 0; i < candList.size(); i++ )
+        {
+            totalVotes += candList.get( i ).getVotes();
+        }
+        candColors = new ArrayList<Color>();
+        for ( int i = 0; i < candList.size(); i++ )
+        {
+            candColors.add(
+                new Color( (int)( 120 + 67.0 * ( i + 1 ) / candList.size() ),
+                    (int)( 120 + 34.0 * ( i + 1 ) / candList.size() ),
+                    (int)( 120 + 23.0 * ( i + 1 ) / candList.size() ) ) );
         }
     }
 
