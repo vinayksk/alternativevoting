@@ -18,7 +18,7 @@ public class BarChart extends JPanel
     {
         setBackground( Color.WHITE );
         candList = list;
-        if(list.size() > 0) {
+        if(list != null && list.size() > 0) {
             for (int i = 0; i < candList.size(); i++) {
                 totalVotes += candList.get(i).getVotes();
             }

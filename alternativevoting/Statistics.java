@@ -59,5 +59,9 @@ public class Statistics extends JPanel implements ActionListener
             frame.setDefaultCloseOperation( EXIT_ON_CLOSE );
             frame.setVisible(true);
         }
+        else if(button.getText().equals("Explanation"))
+        {
+            System.out.println("Ask Vinay");
+        }
     }
 }
