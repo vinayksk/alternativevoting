@@ -14,14 +14,10 @@ public class ResultScreen extends JFrame
 
     Statistics stats;
 
-    // AlternativeElection a;
+    AlternativeElection a;
 
-    HashSet<ArrayList<Candidate>> set;
-
-    public ResultScreen( String electionName, ArrayList<Candidate> list //, AlternativeElection a
-    )
+    public ResultScreen( String electionName, AlternativeElection a)
     {
-        // this.a = a;
         super( electionName );
         Container c = getContentPane();
         c.setBackground( Color.WHITE );
@@ -30,7 +26,7 @@ public class ResultScreen extends JFrame
         c.add( buttons, BorderLayout.SOUTH );
         buttons.setResultScreen(this);
 
-        results = new BarChart(list);
+        results = new BarChart(a.getCandidateList());
         c.add(results, BorderLayout.CENTER);
 
         stats = new Statistics();
@@ -42,10 +38,10 @@ public class ResultScreen extends JFrame
         setVisible( true );
     }
 
-    //public void getAlternativeElection()
-    //{ return a;
-
-    //}
+    public AlternativeElection getAlternativeElection()
+    {
+        return a;
+    }
 
     public void updateBarChart(ArrayList<Candidate> list) {
         results.setCandidateList(list);
