@@ -7,15 +7,8 @@
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/../../Dev/sqljdbc_6.0/enu/jre8/sqljdbc42.jar" />
           <element id="file-copy" path="$USER_HOME$/Downloads/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar" />
-<<<<<<< HEAD
-          <element id="file-copy" path="$PROJECT_DIR$/../../Lynbrook 2016-17/postgresql-42.1.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/Downloads/jsp-wrapper-master/jsp-wrapper-master/includeJarFiles/gson-2.4.jar" />
-        </element>
-        <element id="directory" name="classes">
-          <element id="module-output" name="alternativevoting" />
-=======
+
           <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/servlet-api.jar" />
->>>>>>> origin/master
         </element>
       </element>
     </root>
