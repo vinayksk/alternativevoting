@@ -12,24 +12,33 @@
 <html>
 <head>
     <title>Warowac</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <center>
-    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <%out.println(request.getParameter("electionName"));%></h1>
+    <%String lit = "";
+        lit = request.getParameter("electionName");%>
+    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <%out.println(lit);%></h1>
     <div>
-        <form action="thanksCreate.jsp" id="list" method="post" onsubmit="push()">
+        <form action="example" id="list" method="post">
             <input type="hidden" id="pass" name="urlPop">
+            <input type="hidden" id="pass2" name="urlPop2">
         </form>
     </div>
     <script>
     var toAdd = document.createDocumentFragment();
     <%int cand = Integer.parseInt(request.getParameter("numberCand"));%>
+    var elec = "";
+    elec = <%=lit%>;
     var inte = parseInt(<%=cand%>);
+    console.log(elec);
     console.log(inte);
     for(var i = 1; i <= inte; i++){
         var newDiv = document.createElement('input');
-        newDiv.id = 'r'+ i;
+        newDiv.name = 'r'+ i;
         newDiv.className = 'ansbox';
         var newString = document.createElement('span');
         newString.textContent = 'Candidate ' + i + "  ";
@@ -44,15 +53,18 @@
     button.setAttribute('type', 'submit');
     toAdd.appendChild(button);
     document.getElementById('list').appendChild(toAdd);
+    document.getElementById('pass').value = inte;
+    document.getElementById('pass2').value = elec;
 
-    function push() {
-        var names = [];
-        for(var i = 1; i <= inte ; i++) {
-            var id = "r" + i;
-            names.push(document.getElementById(id).value);
-        }
-        document.getElementById('pass').value = names;
-    }
+    <%--function push() {--%>
+        <%--var names = "";--%>
+        <%--for(var i = 1; i <= inte ; i++) {--%>
+            <%--var id = "r" + i;--%>
+            <%--names = names + (document.getElementById(id).value) + " ";--%>
+        <%--}--%>
+        <%--document.getElementById('pass').value = inte;--%>
+        <%--document.getElementById('pass2').value = <%=request.getParameter("electionName")%>;--%>
+    <%--}--%>
 
     </script>
     <style>
