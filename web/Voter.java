@@ -28,9 +28,16 @@ public class Voter extends HttpServlet {
                 list.add(Integer.MAX_VALUE);
             }
         }
-
         heroku a = new heroku();
-
+        try {
+            a.push(electionName, name, list);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
