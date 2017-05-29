@@ -21,9 +21,7 @@ public class Result
             candList.add(new Candidate(candNames.get(i)));
         }
         LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
-<<<<<<< HEAD
 
-=======
         int[][] ballots = a.request(str);
         for(int j=0;j<ballots[0].length;j++)
         {
@@ -34,7 +32,7 @@ public class Result
             }
             Queue<Candidate> q = new LinkedList<Candidate>();
         }
->>>>>>> 8c178aa437aadd14a570ebe6e6c627e856a8ea33
+
         r = new ResultScreen("electionName", new AlternativeElection(candList, list));
         r.setVisible(true);
     }
