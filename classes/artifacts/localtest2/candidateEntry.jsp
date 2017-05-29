@@ -49,7 +49,7 @@
         toAdd.appendChild(document.createElement('br'));
     }
     var button = document.createElement('input');
-    button.className = 'button';
+    button.className = 'button button1';
     button.setAttribute('type', 'submit');
     toAdd.appendChild(button);
     document.getElementById('list').appendChild(toAdd);

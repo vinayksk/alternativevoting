@@ -43,17 +43,6 @@ public class AlternativeElection
 
     public ArrayList<Candidate> eliminateCandidate()
     {
-        for ( Candidate c : candList )
-        {
-            c.reset();
-        }
-        for ( Queue<Candidate> list : map )
-        {
-            if ( !list.isEmpty() )
-            {
-                list.peek().increment();
-            }
-        }
         Collections.sort( candList );
         int min = candList.get( 0 ).getVotes();
         int max = candList.get( candList.size() - 1 ).getVotes();
@@ -71,6 +60,15 @@ public class AlternativeElection
             while ( !list.isEmpty() && set.contains( list.peek() ) )
             {
                 list.remove();
+            }
+        }
+        for ( Candidate c : candList )
+        {
+            c.reset();
+        }
+        for ( Queue<Candidate> list : map ) {
+            if (!list.isEmpty()) {
+                list.peek().increment();
             }
         }
         return candList;
