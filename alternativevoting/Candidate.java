@@ -14,13 +14,6 @@ public class Candidate implements Comparable<Candidate>
     }
 
 
-    public Candidate( String name, int votes )
-    {
-        this.votes = votes;
-        this.name = name;
-    }
-
-
     public int getVotes()
     {
         return votes;
@@ -55,6 +48,9 @@ public class Candidate implements Comparable<Candidate>
     {
         return votes - other.getVotes();
     }
-    public static void main(String[] args)
-    {}
+
+
+    public static void main( String[] args )
+    {
+    }
 }
