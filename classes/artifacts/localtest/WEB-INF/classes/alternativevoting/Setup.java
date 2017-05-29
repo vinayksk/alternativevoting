@@ -75,7 +75,7 @@ public class Setup
         String filler = in.nextLine();
         BallotStats b = new BallotStats();
         // here we store all the stuff from database into b
-        ResultScreen r = new ResultScreen( electionName, b );
+       //  ResultScreen r = new ResultScreen( electionName, new ArrayList<Candidate>() );
         in.close();
     }
 }

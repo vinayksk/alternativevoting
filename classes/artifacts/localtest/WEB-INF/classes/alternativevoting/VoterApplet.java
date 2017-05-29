@@ -2,11 +2,12 @@ package alternativevoting;
 import javax.swing.*;
 import java.util.*;
 import java.awt.*;
+import java.applet.*;
 
 /**
  * Created by Andrew on 5/19/2017.
  */
-public class VoterApplet extends JApplet
+public class VoterApplet extends Applet
 {
     public void init()
     {
@@ -19,3 +20,5 @@ public class VoterApplet extends JApplet
         this.setVisible(true);
     }
 }
+
+

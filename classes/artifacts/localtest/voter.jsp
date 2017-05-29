@@ -12,7 +12,7 @@
 <head>
     <title>Voter Screen</title>
 </head>
-<form action="servlet/Voter" method="post">
+<form action="welcome.jsp" method="post">
 
     Hello and welcome to the TEST election! <br/><br/>
 
@@ -24,6 +24,6 @@
     Cand3:<input type="number" name="vote3"/><br/><br/>
     <br/><br/>
     <input type="submit" value="submit vote"/>
-    <input type="reset" value="try again"
+    <input type="reset" value="try again">
 </form>
 </html>
