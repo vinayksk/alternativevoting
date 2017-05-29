@@ -12,8 +12,8 @@ public class VoterApplet extends Applet
     public void init()
     {
         ArrayList<Candidate> list = new ArrayList<Candidate>();
-        list.add(new Candidate("Jeffrey", 3));
-        list.add(new Candidate("Vinay", 4));
+        list.add(new Candidate("Jeffrey"));
+        list.add(new Candidate("Vinay"));
         ElectionScreen e = new ElectionScreen(list, "bad");
         e.setVisible(true);
         this.add(e);

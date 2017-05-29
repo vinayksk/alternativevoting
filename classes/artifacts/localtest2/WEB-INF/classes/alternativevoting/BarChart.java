@@ -18,17 +18,17 @@ public class BarChart extends JPanel
     {
         setBackground( Color.WHITE );
         candList = list;
-        for ( int i = 0; i < candList.size(); i++ )
-        {
-            totalVotes += candList.get( i ).getVotes();
-        }
-        candColors = new ArrayList<Color>();
-        for ( int i = 0; i < candList.size(); i++ )
-        {
-            candColors.add(
-                new Color( (int)( 120 + 67.0 * ( i + 1 ) / candList.size() ),
-                    (int)( 120 + 34.0 * ( i + 1 ) / candList.size() ),
-                    (int)( 120 + 23.0 * ( i + 1 ) / candList.size() ) ) );
+        if(list != null && list.size() > 0) {
+            for (int i = 0; i < candList.size(); i++) {
+                totalVotes += candList.get(i).getVotes();
+            }
+            candColors = new ArrayList<Color>();
+            for (int i = 0; i < candList.size(); i++) {
+                candColors.add(
+                        new Color((int) (120 + 67.0 * (i + 1) / candList.size()),
+                                (int) (120 + 34.0 * (i + 1) / candList.size()),
+                                (int) (120 + 23.0 * (i + 1) / candList.size())));
+            }
         }
     }
 
@@ -38,7 +38,14 @@ public class BarChart extends JPanel
         return candList;
     }
 
-    public void setCandidateList(ArrayList<Candidate> list){candList = list;}
+    public void setCandidateList(ArrayList<Candidate> list)
+    {
+        candList = list;
+        totalVotes = 0;
+        for (int i = 0; i < candList.size(); i++) {
+            totalVotes += candList.get(i).getVotes();
+        }
+    }
 
     public void paintComponent( Graphics g )
     {

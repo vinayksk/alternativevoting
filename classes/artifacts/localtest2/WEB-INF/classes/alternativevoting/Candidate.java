@@ -6,17 +6,9 @@ public class Candidate implements Comparable<Candidate>
 
     private String name;
 
-
     public Candidate( String name )
     {
         votes = 0;
-        this.name = name;
-    }
-
-
-    public Candidate( String name, int votes )
-    {
-        this.votes = votes;
         this.name = name;
     }
 
@@ -29,7 +21,7 @@ public class Candidate implements Comparable<Candidate>
 
     public String toString()
     {
-        return name;
+        return name + " " + votes;
     }
 
 
@@ -39,14 +31,25 @@ public class Candidate implements Comparable<Candidate>
     }
 
 
-    public void changeVotes( int v )
+    public void increment()
     {
-        votes += v;
+        votes += 1;
+    }
+
+
+    public void reset()
+    {
+        votes = 0;
     }
 
 
     public int compareTo( Candidate other )
     {
         return votes - other.getVotes();
+    }
+
+
+    public static void main( String[] args )
+    {
     }
 }

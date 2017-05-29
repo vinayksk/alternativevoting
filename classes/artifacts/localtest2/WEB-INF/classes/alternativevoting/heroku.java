@@ -12,8 +12,9 @@ public class heroku {
     public heroku(){
 
     }
-//    public static void main(String[] args) throws InstantiationException,
-//            IllegalAccessException, ClassNotFoundException {
+    public static void main(String[] args) throws InstantiationException,
+            IllegalAccessException, ClassNotFoundException {
+        retrieve("future");
 //        ArrayList<String> cand = new ArrayList<>();
 //        cand.add("me");
 //        cand.add("you");
@@ -65,11 +66,10 @@ public class heroku {
 //            e.printStackTrace();
 //            return;
 //        }
-//    }
+    }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException {
-        {
             Class.forName("org.postgresql.Driver");
             Connection connection = null;
             try {
@@ -102,7 +102,45 @@ public class heroku {
                 e.printStackTrace();
 
             }
+
+    }
+
+    public static ArrayList<String> retrieve(String table) throws InstantiationException,
+            IllegalAccessException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = null;
+        try {
+            // ========>     from heroku website
+            String url = String.format("jdbc:postgresql://ec2-54-163-254-76.compute-1.amazonaws.com:5432/dahhebb44gsieu?sslmode=require");
+            Properties props = new Properties();
+            props.setProperty("user", "ugtzulvykibvoo");
+            props.setProperty("password", "288db9b457f62a3f7333f910087e6d79f38bd205a3e47841596d2658a93cfdbb");
+            connection = DriverManager.getConnection(url, props);
+            String lit = connection.getSchema();
+            System.out.println("Success " + lit);
+
+            ArrayList<String> val = new ArrayList<String>();
+            Statement stmt = connection.createStatement();
+            ResultSet myRs = stmt.executeQuery("select * from " + table);
+            ResultSetMetaData md = myRs.getMetaData();
+            int col = md.getColumnCount();
+
+            for(int i = 2; i <= col; i++){
+                val.add(md.getColumnName(i));
+            }
+
+            System.out.print("Values Retrieved");
+            stmt.close();
+            connection.close();
+            return val;
+        } catch (SQLException e) {
+
+            System.out.println("Connection Failed! Check output console");
+            e.printStackTrace();
+            return null;
+
         }
+
 
     }
 
