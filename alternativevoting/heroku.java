@@ -22,10 +22,6 @@ public class heroku {
         ranks.add(2);
         ranks.add(3);
         push("future", "lit", ranks);
-<<<<<<< HEAD
-=======
-
->>>>>>> 43ea8758191bd6cf342f2afffa6c225bc26a6723
     }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,

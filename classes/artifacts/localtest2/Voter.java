@@ -30,7 +30,7 @@ public class Voter extends HttpServlet {
         }
 
         heroku a = new heroku();
-        a.push(electionName, name, list);
+
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)

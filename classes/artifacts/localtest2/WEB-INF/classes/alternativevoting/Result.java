@@ -22,9 +22,33 @@ public class Result
         }
         LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
         int[][] ballots = a.request(str);
-
+        for(int j=0;j<ballots[0].length;j++)
+        {
+            int[] ballot = new int[ballots.length];
+            for(int i=0;i<ballots.length;i++)
+            {
+                ballot[i] = ballots[i][j];
+            }
+            Queue<Candidate> q = new LinkedList<Candidate>();
+            for(int i=1;i<=ballot.length;i++)
+            {
+                for(int spot=0;spot<ballot.length;spot++)
+                {
+                    if(ballot[spot] == i)
+                    {
+                        q.add(candList.get(spot));
+                    }
+                }
+            }
+            list.add(q);
+        }
         r = new ResultScreen("electionName", new AlternativeElection(candList, list));
         r.setVisible(true);
+    }
+
+    private Queue<Candidate> sorted()
+    {
+    return null;
     }
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
