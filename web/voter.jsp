@@ -1,5 +1,7 @@
 <%@ page import="java.applet.*" %>
 <%@ page import="java.util.*" %>
+<%@ page import="alternativevoting.heroku" %>
+<%@ page import="alternativevoting.Candidate" %>
 <%--
   Created by IntelliJ IDEA.
   User: Andrew
@@ -12,17 +14,25 @@
 <head>
     <title>Voter Screen</title>
 </head>
-<form action="welcome.jsp" method="post">
-
-    Hello and welcome to the TEST election! <br/><br/>
+<form action="voter" method="post">
+    <% String name = request.getParameter("query");
+        heroku a = new heroku();
+        ArrayList<String> list = a.retrieve(name);
+        out.println("Hello and welcome to the " + name + " election!"); %>
+    <br/><br/>
 
     Please put your name:<input type="text" name="userName"/><br/><br/>
-    What is your age?:<input type="number" name="age"/><br/><br/>
-    Please rank candidates from 1 to N, where N is the number of candidates you like. N can be less than the total number of candidates. Do NOT repeat. You may leave candidate names blank. <br/><br/>
-    Cand1:<input type="number" name="vote1"/><br/><br/>
-    Cand2:<input type="number" name="vote2"/><br/><br/>
-    Cand3:<input type="number" name="vote3"/><br/><br/>
     <br/><br/>
+    Please rank candidates from 1 to N, where N is the number of candidates you like. N can be less than the total number of candidates. Do NOT repeat. You may leave candidate names blank. <br/><br/>
+    <br/><br/>
+    <% int numCands = list.size();
+        out.println("There are a total of " + numCands + " candidates."); %>
+    <% for(int i=1;i<=numCands;i++){String voteName="vote"+i;%>
+    <% out.print(list.get(i-1) + ":");%> <input type="number" name=voteName/><br/><br/>
+    <% } %>
+    <br/><br/>
+    <input type="hidden" value= name name="electionName" />
+    <input type="hidden" value= numCands name="number" />
     <input type="submit" value="submit vote"/>
     <input type="reset" value="try again">
 </form>
