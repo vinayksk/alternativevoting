@@ -1,5 +1,7 @@
 <%@ page import="java.applet.*" %>
 <%@ page import="java.util.*" %>
+<%@ page import="alternativevoting.heroku" %>
+<%@ page import="alternativevoting.Candidate" %>
 <%--
   Created by IntelliJ IDEA.
   User: Andrew
@@ -13,8 +15,11 @@
     <title>Voter Screen</title>
 </head>
 <form action="welcome.jsp" method="post">
-
-    Hello and welcome to the TEST election! <br/><br/>
+    <% String name = request.getParameter("query"); %>
+    <% heroku a = new heroku(); %>
+    <% a.
+    <% System.out.println("Hello and welcome to the " + name + "election!" %>
+        <br/><br/>
 
     Please put your name:<input type="text" name="userName"/><br/><br/>
     What is your age?:<input type="number" name="age"/><br/><br/>
