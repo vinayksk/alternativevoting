@@ -1,5 +1,5 @@
 
-// package alternativevoting;
+package alternativevoting;
 
 import java.util.*;
 
