@@ -1,4 +1,5 @@
-package alternativevoting;
+
+// package alternativevoting;
 
 import java.util.*;
 
@@ -30,6 +31,10 @@ public class AlternativeElection
 
     public ArrayList<Candidate> eliminateCandidate()
     {
+        for ( Candidate c : candList )
+        {
+            c.reset();
+        }
         for ( Queue<Candidate> list : map )
         {
             if ( !list.isEmpty() )
@@ -38,21 +43,23 @@ public class AlternativeElection
             }
         }
         Collections.sort( candList );
-        Candidate remove = candList.remove( 0 );
-        set.add( remove );
+        int min = candList.get( 0 ).getVotes();
+        int max = candList.get( candList.size() - 1 ).getVotes();
+        if ( min == max )
+        {
+            return candList;
+        }
+        while ( candList.get( 0 ).getVotes() == min )
+        {
+            Candidate remove = candList.remove( 0 );
+            set.add( remove );
+        }
         for ( Queue<Candidate> list : map )
         {
-            while ( !list.isEmpty() )
+            while ( !list.isEmpty() && set.contains( list.peek() ) )
             {
-                if ( set.contains( list.peek() ) )
-                {
-                    list.remove();
-                }
+                list.remove();
             }
-        }
-        for ( Candidate c : candList )
-        {
-            c.reset();
         }
         return candList;
     }

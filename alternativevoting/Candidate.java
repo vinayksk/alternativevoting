@@ -29,7 +29,7 @@ public class Candidate implements Comparable<Candidate>
 
     public String toString()
     {
-        return name;
+        return name + " " + votes;
     }
 
 
