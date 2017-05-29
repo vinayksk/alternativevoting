@@ -37,14 +37,12 @@ public class FinalActionButtons extends JPanel implements ActionListener
         JButton button = (JButton)e.getSource();
         if ( button.getText().equals( "Eliminate a Candidate" ) )
         {
-            String str = r.getAlternativeElection().eliminateCandidate();
-            System.out.println("eliminated candidate " + str);
-            r.updateBarChart(r.getAlternativeElection().getVotes());
+            r.updateBarChart(r.getAlternativeElection().eliminateCandidate());
         }
         else if(button.getText().equals("Done with Elimination"))
         {
             System.out.println("The winners are: \n");
-            ArrayList<Candidate> list = r.getAlternativeElection().getCandidateList();
+            ArrayList<Candidate> list = r.getAlternativeElection().getCandList();
             for(int i=0;i<list.size();i++)
             {
                 System.out.println(list.get(i).getName());
