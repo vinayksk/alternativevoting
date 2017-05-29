@@ -17,7 +17,6 @@ public class heroku {
             IllegalAccessException, ClassNotFoundException {
         System.out.print(retrieve("future"));
         request("future");
-
     }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,
@@ -151,7 +150,7 @@ public class heroku {
         }
     }
 
-    public void push(String elecname, String name, ArrayList<Integer> ranks){
+    public static void push(String elecname, String name, ArrayList<Integer> ranks){
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");

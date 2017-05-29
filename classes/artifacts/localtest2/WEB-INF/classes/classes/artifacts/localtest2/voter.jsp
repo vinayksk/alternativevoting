@@ -32,12 +32,10 @@
     <% } %>
 
     <br/><br/>
+    <script> var numberCands = parseInt(<%=numCands%>)</script>
     <input type="hidden" value=name name="electionName" />
-    <input type="hidden" id="asdf" name="number" />
+    <input type="hidden" value=numberCands name="number" />
     <input type="submit" value="submit vote"/>
     <input type="reset" value="try again">
-    <script> var numberCands = parseInt(<%=numCands%>);
-    document.getElementById("asdf").value=(numberCands)</script>
-
 </form>
 </html>

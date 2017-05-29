@@ -12,60 +12,12 @@ public class heroku {
     public heroku(){
 
     }
+
     public static void main(String[] args) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException {
-        retrieve("future");
-//        ArrayList<String> cand = new ArrayList<>();
-//        cand.add("me");
-//        cand.add("you");
-//        createTable("aids", cand);
-//        System.out.println("-------- PostgreSQL "
-//                + "JDBC Connection Testing ------------");
-//        try {
-//            Class.forName("org.postgresql.Driver");
-//        } catch (ClassNotFoundException e) {
-//            System.out.println("Where is your PostgreSQL JDBC Driver? "
-//                    + "Include in your library path!");
-//            e.printStackTrace();
-//            return;
-//        }
-//        System.out.println("PostgreSQL JDBC Driver Registered!");
-//        Connection connection = null;
-//        try {
-//            Class.forName("org.postgresql.Driver");
-//            // ========>     from heroku website
-//            String url = String.format("jdbc:postgresql://ec2-54-163-254-76.compute-1.amazonaws.com:5432/dahhebb44gsieu?sslmode=require");
-//            Properties props = new Properties();
-//            props.setProperty("user", "ugtzulvykibvoo");
-//            props.setProperty("password", "288db9b457f62a3f7333f910087e6d79f38bd205a3e47841596d2658a93cfdbb");
-//            connection = DriverManager.getConnection(url, props);
-//            String lit = connection.getSchema();
-//            System.out.println("Success " + lit);
-//
-//            Statement stmt = connection.createStatement();
-////            String sql = "CREATE TABLE COMPANY " +
-////                    "(ID INT PRIMARY KEY     NOT NULL," +
-////                    " NAME           TEXT    NOT NULL, " +
-////                    " AGE            INT     NOT NULL, " +
-////                    " ADDRESS        CHAR(50), " +
-////                    " SALARY         REAL)";
-////            stmt.executeUpdate(sql);
-//            String fats = "insert into company (ID, name, age, address, salary) values (2, 'Jeff', 3, 22, 4)";
-//            stmt.executeUpdate(fats);
-//
-//            ResultSet myRs = stmt.executeQuery("select * from company");
-//
-//            while(myRs.next()){
-//                System.out.println(myRs.getString("name"));
-//            }
-//            stmt.close();
-//            connection.close();
-//        } catch (SQLException e) {
-//
-//            System.out.println("Connection Failed! Check output console");
-//            e.printStackTrace();
-//            return;
-//        }
+        System.out.print(retrieve("future"));
+        request("future");
+
     }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,
@@ -129,7 +81,7 @@ public class heroku {
                 val.add(md.getColumnName(i));
             }
 
-            System.out.print("Values Retrieved");
+            System.out.println("Values Retrieved");
             stmt.close();
             connection.close();
             return val;
@@ -144,7 +96,95 @@ public class heroku {
 
     }
 
-    public static void add(Map<String, Integer> mp){
+    public static int[][] request(String table)throws InstantiationException,
+            IllegalAccessException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = null;
+        try {
+            // ========>     from heroku website
+            String url = String.format("jdbc:postgresql://ec2-54-163-254-76.compute-1.amazonaws.com:5432/dahhebb44gsieu?sslmode=require");
+            Properties props = new Properties();
+            props.setProperty("user", "ugtzulvykibvoo");
+            props.setProperty("password", "288db9b457f62a3f7333f910087e6d79f38bd205a3e47841596d2658a93cfdbb");
+            connection = DriverManager.getConnection(url, props);
+            String lit = connection.getSchema();
+            System.out.println("Success " + lit);
+
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT COUNT(*) FROM " + table);
+            rs.next();
+            int rowCount = rs.getInt(1);
+            System.out.println(rowCount);
+            ArrayList<String> candidates = retrieve(table);
+            int len = candidates.size();
+            int[][] ballots = new int[len][rowCount];
+            rs.close();
+
+            for(int i = 0; i < len; i++){
+                ResultSet myRs = st.executeQuery("SELECT * FROM " + table);
+                int j = 0;
+                while(myRs.next()){
+                    ballots[i][j] = (myRs.getInt(candidates.get(i)));
+                    j++;
+                }
+                myRs.close();
+            }
+            st.close();
+            connection.close();
+
+            for(int i=0;i<ballots.length;i++)
+            {
+                for(int j=0;j<ballots[0].length;j++)
+                {
+                    System.out.print(ballots[i][j] + " ");
+                }
+                System.out.println("");
+            }
+            return ballots;
+
+
+        } catch (SQLException e) {
+            System.out.println("Connection Failed! Check output console");
+            e.printStackTrace();
+            return null;
+
+        }
+    }
+
+    public void push(String elecname, String name, ArrayList<Integer> ranks){
+        Connection connection = null;
+        try {
+            Class.forName("org.postgresql.Driver");
+            // ========>     from heroku website
+            String url = String.format("jdbc:postgresql://ec2-54-163-254-76.compute-1.amazonaws.com:5432/dahhebb44gsieu?sslmode=require");
+            Properties props = new Properties();
+            props.setProperty("user", "ugtzulvykibvoo");
+            props.setProperty("password", "288db9b457f62a3f7333f910087e6d79f38bd205a3e47841596d2658a93cfdbb");
+            connection = DriverManager.getConnection(url, props);
+            String lit = connection.getSchema();
+            System.out.println("Success " + lit);
+
+            Statement stmt = connection.createStatement();
+            ArrayList<String> candidates = retrieve(elecname);
+            String sql = "insert into " + elecname + " (name";
+            for(int i = 0; i < candidates.size(); i++){
+                sql = sql + ", " + candidates.get(i);
+            }
+            sql = sql + ") VALUES (" + name;
+            for(int i = 0; i < ranks.size(); i++){
+                sql = sql + ", " + ranks.get(i);
+            }
+            sql = sql + ")";
+            System.out.println(sql);
+            System.out.println("Values added to the database");
+            stmt.executeUpdate(sql);
+            stmt.close();
+            connection.close();
+        } catch (Exception e) {
+
+            System.out.println("Connection Failed! Check output console");
+            e.printStackTrace();
+        }
 
     }
 }
