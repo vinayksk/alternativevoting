@@ -1,31 +1,78 @@
+
 package alternativevoting;
 
 import java.util.*;
 
+
 public class AlternativeElection
 {
-    public AlternativeElection(ArrayList<Candidate> candList, HashMap<String, ArrayList<Candidate>> map)
-    {
+    private ArrayList<Candidate> candList;
 
+    private LinkedList<Queue<Candidate>> map;
+
+    private HashSet<Candidate> set;
+
+
+    public AlternativeElection(
+        ArrayList<Candidate> candList,
+        LinkedList<Queue<Candidate>> map )
+    {
+        this.candList = candList;
+        this.map = map;
+        set = new HashSet<Candidate>();
+
+        for ( Queue<Candidate> list : map )
+        {
+            if ( !list.isEmpty() )
+            {
+                list.peek().increment();
+            }
+        }
     }
 
-    public ArrayList<Candidate> getCandidateList()
+
+    public LinkedList<Queue<Candidate>> getBallots()
     {
-        return null;
+        return map;
     }
 
-    public HashMap<String, ArrayList<Candidate>> getBallots()
+    public ArrayList<Candidate> getCandList()
     {
-        return null;
+        return candList;
     }
 
-    public ArrayList<Candidate> getVotes()
+    public ArrayList<Candidate> eliminateCandidate()
     {
-        return null;
+        for ( Candidate c : candList )
+        {
+            c.reset();
+        }
+        for ( Queue<Candidate> list : map )
+        {
+            if ( !list.isEmpty() )
+            {
+                list.peek().increment();
+            }
+        }
+        Collections.sort( candList );
+        int min = candList.get( 0 ).getVotes();
+        int max = candList.get( candList.size() - 1 ).getVotes();
+        if ( min == max )
+        {
+            return candList;
+        }
+        while ( candList.get( 0 ).getVotes() == min )
+        {
+            Candidate remove = candList.remove( 0 );
+            set.add( remove );
+        }
+        for ( Queue<Candidate> list : map )
+        {
+            while ( !list.isEmpty() && set.contains( list.peek() ) )
+            {
+                list.remove();
+            }
+        }
+        return candList;
     }
-    public String eliminateCandidate()
-    {
-        return null;
-    }
-
 }

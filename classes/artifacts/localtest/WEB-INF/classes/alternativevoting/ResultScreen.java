@@ -22,11 +22,13 @@ public class ResultScreen extends JFrame
         Container c = getContentPane();
         c.setBackground( Color.WHITE );
 
+        this.a = a;
+
         buttons = new FinalActionButtons();
         c.add( buttons, BorderLayout.SOUTH );
         buttons.setResultScreen(this);
 
-        results = new BarChart(a.getCandidateList());
+        results = new BarChart(a.getCandList());
         c.add(results, BorderLayout.CENTER);
 
         stats = new Statistics();
