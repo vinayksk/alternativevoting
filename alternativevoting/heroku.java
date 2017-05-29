@@ -17,6 +17,14 @@ public class heroku {
             IllegalAccessException, ClassNotFoundException {
         System.out.print(retrieve("future"));
         request("future");
+<<<<<<< HEAD
+        ArrayList<Integer> ranks = new ArrayList<>();
+        ranks.add(1);
+        ranks.add(2);
+        ranks.add(3);
+        push("vinsta", "lit", ranks);
+=======
+>>>>>>> fd292cbedc281c22987fa6e8ef7d471ba09073ed
     }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,
