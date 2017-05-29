@@ -38,7 +38,14 @@ public class BarChart extends JPanel
         return candList;
     }
 
-    public void setCandidateList(ArrayList<Candidate> list){candList = list;}
+    public void setCandidateList(ArrayList<Candidate> list)
+    {
+        candList = list;
+        totalVotes = 0;
+        for (int i = 0; i < candList.size(); i++) {
+            totalVotes += candList.get(i).getVotes();
+        }
+    }
 
     public void paintComponent( Graphics g )
     {

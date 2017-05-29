@@ -20,6 +20,14 @@ public class AlternativeElection
         this.candList = candList;
         this.map = map;
         set = new HashSet<Candidate>();
+
+        for ( Queue<Candidate> list : map )
+        {
+            if ( !list.isEmpty() )
+            {
+                list.peek().increment();
+            }
+        }
     }
 
 
@@ -28,6 +36,10 @@ public class AlternativeElection
         return map;
     }
 
+    public ArrayList<Candidate> getCandList()
+    {
+        return candList;
+    }
 
     public ArrayList<Candidate> eliminateCandidate()
     {
