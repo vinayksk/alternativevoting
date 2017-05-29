@@ -21,7 +21,7 @@ public class heroku {
         ranks.add(1);
         ranks.add(2);
         ranks.add(3);
-        push("future", "lit", ranks);
+        push("vinsta", "lit", ranks);
     }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,

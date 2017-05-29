@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1bc5f32-b5df-4730-a02e-07d2bda52979" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Voter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Voter.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/election/election.war" afterPath="$PROJECT_DIR$/classes/artifacts/election/election.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Result.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Result.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Statistics.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Statistics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/VoterApplet.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/VoterApplet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/heroku.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/heroku.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/ServletTest.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/ServletTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/Voter.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/Voter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ServletTest.class" afterPath="$PROJECT_DIR$/web/ServletTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/Voter.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/Voter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/.classpath" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/.gitignore" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting.iml" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/AlternativeElection.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/AlternativeElection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Ballot.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Ballot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/BallotStats.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/BallotStats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/BarChart.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/BarChart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Candidate.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Candidate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/FinalActionButtons.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/FinalActionButtons.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Result.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/ResultScreen.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/ResultScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Statistics.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/Statistics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/VoterApplet.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/VoterApplet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/heroku.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/heroku.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/ServletTest.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/ServletTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/Voter.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/Voter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/voter.jsp" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/voter.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ServletTest.java" afterPath="$PROJECT_DIR$/web/ServletTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/candidateEntry.jsp" afterPath="$PROJECT_DIR$/web/candidateEntry.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/heroku.class" afterPath="$PROJECT_DIR$/alternativevoting/heroku.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/heroku.java" afterPath="$PROJECT_DIR$/alternativevoting/heroku.java" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +16,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="ServletTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ServletTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ServletTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
@@ -67,20 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heroku.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="heroku.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alternativevoting/heroku.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+            <state relative-caret-position="640">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
-                <marker date="1496087648499" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
-                <marker date="1496087648499" expanded="false" signature="3092:3100" ph="&lt;~&gt;" />
-                <marker date="1496087648499" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
-                <marker date="1496087648499" expanded="true" signature="4674:4695" ph="SELECT * FRO... missingValue" />
-                <marker date="1496087648499" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
-                <marker date="1496087648499" expanded="true" signature="6860:6872" ph="insert into missingValue... " />
-                <marker date="1496087648499" expanded="true" signature="6860:6894" ph="insert into missingValue... " />
-                <marker date="1496087648499" expanded="true" signature="6860:7221" ph="insert into " />
+                <marker date="1496090090226" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
+                <marker date="1496090090226" expanded="false" signature="3092:3100" ph="&lt;~&gt;" />
+                <marker date="1496090090226" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
+                <marker date="1496090090226" expanded="true" signature="4674:4695" ph="SELECT * FRO... missingValue" />
+                <marker date="1496090090226" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
+                <marker date="1496090090226" expanded="true" signature="6860:6872" ph="insert into missingValue... " />
+                <marker date="1496090090226" expanded="true" signature="6860:6894" ph="insert into missingValue... " />
+                <marker date="1496090090226" expanded="true" signature="6860:7221" ph="insert into " />
               </folding>
             </state>
           </provider>
@@ -124,9 +93,9 @@
       <list>
         <option value="$PROJECT_DIR$/alternativevoting/Result.java" />
         <option value="$PROJECT_DIR$/web/Voter.java" />
-        <option value="$PROJECT_DIR$/alternativevoting/heroku.java" />
         <option value="$PROJECT_DIR$/web/ServletTest.java" />
         <option value="$PROJECT_DIR$/web/candidateEntry.jsp" />
+        <option value="$PROJECT_DIR$/alternativevoting/heroku.java" />
       </list>
     </option>
   </component>
@@ -769,12 +738,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496080680593</updated>
       <workItem from="1496080686972" duration="2967000" />
-      <workItem from="1496085523068" duration="3619000" />
+      <workItem from="1496085523068" duration="4513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6586000" />
+    <option name="totallyTimeSpent" value="7480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -803,7 +772,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="HDInsight Spark Submission" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23584905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23584905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.206875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -845,14 +814,14 @@
         <state relative-caret-position="6800">
           <caret line="173" column="32" lean-forward="true" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
           <folding>
-            <marker date="1496087648499" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
-            <marker date="1496087648499" expanded="false" signature="3092:3100" ph="&lt;~&gt;" />
-            <marker date="1496087648499" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
-            <marker date="1496087648499" expanded="true" signature="4674:4695" ph="SELECT * FRO... missingValue" />
-            <marker date="1496087648499" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
-            <marker date="1496087648499" expanded="true" signature="6860:6872" ph="insert into missingValue... " />
-            <marker date="1496087648499" expanded="true" signature="6860:6894" ph="insert into missingValue... " />
-            <marker date="1496087648499" expanded="true" signature="6860:7221" ph="insert into " />
+            <marker date="1496090090226" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
+            <marker date="1496090090226" expanded="false" signature="3092:3100" ph="&lt;~&gt;" />
+            <marker date="1496090090226" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
+            <marker date="1496090090226" expanded="true" signature="4674:4695" ph="SELECT * FRO... missingValue" />
+            <marker date="1496090090226" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
+            <marker date="1496090090226" expanded="true" signature="6860:6872" ph="insert into missingValue... " />
+            <marker date="1496090090226" expanded="true" signature="6860:6894" ph="insert into missingValue... " />
+            <marker date="1496090090226" expanded="true" signature="6860:7221" ph="insert into " />
           </folding>
         </state>
       </provider>
@@ -913,23 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alternativevoting/heroku.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
-          <folding>
-            <marker date="1496087648499" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
-            <marker date="1496087648499" expanded="false" signature="3092:3100" ph="&lt;~&gt;" />
-            <marker date="1496087648499" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
-            <marker date="1496087648499" expanded="true" signature="4674:4695" ph="SELECT * FRO... missingValue" />
-            <marker date="1496087648499" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
-            <marker date="1496087648499" expanded="true" signature="6860:6872" ph="insert into missingValue... " />
-            <marker date="1496087648499" expanded="true" signature="6860:6894" ph="insert into missingValue... " />
-            <marker date="1496087648499" expanded="true" signature="6860:7221" ph="insert into " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/candidateEntry.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="711">
@@ -943,6 +895,23 @@
         <state relative-caret-position="400">
           <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alternativevoting/heroku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <marker date="1496090090226" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
+            <marker date="1496090090226" expanded="false" signature="3092:3100" ph="&lt;~&gt;" />
+            <marker date="1496090090226" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
+            <marker date="1496090090226" expanded="true" signature="4674:4695" ph="SELECT * FRO... missingValue" />
+            <marker date="1496090090226" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
+            <marker date="1496090090226" expanded="true" signature="6860:6872" ph="insert into missingValue... " />
+            <marker date="1496090090226" expanded="true" signature="6860:6894" ph="insert into missingValue... " />
+            <marker date="1496090090226" expanded="true" signature="6860:7221" ph="insert into " />
+          </folding>
         </state>
       </provider>
     </entry>
