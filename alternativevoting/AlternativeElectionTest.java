@@ -1,6 +1,5 @@
 package alternativevoting;
 
-import alternativevoting.Candidate;
 import java.util.*;
 
 

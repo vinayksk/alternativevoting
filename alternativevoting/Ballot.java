@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class Ballot
-{ 
+{
     private ArrayList<Candidate> list;
 
 
@@ -12,6 +12,7 @@ public class Ballot
     {
         list = new ArrayList<Candidate>();
     }
+
 
     public void add( Candidate c )
     {

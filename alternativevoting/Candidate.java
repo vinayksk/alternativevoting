@@ -55,4 +55,6 @@ public class Candidate implements Comparable<Candidate>
     {
         return votes - other.getVotes();
     }
+    public static void main(String[] args)
+    {}
 }
