@@ -150,4 +150,41 @@ public class heroku {
 
         }
     }
+
+    public void push(String elecname, String name, ArrayList<Integer> ranks){
+        Connection connection = null;
+        try {
+            Class.forName("org.postgresql.Driver");
+            // ========>     from heroku website
+            String url = String.format("jdbc:postgresql://ec2-54-163-254-76.compute-1.amazonaws.com:5432/dahhebb44gsieu?sslmode=require");
+            Properties props = new Properties();
+            props.setProperty("user", "ugtzulvykibvoo");
+            props.setProperty("password", "288db9b457f62a3f7333f910087e6d79f38bd205a3e47841596d2658a93cfdbb");
+            connection = DriverManager.getConnection(url, props);
+            String lit = connection.getSchema();
+            System.out.println("Success " + lit);
+
+            Statement stmt = connection.createStatement();
+            ArrayList<String> candidates = retrieve(elecname);
+            String sql = "insert into " + elecname + " (name";
+            for(int i = 0; i < candidates.size(); i++){
+                sql = sql + ", " + candidates.get(i);
+            }
+            sql = sql + ") VALUES (" + name;
+            for(int i = 0; i < ranks.size(); i++){
+                sql = sql + ", " + ranks.get(i);
+            }
+            sql = sql + ")";
+            System.out.println(sql);
+            System.out.println("Values added to the database");
+            stmt.executeUpdate(sql);
+            stmt.close();
+            connection.close();
+        } catch (Exception e) {
+
+            System.out.println("Connection Failed! Check output console");
+            e.printStackTrace();
+        }
+
+    }
 }
