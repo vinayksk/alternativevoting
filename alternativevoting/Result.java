@@ -20,15 +20,13 @@ public class Result
         {
             candList.add(new Candidate(candNames.get(i)));
         }
-        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>();
-        int[][] ballots = a.request();
+        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
 
         r = new ResultScreen("electionName", new AlternativeElection(candList, list));
         r.setVisible(true);
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         Result r = new Result();
     }
 

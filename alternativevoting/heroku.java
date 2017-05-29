@@ -17,6 +17,11 @@ public class heroku {
             IllegalAccessException, ClassNotFoundException {
         System.out.print(retrieve("future"));
         request("future");
+        ArrayList<Integer> ranks = new ArrayList<>();
+        ranks.add(1);
+        ranks.add(2);
+        ranks.add(3);
+        push("future", "lit", ranks);
 
     }
 
@@ -151,7 +156,7 @@ public class heroku {
         }
     }
 
-    public void push(String elecname, String name, ArrayList<Integer> ranks){
+    public static void push(String elecname, String name, ArrayList<Integer> ranks){
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");
