@@ -14,33 +14,34 @@ public class Result
         Scanner in = new Scanner( System.in );
         System.out.println( "Which election do we want results for?" );
         // here we get all the ballot information
-        ArrayList<Candidate> list = new ArrayList<Candidate>();
-        Candidate bob = new Candidate("bob", 3);
-        list.add(bob);
-        Candidate joe = new Candidate("joe", 4);
-        list.add(joe);
-        Candidate lin = new Candidate("lin", 5);
-        list.add(lin);
+        Candidate bob = new Candidate("bob");
+        Candidate joe = new Candidate("joe");
+        Candidate lin = new Candidate("lin");
 
-        HashMap<String, ArrayList<Candidate>> map = new HashMap<String, ArrayList<Candidate>>();
-        ArrayList<Candidate> ballot1 = new ArrayList<Candidate>();
+        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
+        ArrayList<Candidate> candList = new ArrayList<Candidate>();
+        candList.add(bob);
+        candList.add(joe);
+        candList.add(lin);
+
+        Queue<Candidate> ballot1 = new LinkedList<Candidate>();
         ballot1.add(bob);
         ballot1.add(joe);
-        map.put("kappa", ballot1);
+        list.add(ballot1);
 
-        ArrayList<Candidate> ballot2 = new ArrayList<Candidate>();
+        Queue<Candidate> ballot2 = new LinkedList<Candidate>();
         ballot2.add(lin);
         ballot2.add(bob);
         ballot2.add(joe);
-        map.put("kappa2", ballot2);
+        list.add(ballot2);
 
-        ArrayList<Candidate> ballot3 = new ArrayList<Candidate>();
+        Queue<Candidate> ballot3 = new LinkedList<Candidate>();
         ballot3.add(bob);
-        map.put("kappa3", ballot3);
+        list.add(ballot3);
+
         // the above is just a filler for now
 
-
-        r = new ResultScreen("electionName", new AlternativeElection(list, map));
+        r = new ResultScreen("electionName", new AlternativeElection(candList, list));
         r.setVisible(true);
     }
 

@@ -5,10 +5,10 @@ import java.util.*;
 
 public class BallotStats
 {
-    public static int[][] prefTable(HashMap<String, ArrayList<Candidate>> map, ArrayList<Candidate> cands)
+    public static int[][] prefTable(LinkedList<Queue<Candidate>> list, ArrayList<Candidate> cands)
     {
         int[][] table = new int[cands.size()][cands.size()];
-    for(ArrayList<Candidate> cand: map.values())
+    for(Queue<Candidate> cand: list)
     {
         for(int i=0;i<table.length;i++)
         {
@@ -26,23 +26,25 @@ public class BallotStats
 
 
     // returns true if a before b in list, false otherwise
-    private static boolean preferred(ArrayList<Candidate> list, Candidate a, Candidate b)
+    private static boolean preferred(Queue<Candidate> list, Candidate a, Candidate b)
     {
-        for(int i=0;i<list.size();i++)
+        Queue<Candidate> copy = list;
+        for(int i=0;i<copy.size();i++)
         {
-            if(list.get(i).getName().equals(a.getName()))
+            if(copy.peek().equals(a.getName()))
             {
                 return true;
             }
-            else if(list.get(i).getName().equals(b.getName()))
+            else if(copy.peek().getName().equals(b.getName()))
             {
                 return false;
             }
+            list.remove();
         }
         return false;
     }
 
-    public static double[][] pollProbabilities(HashMap<String, ArrayList<Candidate>> map, ArrayList<Candidate> cands)
+    public static double[][] pollProbabilities(LinkedList<Queue<Candidate>> map, ArrayList<Candidate> cands)
     {
         double[][] table = new double[cands.size()][cands.size()];
         int[][] table2 = prefTable(map, cands);
@@ -114,29 +116,29 @@ public class BallotStats
         Candidate joe = new Candidate("joe");
         Candidate lin = new Candidate("lin");
 
-        HashMap<String, ArrayList<Candidate>> map = new HashMap<String, ArrayList<Candidate>>();
+        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
         ArrayList<Candidate> candList = new ArrayList<Candidate>();
         candList.add(bob);
         candList.add(joe);
         candList.add(lin);
 
-        ArrayList<Candidate> ballot1 = new ArrayList<Candidate>();
+        Queue<Candidate> ballot1 = new LinkedList<Candidate>();
         ballot1.add(bob);
         ballot1.add(joe);
-        map.put("kappa", ballot1);
+        list.add(ballot1);
 
-        ArrayList<Candidate> ballot2 = new ArrayList<Candidate>();
+        Queue<Candidate> ballot2 = new LinkedList<Candidate>();
         ballot2.add(lin);
         ballot2.add(bob);
         ballot2.add(joe);
-        map.put("kappa2", ballot2);
+        list.add(ballot2);
 
-        ArrayList<Candidate> ballot3 = new ArrayList<Candidate>();
+        Queue<Candidate> ballot3 = new LinkedList<Candidate>();
         ballot3.add(bob);
-        map.put("kappa3", ballot3);
+        list.add(ballot3);
 
 
-        double[][] pref = pollProbabilities(map, candList);
+        double[][] pref = pollProbabilities(list, candList);
         for(int i=0;i<pref.length;i++)
         {
             for(int j=0;j<pref[0].length;j++)
