@@ -9,45 +9,19 @@ public class Result
 {
     ResultScreen r;
 
-    public Result()
-    {
+    public Result() throws IllegalAccessException, ClassNotFoundException, InstantiationException {
         Scanner in = new Scanner( System.in );
         System.out.println( "Which election do we want results for?" );
-        // here we get all the ballot information
-        Candidate bob = new Candidate("bob");
-        Candidate joe = new Candidate("joe");
-        Candidate lin = new Candidate("lin");
-
-        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
+        String str = in.nextLine();
+        heroku a = new heroku();
+        ArrayList<String> candNames = a.retrieve(str);
         ArrayList<Candidate> candList = new ArrayList<Candidate>();
-        candList.add(bob);
-        candList.add(joe);
-        candList.add(lin);
-
-        Queue<Candidate> ballot1 = new LinkedList<Candidate>();
-        ballot1.add(bob);
-        ballot1.add(joe);
-        list.add(ballot1);
-
-        Queue<Candidate> ballot4 = new LinkedList<Candidate>();
-        ballot4.add(bob);
-        list.add(ballot4);
-
-        Queue<Candidate> ballot5 = new LinkedList<Candidate>();
-        ballot5.add(bob);
-        list.add(ballot5);
-
-        Queue<Candidate> ballot2 = new LinkedList<Candidate>();
-        ballot2.add(lin);
-        ballot2.add(bob);
-        ballot2.add(joe);
-        list.add(ballot2);
-
-        Queue<Candidate> ballot3 = new LinkedList<Candidate>();
-        ballot3.add(bob);
-        list.add(ballot3);
-
-        // the above is just a filler for now
+        for(int i=0;i<candNames.size();i++)
+        {
+            candList.add(new Candidate(candNames.get(i)));
+        }
+        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>();
+        int[][] ballots = a.request();
 
         r = new ResultScreen("electionName", new AlternativeElection(candList, list));
         r.setVisible(true);
