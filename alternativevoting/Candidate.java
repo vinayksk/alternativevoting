@@ -39,9 +39,15 @@ public class Candidate implements Comparable<Candidate>
     }
 
 
-    public void changeVotes( int v )
+    public void increment()
     {
-        votes += v;
+        votes += 1;
+    }
+
+
+    public void reset()
+    {
+        votes = 0;
     }
 
 

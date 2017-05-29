@@ -2,30 +2,64 @@ package alternativevoting;
 
 import java.util.*;
 
+
 public class AlternativeElection
 {
-    public AlternativeElection(ArrayList<Candidate> candList, HashMap<String, ArrayList<Candidate>> map)
-    {
+    private ArrayList<Candidate> candList;
 
+    private HashMap<String, Queue<Candidate>> map;
+
+    private HashSet<Candidate> set;
+
+
+    public AlternativeElection(
+        ArrayList<Candidate> candList,
+        HashMap<String, Queue<Candidate>> map )
+    {
+        this.candList = candList;
+        this.map = map;
+        set = new HashSet<Candidate>();
     }
+
 
     public ArrayList<Candidate> getCandidateList()
     {
-        return null;
+        return candList;
     }
 
-    public HashMap<String, ArrayList<Candidate>> getBallots()
+
+    public HashMap<String, Queue<Candidate>> getBallots()
     {
-        return null;
+        return map;
     }
 
-    public ArrayList<Candidate> getVotes()
-    {
-        return null;
-    }
-    public String eliminateCandidate()
-    {
-        return null;
-    }
 
+    public Candidate eliminateCandidate()
+    {
+        for ( Queue<Candidate> list : map.values() )
+        {
+            if ( !list.isEmpty() )
+            {
+                list.peek().increment();
+            }
+        }
+        Collections.sort( candList );
+        Candidate remove = candList.remove( 0 );
+        set.add( remove );
+        for ( Queue<Candidate> list : map.values() )
+        {
+            while ( !list.isEmpty() )
+            {
+                if ( set.contains( list.peek() ) )
+                {
+                    list.remove();
+                }
+            }
+        }
+        for ( Candidate c : candList )
+        {
+            c.reset();
+        }
+        return remove;
+    }
 }
