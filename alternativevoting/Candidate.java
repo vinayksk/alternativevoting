@@ -6,7 +6,6 @@ public class Candidate implements Comparable<Candidate>
 
     private String name;
 
-
     public Candidate( String name )
     {
         votes = 0;
