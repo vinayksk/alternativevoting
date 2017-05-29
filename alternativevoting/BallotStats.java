@@ -5,6 +5,12 @@ import java.util.*;
 
 public class BallotStats
 {
+
+    /**
+     * Returns a preference table. prefTable[i][j] has the number of ballots that prefer candidate i to candidate j in cands list
+     * @param list list of ballots
+     *             @param cands list of candidates
+     */
     public static int[][] prefTable(LinkedList<Queue<Candidate>> list, ArrayList<Candidate> cands)
     {
         int[][] table = new int[cands.size()][cands.size()];
@@ -44,10 +50,15 @@ public class BallotStats
         return false;
     }
 
-    public static double[][] pollProbabilities(LinkedList<Queue<Candidate>> map, ArrayList<Candidate> cands)
+    /**
+     * Returns a probability table. prefTable[i][j] has the probability of such a win assuming a statistical binomial distribution centered at 50%. Honestly just check the cases of like 100% and stuff
+     * @param list list of ballots
+     *             cands list of candidates
+     */
+    public static double[][] pollProbabilities(LinkedList<Queue<Candidate>> list, ArrayList<Candidate> cands)
     {
         double[][] table = new double[cands.size()][cands.size()];
-        int[][] table2 = prefTable(map, cands);
+        int[][] table2 = prefTable(list, cands);
         for(int i=0;i<table.length;i++)
         {
             for(int j=0;j<table[0].length;j++)
@@ -57,6 +68,12 @@ public class BallotStats
         }
         return table;
     }
+
+    /**
+     *  Percentage chance of votes1 getting at most this many votes assuming each vote goes to votes1 or votes2 with equal probability.
+     * @param votes1 number of votes for first candidate
+     *             @param votes2 number of votes for second candidate
+     */
     public static double percentageWin(int votes1, int votes2)
     {
         if(votes1 == 0 && votes2 == 0)
@@ -77,7 +94,7 @@ public class BallotStats
         return 100 * normpdf(zScore);
     }
 
-    public static double normpdf(double zscore)
+    private static double normpdf(double zscore)
     {
         if(zscore >= 3)
         {
@@ -110,6 +127,10 @@ public class BallotStats
         return n*factorial(n-1);
     }
 
+    /**
+     * Main method.
+     * @param args not used
+     */
     public static void main(String[] args)
     {
         Candidate bob = new Candidate("bob");
