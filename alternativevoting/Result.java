@@ -29,6 +29,14 @@ public class Result
         ballot1.add(joe);
         list.add(ballot1);
 
+        Queue<Candidate> ballot4 = new LinkedList<Candidate>();
+        ballot4.add(bob);
+        list.add(ballot4);
+
+        Queue<Candidate> ballot5 = new LinkedList<Candidate>();
+        ballot5.add(bob);
+        list.add(ballot5);
+
         Queue<Candidate> ballot2 = new LinkedList<Candidate>();
         ballot2.add(lin);
         ballot2.add(bob);
