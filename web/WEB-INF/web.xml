@@ -11,4 +11,13 @@
         <servlet-name>ServletTest</servlet-name>
         <url-pattern>/thankyou</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Voter</servlet-name>
+        <servlet-class>web.Voter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Voter</servlet-name>
+        <url-pattern>/voter</url-pattern>
+    </servlet-mapping>
 </web-app>

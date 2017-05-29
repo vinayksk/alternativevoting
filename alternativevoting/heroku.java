@@ -71,7 +71,7 @@ public class heroku {
             String lit = connection.getSchema();
             System.out.println("Success " + lit);
 
-            ArrayList<String> val = new ArrayList<>();
+            ArrayList<String> val = new ArrayList<String>();
             Statement stmt = connection.createStatement();
             ResultSet myRs = stmt.executeQuery("select * from " + table);
             ResultSetMetaData md = myRs.getMetaData();
