@@ -71,9 +71,12 @@ public class FinalActionButtons extends JPanel implements ActionListener
 
             for(int i=0;i<data.length;i++)
             {
-                table.setValueAt(r.getAlternativeElection().getCandList().get(i), 0, i+1);
-                table.setValueAt(r.getAlternativeElection().getCandList().get(i), i+1, 0);
-                table.setValueAt(r.getAlternativeElection().getCandList().get(i), i+data.length + 1, 0);
+                table.setValueAt(r.getAlternativeElection().getCandList().get(i).getName(), 0, i+1);
+                table.setValueAt(r.getAlternativeElection().getCandList().get(i).getName(), data.length + 1, i+1);
+                table.setValueAt(r.getAlternativeElection().getCandList().get(i).getName(), i+1, 0);
+                table.setValueAt(r.getAlternativeElection().getCandList().get(i).getName(), i+data.length + 2, 0);
+                table.setValueAt("X", i+1, i+1);
+                table.setValueAt("X", data.length+i+2, i+1);
             }
 
             // add the table to the frame
