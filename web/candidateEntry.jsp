@@ -17,7 +17,7 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="font-family: 'Segoe UI Light'">
 <center>
     <%String electionName = "";
         electionName = request.getParameter("electionName");
