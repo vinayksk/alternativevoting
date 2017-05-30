@@ -20,8 +20,11 @@
 <body>
 <center>
     <%String electionName = "";
-        electionName = request.getParameter("electionName");%>
-    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <%out.println(electionName);%></h1>
+        electionName = request.getParameter("electionName");
+    heroku a = new heroku();
+    if(a.clear(electionName)){%>
+
+    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <span style="color: #008CBA;"><%out.print(electionName);%></span>.</h1>
     <div>
         <form action="thankyou" id="list" method="post">
             <input type="hidden" id="pass" name="numCand">
@@ -49,7 +52,7 @@
         toAdd.appendChild(document.createElement('br'));
     }
     var button = document.createElement('input');
-    button.className = 'button';
+    button.className = 'button button1';
     button.setAttribute('type', 'submit');
     toAdd.appendChild(button);
     document.getElementById('list').appendChild(toAdd);
@@ -57,6 +60,9 @@
     document.getElementById('pass2').value = elec;
 
     </script>
+    <% }else{ %>
+    Oops, this election name is already taken! Try again.
+    <% }%>
     <style>
         .rep{
             font-family: "Segoe UI Light";
