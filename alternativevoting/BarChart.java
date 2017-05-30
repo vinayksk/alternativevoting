@@ -13,7 +13,6 @@ public class BarChart extends JPanel
 
     ArrayList<Color> candColors;
 
-
     public BarChart( ArrayList<Candidate> list )
     {
         setBackground( Color.WHITE );
@@ -52,26 +51,26 @@ public class BarChart extends JPanel
         super.paintComponent( g );
         int barWidth = (int)((double)getHeight() / candList.size() / 2.5);
         int maxBarHeight = getWidth() * 3 / 4;
-        g.setFont(new Font("TimesRoman", Font.PLAIN, barWidth / 2));
+        g.setFont(new Font("Helvetica", Font.PLAIN, barWidth/2));
         if ( totalVotes > 0 )
         {
             for ( int i = 0; i < candList.size(); i++ )
             {
                 g.setColor( candColors.get( i ) );
-                g.fillRect( getWidth() / 4,
-                    (int)( getHeight() / 8 + i * barWidth * 1.5 ),
+                g.fillRect( getWidth() / 8,
+                    (int)( getHeight() / 4 + i * barWidth * 1.5 ),
                     (int)( maxBarHeight * candList.get( i ).getVotes() * 1.0
                         / totalVotes ),
                     barWidth );
                 g.setColor( Color.BLACK );
+                System.out.println("Drawing string!");
                 g.drawString(
-                    Integer.toString(
-                        candList.get( i ).getVotes() * 100 / totalVotes ) + "%",
-                    getWidth() / 4,
-                    (int)( getHeight() / 8 + i * barWidth * 1.5 ) );
+                    Integer.toString((int)(candList.get( i ).getVotes() * 100.0 / totalVotes + 0.5) ) + "%",
+                    getWidth() / 8,
+                    (int)( getHeight() / 4 + i * barWidth * 1.5 ) );
                 g.drawString( candList.get( i ).getName(),
                     getWidth() / 8,
-                    (int)( 3 * getHeight() / 16 + i * barWidth * 1.5 ) );
+                    (int)( getHeight() / 4 + i * barWidth * 1.5 + barWidth * 0.5) );
             }
         }
         else
