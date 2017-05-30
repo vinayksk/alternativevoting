@@ -21,9 +21,9 @@ public class Result
     /**
      * Creates a new ResultScreen based on election name.
      * 
-     * @throws IllegalAccessException
-     * @throws ClassNotFoundException
-     * @throws InstantiationException
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
+     * @throws InstantiationException instantiation error
      */
     public Result()
         throws IllegalAccessException,
@@ -79,9 +79,9 @@ public class Result
      * 
      * @param args
      *            not used
-     * @throws IllegalAccessException
-     * @throws InstantiationException
-     * @throws ClassNotFoundException
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
+     * @throws InstantiationException instantiation error
      */
     public static void main( String[] args )
         throws IllegalAccessException,

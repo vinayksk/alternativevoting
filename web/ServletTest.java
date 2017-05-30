@@ -26,8 +26,8 @@ public class ServletTest extends HttpServlet {
      * Creates a new election.
      * @param request servlet request
      * @param response servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException servlet error
+     * @throws IOException input/output error
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
@@ -91,8 +91,8 @@ public class ServletTest extends HttpServlet {
      * Creates a new election.
      * @param request servlet request
      * @param response servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException servlet error
+     * @throws IOException input/output error
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");

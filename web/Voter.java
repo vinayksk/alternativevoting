@@ -24,8 +24,8 @@ public class Voter extends HttpServlet {
      * Pushes a ballot to the table.
      * @param request servlet request
      * @param response servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException servlet error
+     * @throws IOException input/output error
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -130,8 +130,8 @@ public class Voter extends HttpServlet {
      * Pushes a ballot to the table.
      * @param request servlet request
      * @param response servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException servlet error
+     * @throws IOException input/output error
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

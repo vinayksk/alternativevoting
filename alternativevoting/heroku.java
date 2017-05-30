@@ -7,7 +7,6 @@ import java.util.Properties;
 
 
 /**
- * Created by aweso on 5/22/2017.
  *
  * Heroku queries from a database and returns relevant information.
  *
@@ -34,9 +33,9 @@ public class heroku
      * 
      * @param args
      *            not used
-     * @throws InstantiationException
-     * @throws IllegalAccessException
-     * @throws ClassNotFoundException
+     * @throws InstantiationException instantiation error
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
      */
     public static void main( String[] args )
         throws InstantiationException,
@@ -61,9 +60,9 @@ public class heroku
      *            The name of the election
      * @param candidates
      *            The list of candidate names.
-     * @throws InstantiationException
-     * @throws IllegalAccessException
-     * @throws ClassNotFoundException
+     * @throws InstantiationException instantiation error
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
      */
     public void createTable( String electionName, ArrayList<String> candidates )
         throws InstantiationException,
@@ -117,10 +116,10 @@ public class heroku
      * 
      * @param table
      *            the table name to retrieve from
-     * @return
-     * @throws InstantiationException
-     * @throws IllegalAccessException
-     * @throws ClassNotFoundException
+     * @return candidate names in an arraylist of strings
+     * @throws InstantiationException instantiation error
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
      */
     public static ArrayList<String> retrieve( String table )
         throws InstantiationException,
@@ -176,10 +175,10 @@ public class heroku
      * 
      * @param table
      *            the table name to request from.
-     * @return
-     * @throws InstantiationException
-     * @throws IllegalAccessException
-     * @throws ClassNotFoundException
+     * @return ballots in array format, with columns as ballots.
+     * @throws InstantiationException instantiation error
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
      */
     public static int[][] request( String table )
         throws InstantiationException,
@@ -255,9 +254,9 @@ public class heroku
      *            Name of voter
      * @param ranks
      *            The ballot ranks
-     * @throws InstantiationException
-     * @throws IllegalAccessException
-     * @throws ClassNotFoundException
+     * @throws InstantiationException instantiation error
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
      */
     public static void push(
         String elecname,
@@ -318,9 +317,9 @@ public class heroku
      * @param elecname
      *            the name of election
      * @return true if and only if there is no table with this name
-     * @throws InstantiationException
-     * @throws IllegalAccessException
-     * @throws ClassNotFoundException
+     * @throws InstantiationException instantiation error
+     * @throws IllegalAccessException illegal access error
+     * @throws ClassNotFoundException class not found error
      */
     public static boolean clear( String elecname )
         throws InstantiationException,
