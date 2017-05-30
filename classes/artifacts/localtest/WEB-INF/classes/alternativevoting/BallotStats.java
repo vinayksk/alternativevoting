@@ -3,6 +3,16 @@ package alternativevoting;
 import java.util.*;
 
 
+/**
+ * Provides ballot statistics.
+ *
+ * @author Andrew, Jeffrey
+ * @version May 29, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
+ */
 public class BallotStats
 {
 
@@ -38,6 +48,17 @@ public class BallotStats
     }
 
 
+    /**
+     * Returns a preference table. prefTable[i][j] has the percentage of ballots
+     * that prefer candidate i to candidate j in cands list, relative to the
+     * percentage of ballots that prefer candidate j to candidate i. Rounds to
+     * the nearest tenth of a percent.
+     * 
+     * @param list
+     *            list of ballots
+     * @param cands
+     *            list of candidates
+     */
     public static double[][] prefTablePerc(
         LinkedList<Queue<Candidate>> list,
         ArrayList<Candidate> cands )
