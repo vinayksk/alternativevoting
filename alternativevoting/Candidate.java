@@ -1,9 +1,8 @@
 package alternativevoting;
 
 /**
- * TODO Write a one-sentence summary of your class here. TODO Follow it with
- * additional details about its purpose, what abstraction it represents, and how
- * to use it.
+ * The Candidate class supplies the basic fields needed to define a candidate
+ * and modify a candidate's vote count.
  *
  * @author jeffr
  * @version May 29, 2017
