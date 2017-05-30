@@ -20,7 +20,10 @@
 <body>
 <center>
     <%String electionName = "";
-        electionName = request.getParameter("electionName");%>
+        electionName = request.getParameter("electionName");
+        heroku a = new heroku();
+        if(a.clear(electionName)){%>
+
     <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <span style="color: #008CBA;"><%out.print(electionName);%></span>.</h1>
     <div>
         <form action="thankyou" id="list" method="post">
@@ -29,34 +32,37 @@
         </form>
     </div>
     <script>
-    var toAdd = document.createDocumentFragment();
-    <%int cand = Integer.parseInt(request.getParameter("numberCand"));%>
-    var elec = "";
-    elec = "<%=electionName%>";
-    var inte = parseInt(<%=cand%>);
-    console.log(elec);
-    console.log(inte);
-    for(var i = 1; i <= inte; i++){
-        var newDiv = document.createElement('input');
-        newDiv.name = 'r'+ i;
-        newDiv.className = 'ansbox';
-        var newString = document.createElement('span');
-        newString.textContent = 'Candidate ' + i + "  ";
-        newString.className = 'rep';
-        toAdd.appendChild(newString);
-        toAdd.appendChild(newDiv);
-        toAdd.appendChild(document.createElement('br'));
-        toAdd.appendChild(document.createElement('br'));
-    }
-    var button = document.createElement('input');
-    button.className = 'button button1';
-    button.setAttribute('type', 'submit');
-    toAdd.appendChild(button);
-    document.getElementById('list').appendChild(toAdd);
-    document.getElementById('pass').value = inte;
-    document.getElementById('pass2').value = elec;
+        var toAdd = document.createDocumentFragment();
+        <%int cand = Integer.parseInt(request.getParameter("numberCand"));%>
+        var elec = "";
+        elec = "<%=electionName%>";
+        var inte = parseInt(<%=cand%>);
+        console.log(elec);
+        console.log(inte);
+        for(var i = 1; i <= inte; i++){
+            var newDiv = document.createElement('input');
+            newDiv.name = 'r'+ i;
+            newDiv.className = 'ansbox';
+            var newString = document.createElement('span');
+            newString.textContent = 'Candidate ' + i + "  ";
+            newString.className = 'rep';
+            toAdd.appendChild(newString);
+            toAdd.appendChild(newDiv);
+            toAdd.appendChild(document.createElement('br'));
+            toAdd.appendChild(document.createElement('br'));
+        }
+        var button = document.createElement('input');
+        button.className = 'button button1';
+        button.setAttribute('type', 'submit');
+        toAdd.appendChild(button);
+        document.getElementById('list').appendChild(toAdd);
+        document.getElementById('pass').value = inte;
+        document.getElementById('pass2').value = elec;
 
     </script>
+    <% }else{ %>
+    Oops, this election name is already taken! Try again.
+    <% }%>
     <style>
         .rep{
             font-family: "Segoe UI Light";

@@ -20,7 +20,10 @@
 <body>
 <center>
     <%String electionName = "";
-        electionName = request.getParameter("electionName");%>
+        electionName = request.getParameter("electionName");
+    heroku a = new heroku();
+    if(a.clear(electionName)){%>
+
     <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <span style="color: #008CBA;"><%out.print(electionName);%></span>.</h1>
     <div>
         <form action="thankyou" id="list" method="post">
@@ -57,6 +60,9 @@
     document.getElementById('pass2').value = elec;
 
     </script>
+    <% }else{ %>
+    Oops, this election name is already taken! Try again.
+    <% }%>
     <style>
         .rep{
             font-family: "Segoe UI Light";
