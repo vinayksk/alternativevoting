@@ -1,14 +1,14 @@
 package alternativevoting;
- 
+
 import static org.junit.Assert.*;
- 
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
- 
+
 import org.junit.Test;
- 
- 
+
+
 /**
  * Tests Alternative Election and Candidate classes
  *
@@ -21,10 +21,13 @@ import org.junit.Test;
  */
 public class JUAlternativeVotingTest
 {
- 
+
     private Candidate cand;
- 
- 
+
+
+    /**
+     * Tests the constructor of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionConstructor()
     {
@@ -33,8 +36,11 @@ public class JUAlternativeVotingTest
         AlternativeElection a = new AlternativeElection( list, map );
         assertNotNull( a );
     }
- 
- 
+
+
+    /**
+     * Tests the getCandList() method of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionGetCandList()
     {
@@ -43,8 +49,11 @@ public class JUAlternativeVotingTest
         AlternativeElection a = new AlternativeElection( list, map );
         assertEquals( list, a.getCandList() );
     }
- 
- 
+
+
+    /**
+     * Tests the getBallots() method of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionGetBallots()
     {
@@ -53,8 +62,11 @@ public class JUAlternativeVotingTest
         AlternativeElection a = new AlternativeElection( list, map );
         assertEquals( map, a.getBallots() );
     }
- 
- 
+
+
+    /**
+     * Tests the eliminateCandidate() method of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionEliminateCandidate()
     {
@@ -82,16 +94,22 @@ public class JUAlternativeVotingTest
         assertEquals( a.eliminateCandidate().get( 0 ), charlie );
         assertEquals( a.eliminateCandidate().get( 0 ), alice );
     }
- 
- 
+
+
+    /**
+     * Tests the constructor of the Candidate class.
+     */
     @Test
     public void CandidateConstructor()
     {
         cand = new Candidate( "name" );
         assertNotNull( cand );
     }
- 
- 
+
+
+    /**
+     * Tests the toString() method of the Candidate class.
+     */
     @Test
     public void CandidateToString()
     {
@@ -99,24 +117,33 @@ public class JUAlternativeVotingTest
         cand.increment();
         assertEquals( cand.toString(), "name 1" );
     }
- 
- 
+
+
+    /**
+     * Tests the getVotes() method of the Candidate class.
+     */
     @Test
     public void CandidateGetVotes()
     {
         cand = new Candidate( "name" );
         assertEquals( cand.getVotes(), 0 );
     }
- 
- 
+
+
+    /**
+     * Tests the getName() method of the Candidate class.
+     */
     @Test
     public void CandidateGetName()
     {
         cand = new Candidate( "name" );
         assertEquals( cand.getName(), "name" );
     }
- 
- 
+
+
+    /**
+     * Tests the increment() method of the Candidate class.
+     */
     @Test
     public void CandidateIncrement()
     {
@@ -124,8 +151,11 @@ public class JUAlternativeVotingTest
         cand.increment();
         assertEquals( cand.getVotes(), 1 );
     }
- 
- 
+
+
+    /**
+     * Tests the reset() method of the Candidate class.
+     */
     @Test
     public void CandidateReset()
     {
@@ -134,8 +164,11 @@ public class JUAlternativeVotingTest
         cand.reset();
         assertEquals( cand.getVotes(), 0 );
     }
- 
- 
+
+
+    /**
+     * Tests the compareTo() method of the Candidate class.
+     */
     @Test
     public void CandidateCompareTo()
     {
@@ -145,37 +178,40 @@ public class JUAlternativeVotingTest
         cand.increment();
         assertTrue( cand.compareTo( otherCand ) > 0 );
     }
- 
- 
+
+
+    /**
+     * Tests the prefTable() method of the Candidate class.
+     */
     @Test
     public void BallotStatsPrefTable()
     {
- 
+
         Candidate bob = new Candidate( "bob" );
         Candidate joe = new Candidate( "joe" );
         Candidate lin = new Candidate( "lin" );
- 
+
         LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
         ArrayList<Candidate> candList = new ArrayList<Candidate>();
         candList.add( bob );
         candList.add( joe );
         candList.add( lin );
- 
+
         Queue<Candidate> ballot1 = new LinkedList<Candidate>();
         ballot1.add( bob );
         ballot1.add( joe );
         list.add( ballot1 );
- 
+
         Queue<Candidate> ballot2 = new LinkedList<Candidate>();
         ballot2.add( lin );
         ballot2.add( bob );
         ballot2.add( joe );
         list.add( ballot2 );
- 
+
         Queue<Candidate> ballot3 = new LinkedList<Candidate>();
         ballot3.add( bob );
         list.add( ballot3 );
- 
+
         int[][] pref = BallotStats.prefTable( list, candList );
         int[][] test = { { 0, 3, 2 }, { 0, 0, 0, }, { 1, 1, 0 } };
         boolean correct = true;
@@ -191,33 +227,36 @@ public class JUAlternativeVotingTest
         }
         assertTrue( correct );
     }
- 
- 
+
+
+    /**
+     * Tests the prefTablePerc() method of the Candidate class.
+     */
     @Test
     public void BallotStatsPrefTablePerc()
     {
- 
+
         Candidate bob = new Candidate( "bob" );
         Candidate joe = new Candidate( "joe" );
         Candidate lin = new Candidate( "lin" );
- 
+
         LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
         ArrayList<Candidate> candList = new ArrayList<Candidate>();
         candList.add( bob );
         candList.add( joe );
         candList.add( lin );
- 
+
         Queue<Candidate> ballot1 = new LinkedList<Candidate>();
         ballot1.add( bob );
         ballot1.add( joe );
         list.add( ballot1 );
- 
+
         Queue<Candidate> ballot2 = new LinkedList<Candidate>();
         ballot2.add( lin );
         ballot2.add( bob );
         ballot2.add( joe );
         list.add( ballot2 );
- 
+
         Queue<Candidate> ballot3 = new LinkedList<Candidate>();
         ballot3.add( bob );
         list.add( ballot3 );
@@ -239,4 +278,3 @@ public class JUAlternativeVotingTest
         assertTrue( correct );
     }
 }
-
