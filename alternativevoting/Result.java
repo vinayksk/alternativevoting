@@ -3,12 +3,25 @@ package alternativevoting;
 import java.util.*;
 
 /**
- * Created by Andrew on 5/25/2017.
+ * Creates a ResultScreen object.
+ *
+ * @author Andrew Lin
+ * @version May 29, 2017
+ * @author Assignment: Final Project
+ *
+ * @author Sources: None
+ *
  */
 public class Result
 {
-    ResultScreen r;
+    private ResultScreen r;
 
+    /**
+     * Creates a new ResultScreen based on election name.
+     * @throws IllegalAccessException
+     * @throws ClassNotFoundException
+     * @throws InstantiationException
+     */
     public Result() throws IllegalAccessException, ClassNotFoundException, InstantiationException {
         Scanner in = new Scanner( System.in );
         System.out.println( "Which election do we want results for?" );
@@ -51,6 +64,13 @@ public class Result
     return null;
     }
 
+    /**
+     * Main method, creates an object.
+     * @param args not used
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws ClassNotFoundException
+     */
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         Result r = new Result();
     }

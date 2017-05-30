@@ -6,10 +6,23 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 /**
+ * The delete class deletes tables from the backend.
  * Created by aweso on 5/11/2017.
+ * @author vinay
+ * @version May 11, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
+ *
  */
+
 public class delete
 {
+    /**
+     * Main method.
+     * @param args is not used.
+     */
     public static void main(String args[]){
         String hostName = "warowac";
         String dbName = "testDB";
@@ -33,10 +46,5 @@ public class delete
         catch(Exception exc){
             exc.printStackTrace();
         }
-    }
-
-    public void delete(String table){
-
-
     }
 }

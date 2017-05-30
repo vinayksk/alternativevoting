@@ -8,7 +8,25 @@ import java.util.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
+/**
+ * Created by aweso on 5/26/2017.
+ * Pushes a ballot to a table.
+ *
+ * @author vinay
+ * @version May 29, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
+ */
 public class Voter extends HttpServlet {
+    /**
+     * Pushes a ballot to the table.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -89,6 +107,13 @@ public class Voter extends HttpServlet {
         out.flush();
     }
 
+    /**
+     * Pushes a ballot to the table.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doPost(request, response);

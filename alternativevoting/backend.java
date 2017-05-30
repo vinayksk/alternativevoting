@@ -3,9 +3,20 @@ import java.sql.*;
 import java.util.ArrayList;
 
 /**
+ * Provides backend support for tables.
+ *
  * Created by aweso on 4/28/2017.
+ * @author vinay
+ * @version May 23, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
  */
 public class backend {
+    /**
+     *
+     * Main method for testing.
+     * @param args is not used
+     */
     public static void main(String[] args){
         String hostName = "warowac";
         String dbName = "testDB";

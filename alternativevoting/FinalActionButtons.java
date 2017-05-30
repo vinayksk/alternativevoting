@@ -6,14 +6,25 @@ import java.awt.event.ActionListener;
 import java.util.*;
 import javax.swing.*;
 
-
+/**
+ * The FinalActionButtons class allows certain actions to be performed on a ResultScreen.
+ *
+ * @author Andrew Lin
+ * @version May 29, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
+ */
 public class FinalActionButtons extends JPanel implements ActionListener
 {
-    private JButton eliminateButton, doneButton;
+    private JButton eliminateButton;
+    private JButton doneButton;
+    private ResultScreen r;
 
-    ResultScreen r;
-
-
+    /**
+     * Creates buttons for GUI for various purposes
+     */
     public FinalActionButtons()
     {
         eliminateButton = new JButton( "Eliminate a Candidate" );
@@ -29,13 +40,20 @@ public class FinalActionButtons extends JPanel implements ActionListener
         doneButton.setFont(new Font("Helvetica", Font.PLAIN, 20));
     }
 
-
+    /**
+     * Sets a reference to the parent result scren.
+     * @param r The parent result screen
+     */
     public void setResultScreen( ResultScreen r )
     {
         this.r = r;
     }
 
 
+    /**
+     * Performs an action. If the action was to eliminate a candidate, a candidate is eliminated using AlternativeElection and the barchart is redrawn. Otherwise, a pop-up window appears with statistics.
+     * @param e The action event
+     */
     public void actionPerformed( ActionEvent e )
     {
         JButton button = (JButton)e.getSource();

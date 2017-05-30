@@ -4,15 +4,29 @@ import java.util.*;
 import java.awt.*;
 import javax.swing.*;
 
-
+/**
+ * Provides a way to draw a bar chart for candidates.
+ *
+ * @author Andrew Lin
+ * @version May 16, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
+ */
 public class BarChart extends JPanel
 {
-    ArrayList<Candidate> candList;
+    private ArrayList<Candidate> candList;
 
-    int totalVotes;
+    private int totalVotes;
 
-    ArrayList<Color> candColors;
+    private ArrayList<Color> candColors;
 
+
+    /**
+     * Creates a new bar chart object. Assigns a color to each candidate.
+     * @param list candidate list
+     */
     public BarChart( ArrayList<Candidate> list )
     {
         setBackground( Color.WHITE );
@@ -31,12 +45,19 @@ public class BarChart extends JPanel
         }
     }
 
-
+    /**
+     * gets candidate list.
+     * @return candidate list in an arraylist
+     */
     public ArrayList<Candidate> getCandidateList()
     {
         return candList;
     }
 
+    /**
+     * sets the candidate list to list. Also changes total nuber of votes.
+     * @param list the candidate list to be set
+     */
     public void setCandidateList(ArrayList<Candidate> list)
     {
         candList = list;
@@ -46,6 +67,10 @@ public class BarChart extends JPanel
         }
     }
 
+    /**
+     * Draws a bar chart
+     * @param g graphics
+     */
     public void paintComponent( Graphics g )
     {
         super.paintComponent( g );
@@ -92,7 +117,9 @@ public class BarChart extends JPanel
         }
     }
 
-
+    /**
+     * updates the bar chart's graphics.
+     */
     public void update()
     {
         paintComponent( this.getGraphics() );

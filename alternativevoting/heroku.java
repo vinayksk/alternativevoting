@@ -7,12 +7,31 @@ import java.util.Properties;
 
 /**
  * Created by aweso on 5/22/2017.
+ *
+ * Heroku queries from a database and returns relevant information.
+ *
+ * @author vinay
+ * @version May 24, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
  */
 public class heroku {
+    /**
+     * Creates a new heroku object.
+     */
     public heroku(){
 
     }
 
+    /**
+     * Main test method.
+     * @param args not used
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     * @throws ClassNotFoundException
+     */
     public static void main(String[] args) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException {
         System.out.print(retrieve("future"));
@@ -25,6 +44,14 @@ public class heroku {
         System.out.println(clear("designner"));
     }
 
+    /**
+     * Creates a new table for the heroku website.
+     * @param electionName The name of the election
+     * @param candidates The list of candidate names.
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     * @throws ClassNotFoundException
+     */
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException {
             Class.forName("org.postgresql.Driver");
@@ -62,6 +89,14 @@ public class heroku {
 
     }
 
+    /**
+     * Retrieves the candidate names from a table.
+     * @param table the table name to retrieve from
+     * @return
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     * @throws ClassNotFoundException
+     */
     public static ArrayList<String> retrieve(String table) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
@@ -101,6 +136,14 @@ public class heroku {
 
     }
 
+    /**
+     * Returns the ballots from a table in array format. Each column is a ballot.
+     * @param table the table name to request from.
+     * @return
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     * @throws ClassNotFoundException
+     */
     public static int[][] request(String table)throws InstantiationException,
             IllegalAccessException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
@@ -156,6 +199,15 @@ public class heroku {
         }
     }
 
+    /**
+     * Pushes a ballot to a table.
+     * @param elecname The table name
+     * @param name Name of voter
+     * @param ranks The ballot ranks
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     * @throws ClassNotFoundException
+     */
     public static void push(String elecname, String name, ArrayList<Integer> ranks) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException{
         Class.forName("org.postgresql.Driver");
@@ -195,6 +247,14 @@ public class heroku {
 
     }
 
+    /**
+     * Returns whether a table is clear
+     * @param elecname the name of election
+     * @return true if and only if there is no table with this name
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     * @throws ClassNotFoundException
+     */
     public static boolean clear(String elecname) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
