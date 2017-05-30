@@ -10,6 +10,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 
 public class FinalActionButtons extends JPanel implements ActionListener
@@ -48,12 +51,33 @@ public class FinalActionButtons extends JPanel implements ActionListener
         }
         else
         {
-            Component frame = new JFrame( "Election statistics" );
-            System.out.println();
-            JOptionPane.showMessageDialog( frame,
-                Arrays.deepToString( BallotStats.prefTable(
-                    r.getAlternativeElection().getBallots(),
-                    r.getAlternativeElection().getCandList() ) ) );
+            System.out.println( " cringe" );
+            // JPanel panel = new JPanel();
+            JFrame frame = new JFrame( "Election statistics" );
+            int[][] data = BallotStats.prefTable(
+                r.getAlternativeElection().getBallots(),
+                r.getAlternativeElection().getCandList() );
+            double[][] data2 = BallotStats.prefTablePerc(
+                r.getAlternativeElection().getBallots(),
+                r.getAlternativeElection().getCandList() );
+            // headers for the table
+            JTable table = new JTable( data.length * 2 + 1, data.length );
+            for ( int i = 0; i < data.length; i++ )
+            {
+                for ( int j = 0; j < data.length; j++ )
+                {
+                    table.setValueAt( data[i][j], i, j );
+                    table.setValueAt( data2[i][j], i + data.length + 1, j );
+                }
+            }
+
+            // add the table to the frame
+            frame.add( new JScrollPane( table ) );
+
+            frame.setTitle( "Table Example" );
+            frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+            frame.pack();
+            frame.setVisible( true );
         }
     }
 }
