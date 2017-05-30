@@ -44,7 +44,7 @@ public class heroku
     {
         System.out.print( retrieve( "future" ) );
         request( "future" );
-        ArrayList<Integer> ranks = new ArrayList<>();
+        ArrayList<Integer> ranks = new ArrayList<Integer>();
         ranks.add( 1 );
         ranks.add( 2 );
         ranks.add( 3 );
@@ -342,7 +342,7 @@ public class heroku
             System.out.println( "Success " + lit );
             DatabaseMetaData md = connection.getMetaData();
             ResultSet rs = md.getTables( null, null, "%", null );
-            ArrayList<String> lis = new ArrayList<>();
+            ArrayList<String> lis = new ArrayList<String>();
             while ( rs.next() )
             {
                 lis.add( rs.getString( "TABLE_NAME" ) );

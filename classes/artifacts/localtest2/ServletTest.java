@@ -50,7 +50,7 @@ public class ServletTest extends HttpServlet {
                 "            color: white;\n" +
                 "        }\n" +
                 "    </style>");
-        ArrayList<String> lis = new ArrayList<>();
+        ArrayList<String> lis = new ArrayList<String>();
         heroku hero = new heroku();
         for (int i = 1; i <= Integer.parseInt(request.getParameter("numCand")); i++) {
             String id = "r" + i;
