@@ -47,10 +47,13 @@ public class BallotStats
         return table;
     }
 
+
     /**
      * Returns a preference table. prefTable[i][j] has the percentage of ballots
-     * that prefer candidate i to candidate j in cands list, relative to the percentage
-     * of ballots that prefer candidate j to candidate i. Rounds to the nearest tenth of a percent.
+     * that prefer candidate i to candidate j in cands list, relative to the
+     * percentage of ballots that prefer candidate j to candidate i. Rounds to
+     * the nearest tenth of a percent.
+     * 
      * @param list
      *            list of ballots
      * @param cands

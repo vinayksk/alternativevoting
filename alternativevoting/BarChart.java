@@ -4,6 +4,7 @@ import java.util.*;
 import java.awt.*;
 import javax.swing.*;
 
+
 /**
  * Provides a way to draw a bar chart for candidates.
  *
@@ -25,28 +26,35 @@ public class BarChart extends JPanel
 
     /**
      * Creates a new bar chart object. Assigns a color to each candidate.
-     * @param list candidate list
+     * 
+     * @param list
+     *            candidate list
      */
     public BarChart( ArrayList<Candidate> list )
     {
         setBackground( Color.WHITE );
         candList = list;
-        if(list != null && list.size() > 0) {
-            for (int i = 0; i < candList.size(); i++) {
-                totalVotes += candList.get(i).getVotes();
+        if ( list != null && list.size() > 0 )
+        {
+            for ( int i = 0; i < candList.size(); i++ )
+            {
+                totalVotes += candList.get( i ).getVotes();
             }
             candColors = new ArrayList<Color>();
-            for (int i = 0; i < candList.size(); i++) {
-                candColors.add(
-                        new Color((int) (240 - 67.0 * (i + 1) / candList.size()),
-                                (int) (67 + 34.0 * (i + 1) / candList.size()),
-                                120));
+            for ( int i = 0; i < candList.size(); i++ )
+            {
+                candColors.add( new Color(
+                    (int)( 240 - 67.0 * ( i + 1 ) / candList.size() ),
+                    (int)( 67 + 34.0 * ( i + 1 ) / candList.size() ),
+                    120 ) );
             }
         }
     }
 
+
     /**
      * gets candidate list.
+     * 
      * @return candidate list in an arraylist
      */
     public ArrayList<Candidate> getCandidateList()
@@ -54,29 +62,36 @@ public class BarChart extends JPanel
         return candList;
     }
 
+
     /**
      * sets the candidate list to list. Also changes total nuber of votes.
-     * @param list the candidate list to be set
+     * 
+     * @param list
+     *            the candidate list to be set
      */
-    public void setCandidateList(ArrayList<Candidate> list)
+    public void setCandidateList( ArrayList<Candidate> list )
     {
         candList = list;
         totalVotes = 0;
-        for (int i = 0; i < candList.size(); i++) {
-            totalVotes += candList.get(i).getVotes();
+        for ( int i = 0; i < candList.size(); i++ )
+        {
+            totalVotes += candList.get( i ).getVotes();
         }
     }
 
+
     /**
      * Draws a bar chart
-     * @param g graphics
+     * 
+     * @param g
+     *            graphics
      */
     public void paintComponent( Graphics g )
     {
         super.paintComponent( g );
-        int barWidth = (int)((double)getHeight() / candList.size() / 2.5);
+        int barWidth = (int)( (double)getHeight() / candList.size() / 2.5 );
         int maxBarHeight = getWidth() * 3 / 4;
-        g.setFont(new Font("Helvetica", Font.PLAIN, barWidth/2));
+        g.setFont( new Font( "Helvetica", Font.PLAIN, barWidth / 2 ) );
         if ( totalVotes > 0 )
         {
             for ( int i = 0; i < candList.size(); i++ )
@@ -89,12 +104,16 @@ public class BarChart extends JPanel
                     barWidth );
                 g.setColor( Color.BLACK );
                 g.drawString(
-                    Integer.toString((int)(candList.get( i ).getVotes() * 100.0 / totalVotes + 0.5) ) + "%",
+                    Integer.toString(
+                        (int)( candList.get( i ).getVotes() * 100.0 / totalVotes
+                            + 0.5 ) )
+                        + "%",
                     getWidth() / 8,
                     (int)( getHeight() / 4 + i * barWidth * 1.5 ) );
                 g.drawString( candList.get( i ).getName(),
                     getWidth() / 8,
-                    (int)( getHeight() / 4 + i * barWidth * 1.5 + barWidth * 0.5) );
+                    (int)( getHeight() / 4 + i * barWidth * 1.5
+                        + barWidth * 0.5 ) );
             }
         }
         else
@@ -116,6 +135,7 @@ public class BarChart extends JPanel
             }
         }
     }
+
 
     /**
      * updates the bar chart's graphics.
