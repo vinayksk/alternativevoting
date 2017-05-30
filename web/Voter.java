@@ -53,7 +53,7 @@ public class Voter extends HttpServlet {
         ArrayList<Integer> list = new ArrayList<Integer>();
         for(int i=1;i<=num;i++)
         {
-            if(request.getParameter("vote"+i) != null) {
+            if(isNumeric(request.getParameter("vote"+i))) {
                 list.add(Integer.parseInt(request.getParameter("vote" + i)));
             }
             else
@@ -105,6 +105,25 @@ public class Voter extends HttpServlet {
                 "        }\n" +
                 "    </style>");
         out.flush();
+    }
+
+    private boolean isNumeric(String str)
+    {
+        if(str.equals(""))
+        {
+            return false;
+        }
+        else
+        {
+            for(int i=0;i<str.length();i++)
+            {
+                if(!Character.isDigit(str.charAt(i)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 
     /**
