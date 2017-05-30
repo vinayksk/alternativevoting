@@ -8,7 +8,25 @@ import java.util.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
+/**
+ * Created by aweso on 5/26/2017.
+ * Pushes a ballot to a table.
+ *
+ * @author vinay
+ * @version May 29, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
+ */
 public class Voter extends HttpServlet {
+    /**
+     * Pushes a ballot to the table.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -35,7 +53,7 @@ public class Voter extends HttpServlet {
         ArrayList<Integer> list = new ArrayList<Integer>();
         for(int i=1;i<=num;i++)
         {
-            if(request.getParameter("vote"+i) != null) {
+            if(isNumeric(request.getParameter("vote"+i))) {
                 list.add(Integer.parseInt(request.getParameter("vote" + i)));
             }
             else
@@ -89,6 +107,32 @@ public class Voter extends HttpServlet {
         out.flush();
     }
 
+    private boolean isNumeric(String str)
+    {
+        if(str.equals(""))
+        {
+            return false;
+        }
+        else
+        {
+            for(int i=0;i<str.length();i++)
+            {
+                if(!Character.isDigit(str.charAt(i)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    /**
+     * Pushes a ballot to the table.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doPost(request, response);

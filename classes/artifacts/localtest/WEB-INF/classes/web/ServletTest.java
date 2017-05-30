@@ -12,8 +12,23 @@ import java.util.ArrayList;
 
 /**
  * Created by aweso on 5/26/2017.
+ * Posts new election.
+ *
+ * @author vinay
+ * @version May 29, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
  */
 public class ServletTest extends HttpServlet {
+    /**
+     * Creates a new election.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
@@ -72,6 +87,13 @@ public class ServletTest extends HttpServlet {
         out.flush();
     }
 
+    /**
+     * Creates a new election.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
