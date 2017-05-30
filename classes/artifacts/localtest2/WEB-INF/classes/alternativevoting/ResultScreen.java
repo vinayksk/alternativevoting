@@ -12,8 +12,6 @@ public class ResultScreen extends JFrame
 
     FinalActionButtons buttons;
 
-    Statistics stats;
-
     AlternativeElection a;
 
     public ResultScreen( String electionName, AlternativeElection a)
@@ -30,10 +28,6 @@ public class ResultScreen extends JFrame
 
         results = new BarChart(a.getCandList());
         c.add(results, BorderLayout.CENTER);
-
-        stats = new Statistics();
-        c.add(stats, BorderLayout.NORTH);
-        stats.setResultScreen(this);
 
         this.setBounds( 100, 100, 1000, 1000 );
         setDefaultCloseOperation( EXIT_ON_CLOSE );
