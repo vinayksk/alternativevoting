@@ -10,7 +10,8 @@ import org.junit.Test;
 
 
 /**
- * Tests Alternative Election and Candidate classes
+ * Tests Alternative Election, Candidate, and BallotStats classes with JUnit
+ * tests.
  *
  * @author Jeffrey Tao
  * @version May 29, 2017
