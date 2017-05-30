@@ -24,6 +24,7 @@ public class BallotStats
      *            list of ballots
      * @param cands
      *            list of candidates
+     * @return returns int[][] containing preference counts
      */
     public static int[][] prefTable(
         LinkedList<Queue<Candidate>> list,
@@ -58,6 +59,7 @@ public class BallotStats
      *            list of ballots
      * @param cands
      *            list of candidates
+     * @return returns int[][] containing preference percentages
      */
     public static double[][] prefTablePerc(
         LinkedList<Queue<Candidate>> list,
