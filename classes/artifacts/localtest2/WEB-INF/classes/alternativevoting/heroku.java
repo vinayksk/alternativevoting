@@ -17,6 +17,12 @@ public class heroku {
             IllegalAccessException, ClassNotFoundException {
         System.out.print(retrieve("future"));
         request("future");
+        ArrayList<Integer> ranks = new ArrayList<>();
+        ranks.add(1);
+        ranks.add(2);
+        ranks.add(3);
+        //push("vinsta", "fat", ranks);
+        System.out.println(clear("designner"));
     }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,
@@ -150,7 +156,7 @@ public class heroku {
         }
     }
 
-    public static void push(String elecname, String name, ArrayList<Integer> ranks, ArrayList<String> candidates) throws InstantiationException,
+    public static void push(String elecname, String name, ArrayList<Integer> ranks) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException{
         Class.forName("org.postgresql.Driver");
         Connection connection = null;
@@ -165,11 +171,13 @@ public class heroku {
             System.out.println("Success " + lit);
             Statement stmt = connection.createStatement();
 
+            ArrayList<String> candidates = retrieve(elecname);
+
             String sql = "insert into " + elecname + " (name";
             for(int i = 0; i < candidates.size(); i++){
                 sql = sql + ", " + candidates.get(i);
             }
-            sql = sql + ") VALUES (" + name;
+            sql = sql + ") VALUES (" + "\'" + name + "\'";
             for(int i = 0; i < ranks.size(); i++){
                 sql = sql + ", " + ranks.get(i);
             }
@@ -186,4 +194,35 @@ public class heroku {
         }
 
     }
+
+    public static boolean clear(String elecname) throws InstantiationException,
+            IllegalAccessException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = null;
+        try {
+            // ========>     from heroku website
+            String url = String.format("jdbc:postgresql://ec2-54-163-254-76.compute-1.amazonaws.com:5432/dahhebb44gsieu?sslmode=require");
+            Properties props = new Properties();
+            props.setProperty("user", "ugtzulvykibvoo");
+            props.setProperty("password", "288db9b457f62a3f7333f910087e6d79f38bd205a3e47841596d2658a93cfdbb");
+            connection = DriverManager.getConnection(url, props);
+            String lit = connection.getSchema();
+            System.out.println("Success " + lit);
+            DatabaseMetaData md = connection.getMetaData();
+            ResultSet rs = md.getTables(null, null, "%", null);
+            ArrayList<String> lis = new ArrayList<>();
+            while (rs.next()) {
+                lis.add(rs.getString("TABLE_NAME"));
+            }
+            boolean bool = !lis.contains(elecname);
+            connection.close();
+            return bool;
+        } catch (Exception e) {
+
+            System.out.println("Connection Failed! Check output console");
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
