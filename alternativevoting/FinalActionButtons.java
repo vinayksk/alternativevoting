@@ -1,18 +1,10 @@
 package alternativevoting;
 
-import java.awt.Component;
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.*;
 
 
 public class FinalActionButtons extends JPanel implements ActionListener
@@ -25,14 +17,16 @@ public class FinalActionButtons extends JPanel implements ActionListener
     public FinalActionButtons()
     {
         eliminateButton = new JButton( "Eliminate a Candidate" );
-        eliminateButton.setPreferredSize( new Dimension( 200, 100 ) );
+        eliminateButton.setPreferredSize( new Dimension( 300, 100 ) );
         eliminateButton.addActionListener( this );
         add( eliminateButton );
+        eliminateButton.setFont(new Font("Helvetica", Font.PLAIN, 20));
 
         doneButton = new JButton( "Get Statistics" );
-        doneButton.setPreferredSize( new Dimension( 200, 100 ) );
+        doneButton.setPreferredSize( new Dimension( 300, 100 ) );
         doneButton.addActionListener( this );
         add( doneButton );
+        doneButton.setFont(new Font("Helvetica", Font.PLAIN, 20));
     }
 
 
@@ -51,7 +45,6 @@ public class FinalActionButtons extends JPanel implements ActionListener
         }
         else
         {
-            System.out.println( " cringe" );
             // JPanel panel = new JPanel();
             JFrame frame = new JFrame( "Election statistics" );
             int[][] data = BallotStats.prefTable(
@@ -61,14 +54,26 @@ public class FinalActionButtons extends JPanel implements ActionListener
                 r.getAlternativeElection().getBallots(),
                 r.getAlternativeElection().getCandList() );
             // headers for the table
-            JTable table = new JTable( data.length * 2 + 1, data.length );
+            JTable table = new JTable( data.length * 2 + 2, data.length + 1);
+            table.setRowHeight(50);
+            for(int i=0;i<data.length + 1;i++)
+            {
+                table.getColumnModel().getColumn(i).setPreferredWidth(50);
+            }
             for ( int i = 0; i < data.length; i++ )
             {
                 for ( int j = 0; j < data.length; j++ )
                 {
-                    table.setValueAt( data[i][j], i, j );
-                    table.setValueAt( data2[i][j], i + data.length + 1, j );
+                    table.setValueAt( data[i][j], i+1, j+1 );
+                    table.setValueAt( data2[i][j], i + data.length + 2, j+1 );
                 }
+            }
+
+            for(int i=0;i<data.length;i++)
+            {
+                table.setValueAt(r.getAlternativeElection().getCandList().get(i), 0, i+1);
+                table.setValueAt(r.getAlternativeElection().getCandList().get(i), i+1, 0);
+                table.setValueAt(r.getAlternativeElection().getCandList().get(i), i+data.length + 1, 0);
             }
 
             // add the table to the frame

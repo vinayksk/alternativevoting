@@ -63,7 +63,6 @@ public class BarChart extends JPanel
                         / totalVotes ),
                     barWidth );
                 g.setColor( Color.BLACK );
-                System.out.println("Drawing string!");
                 g.drawString(
                     Integer.toString((int)(candList.get( i ).getVotes() * 100.0 / totalVotes + 0.5) ) + "%",
                     getWidth() / 8,
