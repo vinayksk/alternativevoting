@@ -18,9 +18,9 @@
 /delete.class
 /FinalActionButtons.class
 /BallotStats.class
-/AlternativeElectionTest.class
 /JUAlternativeVotingTest.class
 /Result.class
 /Statistics.class
 /VoterApplet.class
 /heroku.class
+/AlternativeElectionTest.class

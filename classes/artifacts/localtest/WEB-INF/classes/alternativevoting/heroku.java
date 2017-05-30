@@ -17,14 +17,11 @@ public class heroku {
             IllegalAccessException, ClassNotFoundException {
         System.out.print(retrieve("future"));
         request("future");
-<<<<<<< HEAD
         ArrayList<Integer> ranks = new ArrayList<>();
         ranks.add(1);
         ranks.add(2);
         ranks.add(3);
         push("vinsta", "fat", ranks);
-=======
->>>>>>> origin/master
     }
 
     public void createTable(String electionName, ArrayList<String> candidates) throws InstantiationException,
@@ -158,7 +155,7 @@ public class heroku {
         }
     }
 
-    public static void push(String elecname, String name, ArrayList<Integer> ranks, ArrayList<String> candidates) throws InstantiationException,
+    public static void push(String elecname, String name, ArrayList<Integer> ranks) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException{
         Class.forName("org.postgresql.Driver");
         Connection connection = null;
@@ -173,11 +170,13 @@ public class heroku {
             System.out.println("Success " + lit);
             Statement stmt = connection.createStatement();
 
+            ArrayList<String> candidates = retrieve(elecname);
+
             String sql = "insert into " + elecname + " (name";
             for(int i = 0; i < candidates.size(); i++){
                 sql = sql + ", " + candidates.get(i);
             }
-            sql = sql + ") VALUES (" + "\'"+ name + "\'";
+            sql = sql + ") VALUES (" + "\'" + name + "\'";
             for(int i = 0; i < ranks.size(); i++){
                 sql = sql + ", " + ranks.get(i);
             }

@@ -10,7 +10,8 @@ import org.junit.Test;
 
 
 /**
- * Tests Alternative Election and Candidate classes
+ * Tests Alternative Election, Candidate, and BallotStats classes with JUnit
+ * tests.
  *
  * @author Jeffrey Tao
  * @version May 29, 2017
@@ -25,6 +26,9 @@ public class JUAlternativeVotingTest
     private Candidate cand;
 
 
+    /**
+     * Tests the constructor of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionConstructor()
     {
@@ -35,6 +39,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the getCandList() method of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionGetCandList()
     {
@@ -45,6 +52,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the getBallots() method of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionGetBallots()
     {
@@ -55,6 +65,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the eliminateCandidate() method of the AlternativeElection class.
+     */
     @Test
     public void AlternativeElectionEliminateCandidate()
     {
@@ -84,6 +97,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the constructor of the Candidate class.
+     */
     @Test
     public void CandidateConstructor()
     {
@@ -92,6 +108,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the toString() method of the Candidate class.
+     */
     @Test
     public void CandidateToString()
     {
@@ -101,6 +120,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the getVotes() method of the Candidate class.
+     */
     @Test
     public void CandidateGetVotes()
     {
@@ -109,6 +131,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the getName() method of the Candidate class.
+     */
     @Test
     public void CandidateGetName()
     {
@@ -117,6 +142,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the increment() method of the Candidate class.
+     */
     @Test
     public void CandidateIncrement()
     {
@@ -126,6 +154,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the reset() method of the Candidate class.
+     */
     @Test
     public void CandidateReset()
     {
@@ -136,6 +167,9 @@ public class JUAlternativeVotingTest
     }
 
 
+    /**
+     * Tests the compareTo() method of the Candidate class.
+     */
     @Test
     public void CandidateCompareTo()
     {
@@ -144,5 +178,104 @@ public class JUAlternativeVotingTest
         assertTrue( cand.compareTo( otherCand ) == 0 );
         cand.increment();
         assertTrue( cand.compareTo( otherCand ) > 0 );
+    }
+
+
+    /**
+     * Tests the prefTable() method of the Candidate class.
+     */
+    @Test
+    public void BallotStatsPrefTable()
+    {
+
+        Candidate bob = new Candidate( "bob" );
+        Candidate joe = new Candidate( "joe" );
+        Candidate lin = new Candidate( "lin" );
+
+        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
+        ArrayList<Candidate> candList = new ArrayList<Candidate>();
+        candList.add( bob );
+        candList.add( joe );
+        candList.add( lin );
+
+        Queue<Candidate> ballot1 = new LinkedList<Candidate>();
+        ballot1.add( bob );
+        ballot1.add( joe );
+        list.add( ballot1 );
+
+        Queue<Candidate> ballot2 = new LinkedList<Candidate>();
+        ballot2.add( lin );
+        ballot2.add( bob );
+        ballot2.add( joe );
+        list.add( ballot2 );
+
+        Queue<Candidate> ballot3 = new LinkedList<Candidate>();
+        ballot3.add( bob );
+        list.add( ballot3 );
+
+        int[][] pref = BallotStats.prefTable( list, candList );
+        int[][] test = { { 0, 3, 2 }, { 0, 0, 0, }, { 1, 1, 0 } };
+        boolean correct = true;
+        for ( int i = 0; i < pref.length; i++ )
+        {
+            for ( int j = 0; j < pref[0].length; j++ )
+            {
+                if ( pref[i][j] != test[i][j] )
+                {
+                    correct = false;
+                }
+            }
+        }
+        assertTrue( correct );
+    }
+
+
+    /**
+     * Tests the prefTablePerc() method of the Candidate class.
+     */
+    @Test
+    public void BallotStatsPrefTablePerc()
+    {
+
+        Candidate bob = new Candidate( "bob" );
+        Candidate joe = new Candidate( "joe" );
+        Candidate lin = new Candidate( "lin" );
+
+        LinkedList<Queue<Candidate>> list = new LinkedList<Queue<Candidate>>();
+        ArrayList<Candidate> candList = new ArrayList<Candidate>();
+        candList.add( bob );
+        candList.add( joe );
+        candList.add( lin );
+
+        Queue<Candidate> ballot1 = new LinkedList<Candidate>();
+        ballot1.add( bob );
+        ballot1.add( joe );
+        list.add( ballot1 );
+
+        Queue<Candidate> ballot2 = new LinkedList<Candidate>();
+        ballot2.add( lin );
+        ballot2.add( bob );
+        ballot2.add( joe );
+        list.add( ballot2 );
+
+        Queue<Candidate> ballot3 = new LinkedList<Candidate>();
+        ballot3.add( bob );
+        list.add( ballot3 );
+        double[][] pref2 = BallotStats.prefTablePerc( list, candList );
+        double[][] test = { { 0.0, 100.0, 66.6 }, { 0.0, 0.0, 0.0, },
+            { 33.3, 100.0, 0.0 } };
+        boolean correct = true;
+        for ( int i = 0; i < pref2.length; i++ )
+        {
+            for ( int j = 0; j < pref2[0].length; j++ )
+            {
+
+                if ( pref2[i][j] != test[i][j] )
+                {
+                    correct = false;
+                }
+            }
+        }
+        assertTrue( correct );
     }
 }

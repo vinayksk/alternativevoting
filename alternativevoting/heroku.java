@@ -155,7 +155,7 @@ public class heroku {
         }
     }
 
-    public static void push(String elecname, String name, ArrayList<Integer> ranks, ArrayList<String> candidates) throws InstantiationException,
+    public static void push(String elecname, String name, ArrayList<Integer> ranks) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException{
         Class.forName("org.postgresql.Driver");
         Connection connection = null;
@@ -169,6 +169,8 @@ public class heroku {
             String lit = connection.getSchema();
             System.out.println("Success " + lit);
             Statement stmt = connection.createStatement();
+
+            ArrayList<String> candidates = retrieve(elecname);
 
             String sql = "insert into " + elecname + " (name";
             for(int i = 0; i < candidates.size(); i++){

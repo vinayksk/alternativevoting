@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d499766-5aad-4ef7-aab3-fd2cac324f50" name="Default" comment="">
+    <list default="true" id="a08d1331-ffd8-456c-af18-83d3a61d978e" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/alternativevoting/Statistics.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/JUAlternativeVotingTest.class" afterPath="$PROJECT_DIR$/alternativevoting/JUAlternativeVotingTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/heroku.class" afterPath="$PROJECT_DIR$/alternativevoting/heroku.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Voter.class" afterPath="$PROJECT_DIR$/web/Voter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/Statistics.java" afterPath="$PROJECT_DIR$/alternativevoting/Statistics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/heroku.java" afterPath="$PROJECT_DIR$/alternativevoting/heroku.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Voter.java" afterPath="$PROJECT_DIR$/web/Voter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,18 +22,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="heroku.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/alternativevoting/heroku.java">
+      <file leaf-file-name="Statistics.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/alternativevoting/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="171" column="14" lean-forward="true" selection-start-line="171" selection-start-column="14" selection-end-line="171" selection-end-column="14" />
-              <folding>
-                <marker date="1496090674156" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
-                <marker date="1496090674156" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
-                <marker date="1496090674156" expanded="true" signature="4674:4695" ph="SELECT COUNT... missingValue" />
-                <marker date="1496090674156" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
-                <marker date="1496090674156" expanded="true" signature="6859:6893" ph="insert into missingValue... " />
-              </folding>
+            <state relative-caret-position="80">
+              <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,7 +45,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/alternativevoting/heroku.java" />
+        <option value="$PROJECT_DIR$/alternativevoting/Statistics.java" />
       </list>
     </option>
   </component>
@@ -76,6 +76,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -91,8 +93,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -112,79 +112,16 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tom">
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M21" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/welcome.jsp" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="localtest">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_alternativevoting" />
-      </server-settings>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61886" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="Make" enabled="false" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="localtest" />
-        </option>
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -284,7 +221,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_alternativevoting_5" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_alternativevoting_6" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -293,7 +230,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61886" />
+        <option name="DEBUG_PORT" value="55297" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -340,7 +277,12 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="localtest" />
+        </option>
+      </method>
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tom" />
@@ -351,17 +293,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d499766-5aad-4ef7-aab3-fd2cac324f50" name="Default" comment="" />
-      <created>1496091551050</created>
+      <changelist id="a08d1331-ffd8-456c-af18-83d3a61d978e" name="Default" comment="" />
+      <created>1496112708476</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1496091551050</updated>
-      <workItem from="1496091556489" duration="197000" />
+      <updated>1496112708476</updated>
+      <workItem from="1496112714046" duration="104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197000" />
+    <option name="totallyTimeSpent" value="104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -419,17 +361,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alternativevoting/heroku.java">
+    <entry file="file://$PROJECT_DIR$/alternativevoting/Statistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="171" column="14" lean-forward="true" selection-start-line="171" selection-start-column="14" selection-end-line="171" selection-end-column="14" />
-          <folding>
-            <marker date="1496090674156" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
-            <marker date="1496090674156" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
-            <marker date="1496090674156" expanded="true" signature="4674:4695" ph="SELECT COUNT... missingValue" />
-            <marker date="1496090674156" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
-            <marker date="1496090674156" expanded="true" signature="6859:6893" ph="insert into missingValue... " />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -15,11 +15,8 @@ public class Voter extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-<<<<<<< HEAD
         String Uname = request.getParameter("userName");
-=======
-        String name =  request.getParameter("userName");
->>>>>>> origin/master
+
         String electionName = request.getParameter("electionName");
         System.out.print(electionName);
         int num = Integer.parseInt(request.getParameter("number"));
@@ -47,11 +44,9 @@ public class Voter extends HttpServlet {
             }
         }
         try {
-<<<<<<< HEAD
+
             a.push(electionName, Uname, list);
-=======
-            a.push(electionName, name, list, cands);
->>>>>>> origin/master
+
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

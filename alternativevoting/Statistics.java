@@ -41,16 +41,16 @@ public class Statistics extends JPanel implements ActionListener
             JFrame frame = new JFrame();
             JLabel text = new JLabel("text");
             JPanel panel = new JPanel();
-            double[][] pref = BallotStats.pollProbabilities(r.getAlternativeElection().getBallots(), r.getAlternativeElection().getCandList());
-            String str = "";
-            for(int i=0;i<pref.length;i++)
-            {
-                for(int j=0;j<pref[0].length;j++)
-                {
-                    str += pref[i][j] + " ";
-                }
-                str += "\n";
-            }
+//            double[][] pref = BallotStats.pollProbabilities(r.getAlternativeElection().getBallots(), r.getAlternativeElection().getCandList());
+//            String str = "";
+//            for(int i=0;i<pref.length;i++)
+//            {
+//                for(int j=0;j<pref[0].length;j++)
+//                {
+//                    str += pref[i][j] + " ";
+//                }
+//                str += "\n";
+//            }
            // text.setText(str);
             text.setText("asdfk;lashfldahfklhdslfshflashlfdshlasdhfkladsh");
             panel.add(text);
