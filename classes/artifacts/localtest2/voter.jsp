@@ -21,7 +21,7 @@
             heroku a = new heroku();
             if(!a.clear(elecname))
             {
-            ArrayList<String> list = a.retrieve(elecname);%>
+                ArrayList<String> list = a.retrieve(elecname);%>
         <h1>Hello and welcome to the <span style="color: #008CBA;"><%out.print(elecname);%></span> election!</h1>
         <br/>
 
