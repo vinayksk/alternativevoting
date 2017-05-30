@@ -19,20 +19,20 @@
 </head>
 <body>
 <center>
-    <%String lit = "";
-        lit = request.getParameter("electionName");%>
-    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <%out.println(lit);%></h1>
+    <%String electionName = "";
+        electionName = request.getParameter("electionName");%>
+    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <span style="color: #008CBA;"><%out.print(electionName);%></span>.</h1>
     <div>
-        <form action="example" id="list" method="post">
-            <input type="hidden" id="pass" name="urlPop">
-            <input type="hidden" id="pass2" name="urlPop2">
+        <form action="thankyou" id="list" method="post">
+            <input type="hidden" id="pass" name="numCand">
+            <input type="hidden" id="pass2" name="nameOfElec">
         </form>
     </div>
     <script>
     var toAdd = document.createDocumentFragment();
     <%int cand = Integer.parseInt(request.getParameter("numberCand"));%>
     var elec = "";
-    elec = "<%=lit%>";
+    elec = "<%=electionName%>";
     var inte = parseInt(<%=cand%>);
     console.log(elec);
     console.log(inte);
@@ -49,22 +49,12 @@
         toAdd.appendChild(document.createElement('br'));
     }
     var button = document.createElement('input');
-    button.className = 'button';
+    button.className = 'button button1';
     button.setAttribute('type', 'submit');
     toAdd.appendChild(button);
     document.getElementById('list').appendChild(toAdd);
     document.getElementById('pass').value = inte;
     document.getElementById('pass2').value = elec;
-
-    <%--function push() {--%>
-        <%--var names = "";--%>
-        <%--for(var i = 1; i <= inte ; i++) {--%>
-            <%--var id = "r" + i;--%>
-            <%--names = names + (document.getElementById(id).value) + " ";--%>
-        <%--}--%>
-        <%--document.getElementById('pass').value = inte;--%>
-        <%--document.getElementById('pass2').value = <%=request.getParameter("electionName")%>;--%>
-    <%--}--%>
 
     </script>
     <style>
@@ -72,7 +62,7 @@
             font-family: "Segoe UI Light";
         }
         .button {
-            background-color: #4CAF50; /* Green */
+            background-color: #008CBA; /* Green */
             border: none;
             color: white;
             padding: 16px 32px;

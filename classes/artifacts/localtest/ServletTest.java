@@ -18,7 +18,7 @@ public class ServletTest extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String elecname = request.getParameter("nameOfElec");
-        out.println("<center><h1 style=\"font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 15vh;\">Thank you for creating " + elecname + "</h1>" +
+        out.println("<center><h1 style=\"font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 15vh;\">Thank you for creating <span style=\"color: #008CBA;\">" + elecname + "</span>.</h1>" +
                 "<br><a href=\"welcome.jsp\"><button type=\"button\" class=\"button button1\">Return to Home</button></a><center><style>\n" +
                 "        .rep{\n" +
                 "            font-family: \"Segoe UI Light\";\n" +

@@ -21,7 +21,7 @@
 <center>
     <%String electionName = "";
         electionName = request.getParameter("electionName");%>
-    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <span style="color: #008CBA;"><%out.print(electionName);%></span>.</h1>
+    <h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Enter candidates for <%out.println(electionName);%></h1>
     <div>
         <form action="thankyou" id="list" method="post">
             <input type="hidden" id="pass" name="numCand">
@@ -49,7 +49,7 @@
         toAdd.appendChild(document.createElement('br'));
     }
     var button = document.createElement('input');
-    button.className = 'button button1';
+    button.className = 'button';
     button.setAttribute('type', 'submit');
     toAdd.appendChild(button);
     document.getElementById('list').appendChild(toAdd);

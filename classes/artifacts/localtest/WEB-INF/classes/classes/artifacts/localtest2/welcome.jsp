@@ -19,7 +19,7 @@
     ArrayList<String> election = new ArrayList<>();
     String electionName = "";
 %>
-<center><h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Welcome to <span style="color: #008CBA;">Warowac</span></h1>
+<center><h1 style="font-family: 'Segoe UI Light'; font-size: 72px; padding-top: 3vh">Welcome to Warowac</h1>
     <button class="button button1" type="button" id="vote" onclick="change()">Vote</button>
     <button class="button button1" type="button" id="create" onclick="change1()">Create</button>
     <div id="workspace">
@@ -83,7 +83,6 @@
         background-color: #008CBA;
         color: white;
     }
-
 
 </style>
 </html>
