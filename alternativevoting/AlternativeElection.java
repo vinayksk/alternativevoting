@@ -4,6 +4,16 @@ package alternativevoting;
 import java.util.*;
 
 
+/**
+ * Provides methods for running each round of eliminating a candidate.
+ *
+ * @author jeffr
+ * @version May 29, 2017
+ * @author Period: 3
+ * @author Assignment: alternativevoting
+ *
+ * @author Sources: None
+ */
 public class AlternativeElection
 {
     private ArrayList<Candidate> candList;
@@ -13,6 +23,15 @@ public class AlternativeElection
     private HashSet<Candidate> set;
 
 
+    /**
+     * Constructs an AlternativeElection object with a list of candidates and
+     * list of ballots
+     * 
+     * @param candList
+     *            ArrayList that stores candidates
+     * @param map
+     *            LinkedList of Queues that stores ballots
+     */
     public AlternativeElection(
         ArrayList<Candidate> candList,
         LinkedList<Queue<Candidate>> map )
@@ -31,19 +50,37 @@ public class AlternativeElection
     }
 
 
+    /**
+     * Returns the list of ballots.
+     * 
+     * @return Returns map variable
+     */
     public LinkedList<Queue<Candidate>> getBallots()
     {
         return map;
     }
 
+
+    /**
+     * Returns the list of candidates.
+     * 
+     * @return Returns candList variable.
+     */
     public ArrayList<Candidate> getCandList()
     {
         return candList;
     }
 
+
+    /**
+     * Tallies up first choice votes for each ballot, eliminates least popular
+     * candidate(s), and returns modified candidate list.
+     * 
+     * @return Returns the modified candList after one round of candidates has
+     *         been eliminated.
+     */
     public ArrayList<Candidate> eliminateCandidate()
     {
-
         Collections.sort( candList );
         int min = candList.get( 0 ).getVotes();
         int max = candList.get( candList.size() - 1 ).getVotes();
@@ -74,14 +111,6 @@ public class AlternativeElection
                 list.peek().increment();
             }
         }
-
-
-
-        for ( Queue<Candidate> list : map )
-        {
-           System.out.println(list+"Test");
-        }
-        System.out.println("End");
         return candList;
     }
 }

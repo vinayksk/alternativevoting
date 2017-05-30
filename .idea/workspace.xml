@@ -6,7 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="7d499766-5aad-4ef7-aab3-fd2cac324f50" name="Default" comment="">
+=======
+    <list default="true" id="a1bc5f32-b5df-4730-a02e-07d2bda52979" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/alternativevoting/Voter.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/Result.class" afterPath="$PROJECT_DIR$/alternativevoting/Result.class" />
+>>>>>>> origin/master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alternativevoting/heroku.class" afterPath="$PROJECT_DIR$/alternativevoting/heroku.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/Voter.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/Voter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/AlternativeElectionTest.class" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/alternativevoting/AlternativeElectionTest.class" />
@@ -25,9 +31,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/Voter.java" afterPath="$PROJECT_DIR$/classes/artifacts/localtest/WEB-INF/classes/web/Voter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ServletTest.java" afterPath="$PROJECT_DIR$/web/ServletTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Voter.java" afterPath="$PROJECT_DIR$/web/Voter.java" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/candidateEntry.jsp" afterPath="$PROJECT_DIR$/web/candidateEntry.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/voter.jsp" afterPath="$PROJECT_DIR$/web/voter.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/welcome.jsp" afterPath="$PROJECT_DIR$/web/welcome.jsp" />
+=======
+>>>>>>> origin/master
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,6 +65,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ServletTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ServletTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,11 +78,26 @@
       </file>
       <file leaf-file-name="welcome.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/welcome.jsp">
+=======
+      <file leaf-file-name="heroku.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/alternativevoting/heroku.java">
+>>>>>>> origin/master
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="560">
               <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
               <folding>
+<<<<<<< HEAD
                 <element signature="n#style#0;n#span#0;n#h1#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+=======
+                <marker date="1496087164883" expanded="true" signature="1573:1642" ph="CREATE TABLE... missingValue" />
+                <marker date="1496087164883" expanded="false" signature="3093:3101" ph="&lt;~&gt;" />
+                <marker date="1496087164883" expanded="true" signature="3212:3226" ph="select * fro... missingValue" />
+                <marker date="1496087164883" expanded="true" signature="4675:4696" ph="SELECT * FRO... missingValue" />
+                <marker date="1496087164883" expanded="true" signature="5086:5100" ph="SELECT * FRO... missingValue" />
+                <marker date="1496087164883" expanded="true" signature="6861:6873" ph="insert into missingValue... " />
+                <marker date="1496087164883" expanded="true" signature="6861:6895" ph="insert into missingValue... " />
+                <marker date="1496087164883" expanded="true" signature="6861:7222" ph="insert into " />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
@@ -137,12 +162,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/alternativevoting/heroku.java" />
         <option value="$PROJECT_DIR$/web/ServletTest.java" />
         <option value="$PROJECT_DIR$/web/candidateEntry.jsp" />
         <option value="$PROJECT_DIR$/web/Voter.java" />
         <option value="$PROJECT_DIR$/web/voter.jsp" />
         <option value="$PROJECT_DIR$/web/welcome.jsp" />
+=======
+        <option value="$PROJECT_DIR$/alternativevoting/Result.java" />
+        <option value="$PROJECT_DIR$/web/Voter.java" />
+        <option value="$PROJECT_DIR$/alternativevoting/heroku.java" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -849,13 +880,23 @@
       <created>1496091551050</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1496091551050</updated>
       <workItem from="1496091556489" duration="7477000" />
+=======
+      <updated>1496080680593</updated>
+      <workItem from="1496080686972" duration="2967000" />
+      <workItem from="1496085523068" duration="1662000" />
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="7477000" />
+=======
+    <option name="totallyTimeSpent" value="4629000" />
+>>>>>>> origin/master
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -877,6 +918,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28369272" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951483" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -890,6 +932,21 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="HDInsight Spark Submission" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32951483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.206875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+>>>>>>> origin/master
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -963,11 +1020,22 @@
         <state relative-caret-position="544">
           <caret line="177" column="26" lean-forward="false" selection-start-line="177" selection-start-column="26" selection-end-line="177" selection-end-column="26" />
           <folding>
+<<<<<<< HEAD
             <marker date="1496095732819" expanded="true" signature="1572:1641" ph="CREATE TABLE... missingValue" />
             <marker date="1496095732819" expanded="true" signature="3211:3225" ph="select * fro... missingValue" />
             <marker date="1496095732819" expanded="true" signature="4674:4695" ph="SELECT COUNT... missingValue" />
             <marker date="1496095732819" expanded="true" signature="5085:5099" ph="SELECT * FRO... missingValue" />
             <marker date="1496095732819" expanded="true" signature="6859:6893" ph="insert into missingValue... " />
+=======
+            <marker date="1496087164883" expanded="true" signature="1573:1642" ph="CREATE TABLE... missingValue" />
+            <marker date="1496087164883" expanded="false" signature="3093:3101" ph="&lt;~&gt;" />
+            <marker date="1496087164883" expanded="true" signature="3212:3226" ph="select * fro... missingValue" />
+            <marker date="1496087164883" expanded="true" signature="4675:4696" ph="SELECT * FRO... missingValue" />
+            <marker date="1496087164883" expanded="true" signature="5086:5100" ph="SELECT * FRO... missingValue" />
+            <marker date="1496087164883" expanded="true" signature="6861:6873" ph="insert into missingValue... " />
+            <marker date="1496087164883" expanded="true" signature="6861:6895" ph="insert into missingValue... " />
+            <marker date="1496087164883" expanded="true" signature="6861:7222" ph="insert into " />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -990,6 +1058,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/web/Voter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
@@ -1011,11 +1080,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/welcome.jsp">
+=======
+    <entry file="file://$PROJECT_DIR$/alternativevoting/heroku.java">
+>>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding>
+<<<<<<< HEAD
             <element signature="n#style#0;n#span#0;n#h1#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+=======
+            <marker date="1496087164883" expanded="true" signature="1573:1642" ph="CREATE TABLE... missingValue" />
+            <marker date="1496087164883" expanded="false" signature="3093:3101" ph="&lt;~&gt;" />
+            <marker date="1496087164883" expanded="true" signature="3212:3226" ph="select * fro... missingValue" />
+            <marker date="1496087164883" expanded="true" signature="4675:4696" ph="SELECT * FRO... missingValue" />
+            <marker date="1496087164883" expanded="true" signature="5086:5100" ph="SELECT * FRO... missingValue" />
+            <marker date="1496087164883" expanded="true" signature="6861:6873" ph="insert into missingValue... " />
+            <marker date="1496087164883" expanded="true" signature="6861:6895" ph="insert into missingValue... " />
+            <marker date="1496087164883" expanded="true" signature="6861:7222" ph="insert into " />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>

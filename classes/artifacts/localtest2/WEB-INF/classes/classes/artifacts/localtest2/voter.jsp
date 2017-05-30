@@ -14,12 +14,14 @@
 <head>
     <title>Voter Screen</title>
 </head>
-<form action="voter" method="post">
+<form action="voter" id="fat" method="post">
     <% String name = request.getParameter("query");
         heroku a = new heroku();
         ArrayList<String> list = a.retrieve(name);
         out.println("Hello and welcome to the " + name + " election!"); %>
     <br/><br/>
+
+    <script> var cands = [<% for (int i = 0; i < list.size(); i++) { %>"<%= list.get(i) %>"<%= i + 1 < list.size() ? ",":"" %><% } %>]; </script>
 
     Please put your name:<input type="text" name="userName"/><br/><br/>
     <br/><br/>
@@ -27,15 +29,22 @@
     <br/><br/>
     <% int numCands = list.size();
         out.println("There are a total of " + numCands + " candidates."); %> <br/><br/>
-    <% for(int i=1;i<=numCands;i++){String voteName="vote"+i;%>
+    <% for(int i=1;i<=numCands;i++){String candName="vote"+i;%>
     <% out.print(list.get(i-1) + ":");%> <input type="number" name=voteName/><br/><br/>
     <% } %>
 
     <br/><br/>
-    <script> var numberCands = parseInt(<%=numCands%>)</script>
+
+
+
     <input type="hidden" value=name name="electionName" />
-    <input type="hidden" value=numberCands name="number" />
+    <input type="hidden" id="asdf" name="number" />
     <input type="submit" value="submit vote"/>
     <input type="reset" value="try again">
+    <script>
+        var numberCands = parseInt(<%=numCands%>);
+
+    document.getElementById("asdf").value=numberCands</script>
+
 </form>
 </html>

@@ -1,5 +1,6 @@
 package web;
 
+import alternativevoting.Candidate;
 import alternativevoting.heroku;
 import java.io.*;
 import java.sql.*;
@@ -14,10 +15,26 @@ public class Voter extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
+<<<<<<< HEAD
         String Uname = request.getParameter("userName");
+=======
+        String name =  request.getParameter("userName");
+>>>>>>> origin/master
         String electionName = request.getParameter("electionName");
         System.out.print(electionName);
         int num = Integer.parseInt(request.getParameter("number"));
+        heroku a = new heroku();
+        ArrayList<String> cands = null;
+        try {
+            cands = a.retrieve(electionName);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         ArrayList<Integer> list = new ArrayList<Integer>();
         for(int i=1;i<=num;i++)
         {
@@ -29,9 +46,12 @@ public class Voter extends HttpServlet {
                 list.add(Integer.MAX_VALUE);
             }
         }
-        heroku a = new heroku();
         try {
+<<<<<<< HEAD
             a.push(electionName, Uname, list);
+=======
+            a.push(electionName, name, list, cands);
+>>>>>>> origin/master
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
