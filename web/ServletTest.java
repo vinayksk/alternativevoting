@@ -67,7 +67,7 @@ public class ServletTest extends HttpServlet
                 + "            background-color: #008CBA;\n"
                 + "            color: white;\n" + "        }\n"
                 + "    </style>" );
-        ArrayList<String> lis = new ArrayList<>();
+        ArrayList<String> lis = new ArrayList<String>();
         heroku hero = new heroku();
         for ( int i = 1; i <= Integer
             .parseInt( request.getParameter( "numCand" ) ); i++ )
